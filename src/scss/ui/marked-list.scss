@@ -21,5 +21,15 @@
                 margin-top: 1.5rem;
             }
         }
+        &_big{
+            & img{
+                width: 3.2rem;
+                height: 3.2rem;
+                @include small-tablet{
+                    width: 6.4rem;
+                    height: 6.4rem;
+                }
+            }
+        }
     }
 }

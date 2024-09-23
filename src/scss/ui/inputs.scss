@@ -139,6 +139,9 @@
             }
         }
     }
+    &._error{
+        color: $red;
+    }
 
 
     @include small-tablet {
@@ -183,6 +186,7 @@
 
     @include small-tablet {
         gap: 1rem;
+       
     }
 
     &._error {
@@ -208,7 +212,13 @@
         font-family: Rebrand Txt;
         font-size: 1.8rem;
         font-weight: 400;
-        line-height: 2.4rem;
+        line-height: 120%;
+
+        @include small-tablet {
+            font-size: 3rem;
+            padding: 1.4rem 5rem;
+            min-height: 8rem;
+        }
 
         &:focus {
             border-color: $blue;
@@ -223,10 +233,11 @@
         font-family: 'Rebrand Txt';
         font-size: 1.4rem;
         font-weight: 500;
-        line-height: 1.54rem;
+        line-height: 110%;
 
         @include small-tablet {
             min-height: 3rem;
+            font-size: 2rem;
         }
     }
 
@@ -256,13 +267,13 @@
 
 
             & .input-phone__select-current .input-phone__select-current-arrow {
-                transform: rotate(270deg);
+                transform: rotate(180deg);
             }
         }
 
         @include small-tablet {
-            width: 14.4rem;
-            height: 11.2rem;
+            width: 13rem;
+            height: 8rem;
         }
 
         &-current {
@@ -280,15 +291,15 @@
                 height: 1.6rem;
 
                 @include small-tablet {
-                    width: 4.8rem;
-                    height: 3.2rem;
+                    width: 4rem;
+                    height: 2.4rem;
                 }
             }
 
             &-arrow {
                 width: 1.2rem;
                 height: 1.2rem;
-                transform: rotate(90deg);
+                transition: transform .5s;
 
                 @include small-tablet {
                     width: 2.4rem;
@@ -322,6 +333,10 @@
                 box-sizing: border-box;
                 background-color: $gray;
                 color: rgba(22, 46, 58, 0.5);
+                @include small-tablet {
+                    font-size: 3rem;
+                    padding: 3rem .5rem;
+                }
 
                 &:hover {
                     background-color: $gray-dark !important;
@@ -338,8 +353,8 @@
                     height: 1.6rem;
 
                     @include small-tablet {
-                        width: 4.8rem;
-                        height: 3.2rem;
+                        width: 4rem;
+                        height: 2.4rem;
                     }
                 }
 
@@ -351,13 +366,18 @@
     }
 
     & input {
+        width: 100%;
         padding: 1.6rem 2.4rem;
         background-color: $white;
         font-family: Rebrand Txt;
         font-size: 1.8rem;
         font-weight: 400;
-        line-height: 2.4rem;
+        line-height: 120%;
         border: none;
+
+        @include small-tablet {
+            font-size: 3rem;
+        }
 
     }
 

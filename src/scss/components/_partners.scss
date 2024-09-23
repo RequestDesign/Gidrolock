@@ -1,0 +1,49 @@
+@keyframes carousel {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-250%, 0);
+    }
+}
+
+.partners {
+    margin-top: 6rem !important;
+
+    &__c {
+        &-items {
+            overflow: hidden;
+
+            &-list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transform: translate(0,0);
+             
+
+                @include small-tablet {
+                    height: 10rem;
+                    display: grid;
+                    grid-template-columns: repeat(6, 50%);
+                    gap: 3rem;
+                    animation: carousel 10s infinite linear;
+                    animation-direction: alternate;
+                }
+
+                &-e {
+                    display: flex;
+
+                    & img {
+                        object-fit: contain;
+                        object-position: center;
+
+                        @include small-tablet {
+                            height: 10rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

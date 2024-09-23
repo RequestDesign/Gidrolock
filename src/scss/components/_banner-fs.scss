@@ -1,0 +1,60 @@
+.banner-fs {
+    background-color: $blue;
+    background: linear-gradient(90deg, #016192 0%, #014B7B 100%);
+    padding: 6.8rem 0;
+
+    @include small-tablet {
+        padding: 1.4rem 0;
+    }
+
+    &__c {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8.7rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 5rem;
+            align-items: flex-start;
+        }
+
+        &-logo {
+            width: 33.3rem;
+            object-fit: contain;
+        }
+
+        & .tl3 {
+            white-space: pre-line;
+
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+
+            &-e {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                & svg {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    @include small-tablet{
+                        width: 6.4rem;
+                        height: 6.4rem; 
+                    }
+                }
+            }
+        }
+        & .btn-primary{
+            @include small-tablet{
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,20 @@
+.complects{
+
+    &__c{
+        &-top{
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        &-slider{
+            position: relative;
+            &-pagination{
+                @include small-tablet{
+                    display: flex !important;
+                }
+            }
+           
+        }
+    }
+}

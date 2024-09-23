@@ -1,0 +1,28 @@
+.defense-work {
+    &__c {
+        &-slider {
+            margin-top: 4rem;
+            &-e {
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+
+                &-img {
+                    width: 100%;
+                    height: 54.5rem;
+                    display: flex;
+                    position: relative;
+                    background-color: $white;
+                }
+                &-bottom{
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,52 @@
+.ctagories {
+
+    &__c {
+        &-list {
+            /*  display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto); */
+
+
+            &-e {
+
+                position: relative;
+                overflow: hidden;
+                /*  height: 26.8rem; */
+
+
+
+                &-img {
+                    object-fit: cover;
+                    object-position: center;
+                    min-height: 100%;
+                }
+
+                & a {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.123);
+                    border-bottom: .5rem solid $blue;
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 2.3rem;
+                    box-sizing: border-box;
+
+                    &:hover {
+                        border-color: $yellow;
+                    }
+                }
+
+                &_big {
+                    width: 87.7rem;
+
+                    @include small-tablet {}
+
+                }
+            }
+        }
+
+    }
+}

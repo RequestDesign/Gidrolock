@@ -49,10 +49,10 @@ main {
   flex-grow: 1;
 
   section {
-    margin: 20rem 0 0;
+    margin: 11rem 0 0;
 
     @include small-tablet {
-      margin: 16rem 0 0;
+      margin: 20rem 0 0;
     }
 
     &._first {
@@ -65,16 +65,17 @@ main {
   }
 }
 
+
 .desktop {
-  display: block;
+  display: block ;
 
   @media (max-width: 48em) {
-    display: none;
+    display: none ;
   }
 }
 
 .mobile {
-  display: none;
+  display: none ;
 
   @media (max-width: 48em) {
     display: block;

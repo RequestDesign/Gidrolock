@@ -1,0 +1,59 @@
+.why-choice {
+    background-color: $white;
+    padding: 11rem 0;
+
+    @include small-tablet {
+        background-color: $bg;
+    }
+
+    &__c {
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        &-slider {
+            &-list {
+                /*     display: grid;
+                grid-template-columns: repeat(5, 29rem);
+                justify-content: space-between;
+                gap: 3rem;
+                @include small-tablet {
+                    grid-template-columns: repeat(10, auto);
+                    gap:0;
+                } */
+
+                &-e {
+
+                    @include small-tablet {
+
+                        background-color: $white;
+                        padding: 4rem 3rem;
+                    }
+
+                    img {
+                        height: 6.4rem;
+                        width: fit-content;
+                    }
+
+                    .tl4 {
+                        white-space: pre-line;
+                        margin: 2rem 0 1.6rem;
+                    }
+                }
+            }
+        }
+
+        &-link {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

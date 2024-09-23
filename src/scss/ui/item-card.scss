@@ -31,8 +31,13 @@
             & svg {
                 width: 3.2rem;
                 height: 3.2rem;
+                @include small-tablet{
+                    width: 5rem;
+                    height: 5rem;
+                }
             }
-            &_active svg{
+
+            &_active svg {
                 fill: $blue;
             }
 
@@ -47,9 +52,15 @@
         height: 24.8rem;
         overflow: hidden;
 
-        &img {
+        @include small-tablet {
+            height: 47rem;
+        }
+
+        & img {
             object-fit: contain;
             max-width: 100%;
+            height: 100%;
+
         }
     }
 
@@ -63,6 +74,9 @@
 
             &-e {
                 letter-spacing: .1rem;
+                @include small-tablet{
+                    font-size: 4rem;
+                }
 
                 &::after {
                     content: '₽';
@@ -93,11 +107,18 @@
             gap: 1rem;
             border-radius: .3rem;
             border: .2rem solid $gray-dark;
+            @include small-tablet{
+                padding: 1rem 0;
+            }
 
             &-btn {
                 padding: 0 1.2rem;
                 box-sizing: border-box;
                 font-weight: 700;
+
+                @include small-tablet {
+                    padding: 0 3rem;
+                }
 
                 &:disabled {
                     opacity: 0.5;
@@ -116,6 +137,8 @@
 
     & .btn-primary {
         width: 100%;
+        justify-content: center;
+       
     }
 
 }

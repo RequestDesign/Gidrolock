@@ -125,7 +125,7 @@
               </label>
             </li>
             <li class="clipboard">
-              <label class="radio">
+              <label class="radio ">
                 <input type="radio" name="test">
                 <span class="radio-default">
                 </span>
@@ -133,7 +133,7 @@
               </label>
             </li>
             <li class="clipboard">
-              <label class="checkbox">
+              <label class="checkbox form-input">
                 <input type="checkbox">
                 <span class="checkbox-check">
                   <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,67 +145,72 @@
                 <span class="checkbox-text txt14">checkbox-text txt14</span>
               </label>
             </li>
-            <li class="clipboard">
-              <label class="input-container input-text">
-                <input type="text" placeholder="input-text">
+            <li class="clipboard ">
+              <label class="input-container input-text form-input">
+                <input type="text" name="name" placeholder="input-text">
                 <span class="input-text-error-msg "></span>
               </label>
             </li>
             <li class="clipboard">
-              <label class="input-container input-text _error">
+              <label class="input-container input-text _error form-input">
                 <input type="text" required placeholder="required *">
                 <span class="input-text-error-msg ">error text</span>
               </label>
             </li>
 
             <li class="clipboard">
-              <div class="input-text ">
+              <div class="input-text form-input">
                 <div class="input-phone">
-                  <div class="input-phone__select drop-down-container">
-                    <button class="input-phone__select-current drop-down-target">
-                      <img class="input-phone__select-flag input-phone__select-current-flag"
-                        src="./assets/images/icons/flag-rus.svg" alt="flag">
-                      <img class="input-phone__select-current-arrow" src="./assets/images/icons/arrow-black.svg"
-                        alt="arrow">
-                    </button>
-                    <div class="input-phone__select-list">
-                      <div class="input-phone__select-list-wrp">
-                        <button class="input-phone__select-list-btn" data-mask="+7 (999) 999-99-99">
-                          <img class="input-phone__select-flag " src="./assets/images/icons/flag-rus.svg" alt="flag">
-                          +7
+                    <div class="input-phone__select drop-down-container">
+                        <button class="input-phone__select-current drop-down-target">
+                            <img class="input-phone__select-flag input-phone__select-current-flag"
+                                src="./assets/images/icons/flag-rus.svg" alt="flag">
+                            <img class="input-phone__select-current-arrow" src="./assets/images/icons/arrow-black.svg"
+                                alt="arrow">
                         </button>
-                        <button class="input-phone__select-list-btn" data-mask="+375 (999) 999-99-99">
-                          <img class="input-phone__select-flag " src="./assets/images/icons/flag-br.svg" alt="flag">
-                          +375
-                        </button>
-                        <button class="input-phone__select-list-btn" data-mask="+375 (999) 999-99-99">
-                          <img class="input-phone__select-flag " src="./assets/images/icons/flag-kz.svg" alt="flag">
-                          +7
-                        </button>
-                      </div>
+                        <div class="input-phone__select-list">
+                            <div class="input-phone__select-list-wrp">
+                                <button class="input-phone__select-list-btn" data-mask="ru">
+                                    <img class="input-phone__select-flag " src="./assets/images/icons/flag-rus.svg"
+                                        alt="flag">
+                                    +7
+                                </button>
+                                <button class="input-phone__select-list-btn" data-mask="br">
+                                    <img class="input-phone__select-flag " src="./assets/images/icons/flag-br.svg"
+                                        alt="flag">
+                                    +375
+                                </button>
+                                <button class="input-phone__select-list-btn" data-mask="kz">
+                                    <img class="input-phone__select-flag " src="./assets/images/icons/flag-kz.svg"
+                                        alt="flag">
+                                    +7
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <input type="text" required placeholder="87899798789">
+                    <input type="text" autocomplete="off" data-required="true" name="phone" placeholder="номер телефона">
                 </div>
                 <span class="input-text-error-msg "></span>
-              </div>
+            </div>
             </li>
             <li class="clipboard">
               <div class="select drop-down-container">
                 <button class="select__target drop-down-target">
-                  <input class="test-input txt16 txt16_medium" type="text" readonly value="defalut">
-                  <img src="./assets/images/icons/arrow-black.svg" alt="V">
+                    <input class="select__target-input txt16 txt16_medium" type="text" readonly name="choice one"
+                        value="value 1">
+                    <img src="./assets/images/icons/arrow-black.svg" alt="V">
                 </button>
                 <div class="select__items">
-                  <div class="select__items-list">
-                    <button class="select__items-list-e txt16 txt16_medium" disabled>value 1</button>
-                    <button class="select__items-list-e txt16 txt16_medium">value 2</button>
-                    <button class="select__items-list-e txt16 txt16_medium">value 3</button>
-                  </div>
+                    <div class="select__items-list">
+                        <button class="select__items-list-e txt16 txt16_medium" disabled >value
+                            1</button>
+                        <button class="select__items-list-e txt16 txt16_medium" >qwe</button>
+                        <button class="select__items-list-e txt16 txt16_medium">value 3</button>
+                    </div>
 
                 </div>
 
-              </div>
+            </div>
 
             </li>
 

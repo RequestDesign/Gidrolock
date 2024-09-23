@@ -18,11 +18,16 @@
     color: $black;
 
     @include small-tablet {
+        padding: 3rem;
         gap: 2rem;
+        font-size: 3rem;
+        line-height: 4rem;
+        padding: 3rem 4.4rem;
     }
 
     & svg,
     & img {
+        object-fit: contain;
         width: 3.2rem;
         height: 3.2rem;
     }
@@ -53,6 +58,10 @@
 
     &_small {
         padding: 1.4rem 2.3rem;
+        @include small-tablet{
+            padding: 1rem;
+        }
+        
     }
 
     &_green {
@@ -96,6 +105,8 @@
     letter-spacing: 0.02em;
     text-align: left;
     transition: gap .5s;
+    width: fit-content;
+
 
 
 
@@ -114,6 +125,7 @@
     & img {
         width: 2rem;
         height: 2rem;
+        transform: rotate(-90deg);
 
         @include small-tablet {
             width: 4rem;
@@ -139,7 +151,7 @@
 }
 
 
-.btn-icon{
+.btn-icon {
     background-color: $blue;
     border-radius: .3rem;
     display: flex;
@@ -147,18 +159,106 @@
     justify-content: center;
     width: 5.2rem;
     height: 5.2rem;
-    @include small-tablet{
+
+    @include small-tablet {
         width: 8rem;
         height: 8rem;
         border-radius: .4rem;
     }
 
-    & svg, & img{
+    & svg,
+    & img {
         width: 3.2rem;
         height: 3.2rem;
-        @include small-tablet{
+
+        @include small-tablet {
             width: 5rem;
             height: 5rem;
         }
     }
+}
+
+.btn-swiper {
+    background-color: rgba(0, 92, 143, 0.7);
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2.4rem 5.4rem 1.6rem 0px rgba(0, 0, 0, 0);
+    width: 6rem;
+    height: 6rem;
+
+    @include small-tablet {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    & svg,
+    & img {
+        width: 2.4rem;
+        height: 2.4rem;
+
+        @include small-tablet {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+    }
+
+    &:disabled {
+        background-color: $gray !important;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $blue;
+    }
+
+    &_overlayed {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        &.btn-swiper_left {
+            left: 1rem;
+        }
+
+        &.btn-swiper_right {
+            right: 1rem;
+
+        }
+    }
+
+
+    &_left {
+
+        & svg,
+        & img {
+            transform: rotate(180deg);
+        }
+
+
+        &:active {
+
+            & svg,
+            & img {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &_right {
+
+
+        &:active {
+
+            & svg,
+            & img {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+
+
 }

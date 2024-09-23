@@ -1,0 +1,126 @@
+.main-heading {
+
+    &__c {
+        display: flex;
+        flex-direction: column;
+        min-height: 50rem;
+
+        &-main {
+            width: 100%;
+            display: grid;
+            gap: 3rem;
+
+            @include small-tablet {
+               
+            }
+
+
+            &-slider {
+                width: 100%;
+
+
+
+                &-list {
+                    &-e {
+                        position: relative;
+                        display: grid;
+                        grid-template-columns: 50% 50%;
+
+
+                        @include small-tablet {
+                            grid-template-columns: 100%;
+
+                        }
+
+                        &-left {
+                            background-color: $blue;
+
+                            &-c {
+
+                                padding: 4rem;
+                                box-sizing: border-box;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 4rem;
+                                width: 56rem;
+
+                                @include small-tablet {
+                                    width: 90%;
+                                }
+
+                            }
+
+                        }
+
+                        &-right {
+                            background-color: rgba(207, 207, 209, 1);
+                            display: flex;
+                            overflow: hidden;
+
+                            & img {
+                                object-fit: cover;
+                                object-position: bottom;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-special {
+                grid-column: 2;
+                grid-row: 1;
+           
+                width: 42rem;
+                height: 100%;
+                padding: 2.4rem;
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                gap: 3.6rem;
+
+                @include small-tablet {
+                    width: 100%;
+                    height: auto;
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+
+                &-top {
+                    padding: .9rem 1.6rem;
+                    box-sizing: border-box;
+                    background-color: $yellow;
+                    width: fit-content;
+                }
+
+                &-img {
+                    max-width: 100%;
+                    max-height: 27.4rem;
+                    object-fit: contain;
+                    object-position: center;
+                }
+
+                &-bottom {
+                    margin-top: auto;
+                    display: flex;
+                    gap: 2rem;
+
+                    &-ttl {
+                        -webkit-line-clamp: 2;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                    & .btn-primary{
+                        padding: 3rem;
+                        & img{
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

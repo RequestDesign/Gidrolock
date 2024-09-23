@@ -1,0 +1,98 @@
+.choice-system {
+    background-color: $blue;
+
+    &__c {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 77rem;
+
+        @include small-tablet {
+            grid-template-columns: 100%;
+            grid-template-rows: 71rem auto;
+        }
+
+        &-left {
+
+            padding: 11rem 2.4rem 0;
+
+            &-top {
+                display: flex;
+                justify-content: space-between;
+
+                & .tl2 {
+                    white-space: nowrap;
+                }
+
+                &-pagination {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    color: $white;
+
+                    font-family: Rebrand Txt;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    line-height: 110%;
+                    letter-spacing: 0.05em;
+                    margin-right: 4rem;
+                    @include small-tablet{
+                        font-size: 3rem;
+                    }
+
+
+
+                }
+            }
+
+            &-slider {
+                margin-top: 4rem;
+
+                &-form {
+                    padding-bottom: 11rem;
+
+
+                    &-e {
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        padding-right: 20rem;
+
+                        @include small-tablet {
+                            padding-right: 0;
+                        }
+
+                        & .btn-primary {
+                            margin-top: 4rem;
+
+                        }
+
+                        & .select {
+                            margin-top: 1rem;
+                        }
+
+                        & .select+p {
+                            margin-top: 3.2rem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &-right {
+            height: 100%;
+            display: flex;
+
+            @include small-tablet {
+                grid-row: 1;
+            }
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+
+            }
+        }
+    }
+}
