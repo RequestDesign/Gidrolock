@@ -1,0 +1,129 @@
+.tl1 {
+  font-family: 'Rebrand Txt';
+  font-weight: 800;
+  font-size: 4.8rem;
+  line-height: 120%;
+
+  @include small-tablet {
+    font-size: 2.4rem;
+    line-height: 110%;
+  }
+}
+
+.tl2 {
+  font-family: 'Rebrand Txt';
+  font-weight: 500;
+  font-size: 6rem;
+  line-height: 100%;
+
+  @include small-tablet {
+    font-size: 2.4rem;
+    line-height: 50%;
+  }
+}
+
+.tl3 {
+  font-family: 'Rebrand Txt';
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 2.4rem;
+}
+
+.tl4 {
+  font-family: 'Rebrand Txt';
+  font-weight: 600;
+  font-size: 2.0rem;
+  line-height: 135%;
+  @include small-tablet{
+    font-size: 3rem;
+  }
+ 
+}
+
+
+// --------------------------------------------------------------------------
+.txt18 {
+  font-family: 'Rebrand Txt';
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+
+  &_bold {
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  @include small-tablet {
+    font-size: 3rem;
+    line-height: 110%;
+
+  }
+}
+
+.txt16 {
+  font-family: 'Rebrand Txt';
+  font-size: 1.6rem;
+  line-height: 120%;
+  font-weight: 400;
+  &_medium {
+    font-weight: 600;
+  }
+  @include small-tablet{
+    font-size: 3rem;
+  }
+}
+
+.txt15 {
+  font-family: 'Rebrand Txt';
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 110%;
+
+  &_bold {
+    font-weight: 600;
+  }
+
+  &_medium {
+    font-weight: 500;
+  }
+
+  &_caps {
+    text-transform: uppercase;
+
+  }
+
+}
+
+.txt14 {
+  font-family: 'Rebrand Txt';
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 110%;
+  @include small-tablet{
+    font-size: 3rem;
+  }
+}
+
+.txt12 {
+  font-family: 'Rebrand Txt';
+  font-size: 1.2rem;
+  line-height: 140%;
+  font-weight: 600;
+
+  &_medium {
+    font-size: 1.5rem;
+    line-height: 130%;
+    font-weight: 500;
+  }
+
+
+}
+
+//---------------------------------------------------------
+
+.col-gr{
+  color: $gray-dark;
+}
+.col-bl{
+  color: $blue;
+}

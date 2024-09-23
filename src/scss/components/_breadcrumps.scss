@@ -1,0 +1,24 @@
+.breadcrumps {
+    &+section {
+        margin-top: 6rem !important;
+    }
+
+    &__c {
+        display: flex;
+        gap: .5rem;
+
+        &-e:hover{
+            color: $gray-dark;
+        }
+
+        &-e+a::before {
+            content: '/';
+            margin-right: .5rem;
+        }
+        &-e:last-of-type{
+            color: $blue;
+        }
+    }
+
+
+}

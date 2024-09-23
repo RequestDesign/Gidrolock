@@ -1,0 +1,25 @@
+.marked-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    &__e {
+        display: flex;
+
+       
+        gap: 1rem;
+
+        @include small-tablet {
+            gap: 2rem;
+        }
+
+        & svg {
+            margin-top: 1rem;
+            width: .6rem;
+            height: .6rem;
+            @include small-tablet{
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

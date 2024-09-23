@@ -1,0 +1,202 @@
+.footer {
+    background-color: $white;
+    border-top: .2rem solid $gray-dark;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+
+    &__c {
+        display: grid;
+        grid-template-columns: 40rem repeat(4, 1fr);
+        gap: 9rem;
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+
+        }
+
+        &-info {
+            @include small-tablet {}
+
+            &-img {
+                width: 23rem;
+
+                & img {
+                    width: 100%;
+                    object-fit: contain;
+                    margin-bottom: .7rem;
+                }
+            }
+
+            & .tl4 {
+                margin-top: 6.9rem;
+                margin-bottom: 2.4rem;
+                text-transform: uppercase;
+                max-width: 30rem;
+
+                @include small-tablet {
+                    margin-top: 4rem;
+                    max-width: 70%;
+                }
+            }
+
+            &-form {
+                display: grid;
+                grid-template-columns: auto 5rem;
+                grid-template-rows: auto auto;
+                gap: 1rem 0;
+
+                &-submit {
+
+
+                    height: 5.6rem;
+                    background-color: $gray;
+
+                    &:hover img {
+                        transform: translate(1rem, 0);
+                    }
+
+                    & img {
+                        max-width: 50%;
+                        object-fit: contain;
+                        transition: transform .5s;
+                    }
+                }
+
+                & label input {
+                    height: 5.6rem;
+                    background-color: $gray;
+                    border: none;
+                }
+
+
+
+            }
+        }
+
+        &-links {
+            &-e {
+                display: grid;
+                grid-template-rows: auto auto;
+
+                @include small-tablet {
+                    grid-template-rows: min-content 0fr;
+                    transition: all .5s;
+
+                    &._opened {
+                        grid-template-rows: min-content 1fr;
+                    }
+
+                }
+
+                &-target {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1.2rem 0;
+
+                    @include small-tablet {
+                        padding: 2.4rem 0;
+                        border-bottom: .5rem solid $gray-dark;
+
+                        & img {
+                            width: 3rem;
+                            height: 3rem;
+                            transition: all .5s;
+                        }
+
+                        &._opened img {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                &-items {
+                    overflow: hidden;
+                    height: 100%;
+
+                    &-list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.6rem;
+                        margin-top: 2rem;
+
+                        & a:hover {
+                            color: $blue;
+                        }
+
+                        @include small-tablet {
+                            gap: 3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @include small-tablet {
+                grid-row: 2;
+            }
+
+            &-e {
+                display: flex;
+                gap: 2rem;
+                align-items: flex-start;
+
+                & img {
+                    width: 2.4rem;
+                    height: 2.4rem;
+
+                    @include small-tablet {
+                        width: 4.8rem;
+                        height: 4.8rem;
+                    }
+                }
+
+                & span {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        &-social {
+            display: flex;
+            gap: 2rem;
+
+            @include small-tablet {
+                grid-row: 3;
+            }
+        }
+
+        &-sign {
+            grid-column: 4 / span 2;
+            justify-self: flex-end;
+
+            @include small-tablet {
+                grid-column: 1;
+                justify-self: center;
+            }
+
+            & p {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                @include small-tablet{
+                    flex-direction: column;
+                }
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+
+
+        }
+    }
+}
