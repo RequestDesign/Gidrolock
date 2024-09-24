@@ -2,6 +2,7 @@
     &__c {
         &-slider {
             margin-top: 4rem;
+
             &-e {
                 display: flex;
                 flex-direction: column;
@@ -12,13 +13,102 @@
                     height: 54.5rem;
                     display: flex;
                     position: relative;
-                    background-color: $white;
+
+                    @include small-tablet {
+                        height: 65.4rem;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+
+
+                    &-first {
+                        position: absolute;
+                        display: grid;
+                        grid-template-columns: 45.2rem 45.2rem;
+                        grid-template-rows: 26.2rem 26.2rem;
+                        gap: 2rem;
+                        z-index: 2;
+
+                        @include small-tablet {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            grid-template-columns: 48% 48%;
+                            grid-template-rows: 48% 48%;
+                            gap: 4%;
+                            
+                        }
+
+                        & div{ 
+                            @include small-tablet{
+                                overflow: hidden;
+                                display: flex;
+                            }
+                            
+                            & img {
+                            width: 100%;
+                            min-height: 100%;
+                            object-fit: cover;
+
+                            @include small-tablet {
+                                width: auto;
+                                object-fit: cover;
+                                object-position: bottom;
+                            }
+                        }}
+
+
+                    }
+
+                    &-two {
+                        position: relative;
+                        width: 100%;
+                        flex-grow: 1;
+
+                        & img {
+                            position: absolute;
+                            z-index: 3;
+                            width: 40rem;
+                            height: 40rem;
+                            object-fit: contain;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-10%, -50%);
+
+                            @include small-tablet {
+                                width: 60rem;
+                                height: 60rem;
+                                position: relative;
+                                transform: translate(0, 0);
+                                top: 0;
+                                left: 0;
+                                margin: auto;
+                               
+                            }
+                        }
+
+                    }
+
+                    &-three {
+                        object-fit: contain;
+                        width: 85%;
+                        height: 100%;
+                        object-position: center;
+                        margin: auto;
+                        @include small-tablet{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+
+                    }
                 }
-                &-bottom{
+
+                &-bottom {
                     display: flex;
                     align-items: flex-start;
                     gap: 1rem;
-                    
+
                 }
             }
         }

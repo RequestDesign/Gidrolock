@@ -11,7 +11,13 @@
 
                 position: relative;
                 overflow: hidden;
+
                 /*  height: 26.8rem; */
+                @media screen and (min-width: 47em) {
+                    width: 41rem !important;
+                    height: 28.8rem !important;
+
+                }
 
 
 
@@ -40,8 +46,14 @@
                 }
 
                 &_big {
-                    width: 87.7rem;
-
+                    @media screen and (min-width: 47em) {
+                        width: 85rem !important;
+                        height: 28.8rem !important;
+    
+    
+                    }
+    
+                  
                     @include small-tablet {}
 
                 }

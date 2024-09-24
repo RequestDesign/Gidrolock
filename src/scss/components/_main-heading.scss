@@ -1,4 +1,14 @@
 .main-heading {
+    @include small-tablet {
+        margin-top: 0rem;
+    }
+
+    & .container {
+        @include small-tablet {
+            padding: 0;
+        }
+
+    }
 
     &__c {
         display: flex;
@@ -10,9 +20,7 @@
             display: grid;
             gap: 3rem;
 
-            @include small-tablet {
-               
-            }
+            @include small-tablet {}
 
 
             &-slider {
@@ -25,7 +33,7 @@
                         position: relative;
                         display: grid;
                         grid-template-columns: 50% 50%;
-
+                        background-color: rgba(207, 207, 209, 1);
 
                         @include small-tablet {
                             grid-template-columns: 100%;
@@ -33,7 +41,25 @@
                         }
 
                         &-left {
-                            background-color: $blue;
+                            position: relative;
+
+
+                            &-bg {
+                                position: absolute;
+                                z-index: 1;
+                                left: 0;
+                                height: 100%;
+                                width: auto;
+                                object-fit: contain;
+
+                                @include small-tablet {
+                                    width: 100%;
+                                    height: auto;
+                                    object-fit: cover;
+                                    transform: translateY(-10rem);
+
+                                }
+                            }
 
                             &-c {
 
@@ -43,9 +69,12 @@
                                 flex-direction: column;
                                 gap: 4rem;
                                 width: 56rem;
+                                position: relative;
+                                z-index: 2;
 
                                 @include small-tablet {
                                     width: 90%;
+
                                 }
 
                             }
@@ -53,12 +82,12 @@
                         }
 
                         &-right {
-                            background-color: rgba(207, 207, 209, 1);
+
                             display: flex;
                             overflow: hidden;
 
                             & img {
-                                object-fit: cover;
+                                object-fit: contain;
                                 object-position: bottom;
 
                             }
@@ -70,7 +99,7 @@
             &-special {
                 grid-column: 2;
                 grid-row: 1;
-           
+
                 width: 42rem;
                 height: 100%;
                 padding: 2.4rem;
@@ -91,6 +120,7 @@
                     box-sizing: border-box;
                     background-color: $yellow;
                     width: fit-content;
+
                 }
 
                 &-img {
@@ -106,18 +136,28 @@
                     gap: 2rem;
 
                     &-ttl {
-                        -webkit-line-clamp: 2;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
                         overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -moz-box;
+                        -moz-box-orient: vertical;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        line-clamp: 2;
+                        box-orient: vertical;
                     }
-                    & .btn-primary{
-                        padding: 3rem;
-                        & img{
-                            width: 3rem;
-                            height: 3rem;
+                    @include small-tablet{
+                        & .btn-primary {
+                            padding: 3rem;
+    
+                            & img {
+                                width: 3rem;
+                                height: 3rem;
+                            }
                         }
                     }
+
+                   
                 }
             }
         }

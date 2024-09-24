@@ -1,6 +1,6 @@
 import $ from "jquery";
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid } from 'swiper/modules';
+import { Navigation, Pagination, Grid, Autoplay } from 'swiper/modules';
 import { rem } from "../utils/constants";
 import initForms from "../utils/forms";
 import initSelect from "../utils/select";
@@ -162,11 +162,16 @@ function initSwipers() {
     const heading = document.querySelector('.main-heading__c-main-slider')
     if (heading) {
         new Swiper(heading, {
-            modules: [Pagination],
+            modules: [Pagination, Autoplay],
             loop: true,
             slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: rem(3),
+            grabCursor: false,
+            autoplay: {
+                delay: 3000,
+                pauseOnMouseEnter: true,
+            },
             pagination: {
                 el: '.header-pagination'
             },
