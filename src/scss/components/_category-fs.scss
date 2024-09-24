@@ -1,0 +1,26 @@
+.category-fs {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &__c {
+        
+        &-top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            gap: 2.4rem;
+            margin-bottom: 4rem;
+            @include small-tablet {
+                grid-template-columns: 100%;
+            }
+            & .btn-nav{
+                justify-self: flex-end;
+            }
+        }
+        &-link{
+            margin-top: 4rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

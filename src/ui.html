@@ -36,8 +36,16 @@
             <li>
               <p class="tl3">btns</p>
             </li>
+            <li class="clipboard">
+              <div class="filter-tag">
+                <span class="txt16">filter name</span>
+                <button class="filter-tag__btn">
+                  <img src="./assets/images/icons/x-black.svg" alt="x">
+                </button>
+              </div>
+            </li>
 
-            <li>
+            <li class="clipboard">
               <button class="btn-primary">
                 btn-primary
               </button>
@@ -161,56 +169,53 @@
             <li class="clipboard">
               <div class="input-text form-input">
                 <div class="input-phone">
-                    <div class="input-phone__select drop-down-container">
-                        <button class="input-phone__select-current drop-down-target">
-                            <img class="input-phone__select-flag input-phone__select-current-flag"
-                                src="./assets/images/icons/flag-rus.svg" alt="flag">
-                            <img class="input-phone__select-current-arrow" src="./assets/images/icons/arrow-black.svg"
-                                alt="arrow">
+                  <div class="input-phone__select drop-down-container">
+                    <button class="input-phone__select-current drop-down-target">
+                      <img class="input-phone__select-flag input-phone__select-current-flag"
+                        src="./assets/images/icons/flag-rus.svg" alt="flag">
+                      <img class="input-phone__select-current-arrow" src="./assets/images/icons/arrow-black.svg"
+                        alt="arrow">
+                    </button>
+                    <div class="input-phone__select-list">
+                      <div class="input-phone__select-list-wrp">
+                        <button class="input-phone__select-list-btn" data-mask="ru">
+                          <img class="input-phone__select-flag " src="./assets/images/icons/flag-rus.svg" alt="flag">
+                          +7
                         </button>
-                        <div class="input-phone__select-list">
-                            <div class="input-phone__select-list-wrp">
-                                <button class="input-phone__select-list-btn" data-mask="ru">
-                                    <img class="input-phone__select-flag " src="./assets/images/icons/flag-rus.svg"
-                                        alt="flag">
-                                    +7
-                                </button>
-                                <button class="input-phone__select-list-btn" data-mask="br">
-                                    <img class="input-phone__select-flag " src="./assets/images/icons/flag-br.svg"
-                                        alt="flag">
-                                    +375
-                                </button>
-                                <button class="input-phone__select-list-btn" data-mask="kz">
-                                    <img class="input-phone__select-flag " src="./assets/images/icons/flag-kz.svg"
-                                        alt="flag">
-                                    +7
-                                </button>
-                            </div>
-                        </div>
+                        <button class="input-phone__select-list-btn" data-mask="br">
+                          <img class="input-phone__select-flag " src="./assets/images/icons/flag-br.svg" alt="flag">
+                          +375
+                        </button>
+                        <button class="input-phone__select-list-btn" data-mask="kz">
+                          <img class="input-phone__select-flag " src="./assets/images/icons/flag-kz.svg" alt="flag">
+                          +7
+                        </button>
+                      </div>
                     </div>
-                    <input type="text" autocomplete="off" data-required="true" name="phone" placeholder="номер телефона">
+                  </div>
+                  <input type="text" autocomplete="off" data-required="true" name="phone" placeholder="номер телефона">
                 </div>
                 <span class="input-text-error-msg "></span>
-            </div>
+              </div>
             </li>
             <li class="clipboard">
               <div class="select drop-down-container">
                 <button class="select__target drop-down-target">
-                    <input class="select__target-input txt16 txt16_medium" type="text" readonly name="choice one"
-                        value="value 1">
-                    <img src="./assets/images/icons/arrow-black.svg" alt="V">
+                  <input class="select__target-input txt16 txt16_medium" type="text" readonly name="choice one"
+                    value="value 1">
+                  <img src="./assets/images/icons/arrow-black.svg" alt="V">
                 </button>
                 <div class="select__items">
-                    <div class="select__items-list">
-                        <button class="select__items-list-e txt16 txt16_medium" disabled >value
-                            1</button>
-                        <button class="select__items-list-e txt16 txt16_medium" >qwe</button>
-                        <button class="select__items-list-e txt16 txt16_medium">value 3</button>
-                    </div>
+                  <div class="select__items-list">
+                    <button class="select__items-list-e txt16 txt16_medium" disabled>value
+                      1</button>
+                    <button class="select__items-list-e txt16 txt16_medium">qwe</button>
+                    <button class="select__items-list-e txt16 txt16_medium">value 3</button>
+                  </div>
 
                 </div>
 
-            </div>
+              </div>
 
             </li>
 
@@ -218,6 +223,25 @@
           <ul>
             <li>
               <p class="tl3">Остальное</p>
+            </li>
+            <li class="clipboard">
+              <div class="drop-down-container">
+                <button class="drop-down-target">dropdown
+                  <span class="drop-down-target-img">
+                    <img src="./assets/images/icons/arrow-black.svg" alt="v">
+                  </span>
+                </button>
+                <div>
+                  <ul>
+                    <li>
+                      item
+                    </li>
+                    <li>
+                      item
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li class="clipboard">
               <section class="breadcrumps">
@@ -314,7 +338,7 @@
               </ul>
             </li>
 
-            <li>
+            <li class="clipboard">
               <div class="aside-delivery">
                 <img class="aside-delivery__img" src="./assets/images/icons/car.svg" alt="car">
                 <div class="aside-delivery__top">
@@ -341,6 +365,15 @@
               </div>
 
 
+            </li>
+
+            <li class="clipboard">
+              <div class="category-slide swiper-slide ">
+                <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
+                <a href="#" class="tl3 col-wh">
+                  <strong> Блоки управления </strong>
+                </a>
+              </div>
             </li>
 
           </ul>

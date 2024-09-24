@@ -4,6 +4,7 @@ import { Navigation, Pagination, Grid, Autoplay } from 'swiper/modules';
 import { rem } from "../utils/constants";
 import initForms from "../utils/forms";
 import initSelect from "../utils/select";
+import initCatalogFilterOpener from '../components/catalog'
 
 
 
@@ -15,6 +16,7 @@ $(function () {
     choiceSystemSwiper()
     initSelect()
     initMobileNav()
+    initCatalogFilterOpener()
 
     /*   const forms = document.querySelectorAll('.form')
       if (forms) {
@@ -202,6 +204,85 @@ function initSwipers() {
         })
     }
 
+    const catalogHead = document.querySelector('.catalog-head-swiper')
+    if (catalogHead) {
+        new Swiper(catalogHead, {
+            modules: [Pagination],
+            loop: false,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: rem(3),
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
+
+                }
+            },
+            pagination: {
+                el: '.catalog-head-pagination'
+            }
+
+
+        })
+    }
+
+    const catalogDefense = document.querySelector('.catalog-defense__c-right')
+    if (catalogDefense) {
+        new Swiper(catalogDefense, {
+            modules: [Pagination, Grid],
+            loop: false,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: rem(3),
+            grid: {
+                rows: 1
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 2,
+                    grid: {
+                        rows: 2,
+                        fill: 'row'
+
+                    },
+
+                }
+            },
+            pagination: {
+                el: '.catalog-defense-pagination'
+            },
+
+        })
+    }
+
+    const categoryFs = document.querySelectorAll('.category-fs-slider')
+    if (categoryFs) {
+        categoryFs.forEach((el) => {
+            new Swiper(el, {
+                modules: [Pagination],
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: rem(3),
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 1,
+
+                    }
+                },
+                pagination: {
+                    el: el.closest('.category-fs').querySelector('.category-fs-pagination')
+                }
+
+
+            })
+        })
+
+    }
 
 }
 function choiceSystemSwiper() {
@@ -234,6 +315,7 @@ function choiceSystemSwiper() {
 function initMobileNav() {
     const target = document.querySelector('.mobile-nav')
     if (!target) return
+    
     let scrollStart = 0
     document.addEventListener('scroll', () => {
         if (window.scrollY > scrollStart + 50) {

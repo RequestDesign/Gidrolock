@@ -28,8 +28,8 @@
     & svg,
     & img {
         object-fit: contain;
-        width: 3.2rem;
-        height: 3.2rem;
+        max-width: 3.2rem;
+        max-height: 3.2rem;
     }
 
     &:hover,
@@ -54,6 +54,11 @@
         cursor: default;
 
 
+    }
+    &_img-right{
+        & img, & svg{
+            transform: rotate(-90deg);
+        }
     }
 
     &_small {
@@ -124,14 +129,10 @@
 
     & svg,
     & img {
-        width: 2rem;
-        height: 2rem;
+        max-width: 50%;
+        max-height: 50%;
         transform: rotate(-90deg);
 
-        @include small-tablet {
-            width: 4rem;
-            height: 4rem;
-        }
     }
 
     &_ul {

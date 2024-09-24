@@ -7,28 +7,83 @@
 @import './item-card';
 @import './marked-list';
 @import './aside-delivery';
+@import './category-slide';
+@import './filter-tag'; 
+@import './drop-down'; 
 
 
 
 /* swiper */
-.swiper-pagination-bullets{
-    display: flex ;
+.swiper-pagination-bullets {
+    display: flex;
     justify-content: center;
     margin-top: 2rem;
-    @include small-tablet{
-    margin-top: 4rem;
+
+    @include small-tablet {
+        margin-top: 4rem;
     }
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     background-color: $blue;
     opacity: .5;
     width: 1.2rem;
     height: 1.2rem;
-    @include small-tablet{
+
+    @include small-tablet {
         width: 2.4rem;
         height: 2.4rem;
     }
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
     opacity: 1;
+}
+
+/* swiper */
+
+.col {
+    &-gr {
+        color: $gray-dark !important;
+    }
+
+    &-bl {
+        color: $blue !important;
+    }
+
+    &-wh {
+        color: $white !important;
+    }
+    &-bl{
+        color: $black !important;
+    }
+
+}
+
+.bg {
+    padding: .5rem 2rem;
+    box-sizing: border-box;
+
+    @include small-tablet {
+        padding: 1rem 2.2rem;
+    }
+
+    &_wh {
+        background-color: $white;
+    }
+
+    &_gr {
+        background-color: $green;
+    }
+
+    &_bl {
+        background-color: $blue;
+    }
+
+    &_ye {
+        background-color: $yellow;
+    }
+}
+.fit{
+    width: fit-content;
 }

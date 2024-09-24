@@ -4,7 +4,8 @@
     padding: 6.8rem 0;
 
     @include small-tablet {
-        padding: 1.4rem 0;
+        padding: 1.4rem ;
+       
     }
 
     &__c {
@@ -42,19 +43,68 @@
                 & svg {
                     width: 3.2rem;
                     height: 3.2rem;
-                    @include small-tablet{
+
+                    @include small-tablet {
                         width: 6.4rem;
-                        height: 6.4rem; 
+                        height: 6.4rem;
                     }
                 }
             }
         }
-        & .btn-primary{
-            @include small-tablet{
+
+        & .btn-primary {
+            @include small-tablet {
                 width: 100%;
                 justify-content: center;
             }
         }
 
+    }
+
+    @media screen and (min-width: 48em) {
+        &_ss {
+
+            padding: 4rem;
+            box-sizing: border-box;
+
+
+            & .banner-fs__c {
+
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-areas:
+                    'logo btn'
+                    'subhead subhead'
+                    'list list';
+                gap: 4rem;
+
+                &-logo {
+                    grid-area: logo;
+                }
+
+                & .btn-primary {
+                    grid-area: btn;
+                }
+
+                & .tl3 {
+                    grid-area: subhead;
+                }
+
+                &-list {
+                    grid-area: list;
+                    flex-direction: row;
+
+                    &-e {
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        max-width: 17rem;
+                    }
+                }
+
+
+
+            }
+        }
     }
 }

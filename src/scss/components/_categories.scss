@@ -7,57 +7,7 @@
             grid-template-rows: repeat(2, auto); */
 
 
-            &-e {
-
-                position: relative;
-                overflow: hidden;
-
-                /*  height: 26.8rem; */
-                @media screen and (min-width: 47em) {
-                    width: 41rem !important;
-                    height: 28.8rem !important;
-
-                }
-
-
-
-                &-img {
-                    object-fit: cover;
-                    object-position: center;
-                    min-height: 100%;
-                }
-
-                & a {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    background-color: rgba(0, 0, 0, 0.123);
-                    border-bottom: .5rem solid $blue;
-                    display: flex;
-                    align-items: flex-end;
-                    padding: 2.3rem;
-                    box-sizing: border-box;
-
-                    &:hover {
-                        border-color: $yellow;
-                    }
-                }
-
-                &_big {
-                    @media screen and (min-width: 47em) {
-                        width: 85rem !important;
-                        height: 28.8rem !important;
-    
-    
-                    }
-    
-                  
-                    @include small-tablet {}
-
-                }
-            }
+           
         }
 
     }

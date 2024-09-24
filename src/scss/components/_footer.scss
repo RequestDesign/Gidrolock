@@ -83,57 +83,26 @@
 
         &-links {
             &-e {
-                display: grid;
-                grid-template-rows: auto auto;
-
+              display: block !important;
                 @include small-tablet {
-                    grid-template-rows: min-content 0fr;
-                    transition: all .5s;
-
-                    &._opened {
-                        grid-template-rows: min-content 1fr;
-                    }
-
+                    display: grid !important;
                 }
 
                 &-target {
-                    display: flex;
-                    justify-content: space-between;
                     padding: 1.2rem 0;
 
                     @include small-tablet {
                         padding: 2.4rem 0;
                         border-bottom: .5rem solid $gray-dark;
 
-                        & img {
-                            width: 3rem;
-                            height: 3rem;
-                            transition: all .5s;
-                        }
-
-                        &._opened img {
-                            transform: rotate(180deg);
-                        }
                     }
                 }
 
                 &-items {
-                    overflow: hidden;
-                    height: 100%;
-
                     &-list {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 1.6rem;
-                        margin-top: 2rem;
-
                         & a:hover {
                             color: $blue;
-                        }
-
-                        @include small-tablet {
-                            gap: 3.2rem;
-                        }
+                        }        
                     }
                 }
             }

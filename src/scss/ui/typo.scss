@@ -45,6 +45,18 @@
 
 
 // --------------------------------------------------------------------------
+.txt20 {
+  font-family: 'Rebrand Txt';
+  font-size: 2rem;
+  line-height: 110%;
+  font-weight: 400;
+
+  @include small-tablet {
+    font-size: 3rem;
+    line-height: 110%;
+
+  }
+}
 .txt18 {
   font-family: 'Rebrand Txt';
   font-size: 1.8rem;
@@ -124,12 +136,3 @@
 
 //---------------------------------------------------------
 
-.col-gr{
-  color: $gray-dark;
-}
-.col-bl{
-  color: $blue;
-}
-.col-wh{
-  color: $white;
-}

@@ -26,6 +26,7 @@
                 left: 100%;
                 transform: translate(-100%, 0);
                 right: 0;
+                background-color: $blue;
             }
         }
 
@@ -67,8 +68,8 @@
         cursor: pointer;
 
         @include small-tablet {
-            width: 13.2rem;
-            height: 5.6rem;
+            width: 10rem;
+            height: 4rem;
         }
 
         &::after {
@@ -82,6 +83,10 @@
             border: .4rem solid $white;
             border-radius: 50%;
             transition: all .5s;
+            @include small-tablet{
+                width: 3.4rem;
+                height: 3.4rem;
+            }
         }
 
     }

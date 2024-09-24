@@ -1,0 +1,26 @@
+.filter-tag {
+    padding: .6rem 1.6rem;
+    box-sizing: border-box;
+   
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: $white;
+    width: fit-content;
+
+    @include small-tablet{
+        padding: 1rem 3rem;
+    }
+    &__btn {
+        width: 1.5rem;
+        height: 1.5rem;
+        @include small-tablet{
+            width: 3rem;
+            height: 3rem;
+        }
+        &:hover {
+            opacity: .7;
+        }
+       
+    }
+}

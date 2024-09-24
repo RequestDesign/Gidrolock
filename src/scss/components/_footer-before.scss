@@ -1,0 +1,21 @@
+.footer-before {
+    margin-bottom: 10rem;
+
+    &__c {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        gap: 2%;
+        @include small-tablet{
+           display: flex;
+           flex-direction: column-reverse;
+           gap: 4rem;
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+    }
+}
