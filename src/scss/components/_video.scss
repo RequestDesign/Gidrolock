@@ -1,0 +1,63 @@
+.video {
+    &__c {
+        display: flex;
+        flex-direction: column;
+        gap: 3.6rem;
+
+
+
+        &-wrp {
+            position: relative;
+            height: 67rem;
+            @include small-tablet{
+                height: 40rem;
+            }
+
+            &-overlay {
+                cursor: pointer;
+                position: absolute;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                & .video__c-wrp-overlay-btn{
+                    background-color: $white;
+                    width: 8rem;
+                    height: 8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    & svg{
+                        max-width: 50%;
+                        max-height:50% ;
+                    }
+                }
+
+                &:hover {
+                    & .video__c-wrp-overlay-btn {
+                        background-color: $blue;
+
+                        & svg {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+
+
+            &-item {
+                height: 100%;
+                flex-grow: 1;
+                width: 100%;
+                background-color: $white;
+
+            }
+        }
+
+    }
+}

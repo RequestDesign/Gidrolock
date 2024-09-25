@@ -1,4 +1,4 @@
-.drop-down-container {
+.drop-down-container-default {
     transition: all .5s;
     display: grid;
     grid-template-rows: min-content 0fr;
@@ -9,8 +9,11 @@
     }
 }
 
-.drop-down-target {
+
+
+.drop-down-target-default {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     &-img {
@@ -20,6 +23,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
 
         @include small-tablet {
             width: 6rem;
@@ -41,7 +45,7 @@
     }
 }
 
-.drop-down-target+div {
+.drop-down-target-default+div {
     overflow: hidden;
     height: 100%;
 
@@ -58,7 +62,8 @@
 
         & li {
             padding-left: 2rem;
-            @include small-tablet{
+
+            @include small-tablet {
                 padding-left: 4rem;
             }
         }

@@ -55,8 +55,11 @@
 
 
     }
-    &_img-right{
-        & img, & svg{
+
+    &_img-right {
+
+        & img,
+        & svg {
             transform: rotate(-90deg);
         }
     }
@@ -112,6 +115,7 @@
     text-align: left;
     transition: gap .5s;
     width: fit-content;
+    white-space: nowrap;
 
 
 
@@ -122,16 +126,15 @@
         line-height: 3.4rem;
     }
 
-    &:hover {
-        gap: 1.5rem;
-    }
+ 
 
 
     & svg,
     & img {
-        max-width: 50%;
-        max-height: 50%;
-        transform: rotate(-90deg);
+        max-width: 2.4rem;
+        max-height: 2.4rem;
+
+        @include small-tablet {}
 
     }
 
@@ -148,6 +151,11 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 2.34rem;
+
+        & svg,
+        & img {
+            transform: rotate(-90deg);
+        }
 
     }
 }
@@ -198,7 +206,7 @@
     & svg,
     & img {
         max-width: 30%;
-        max-height: 30%;
+        
 
 
         @include small-tablet {
@@ -209,6 +217,7 @@
 
     &:disabled {
         background-color: $gray !important;
+      display: none;
     }
 
     &:hover {
@@ -262,5 +271,54 @@
     }
 
 
+
+}
+
+.btn-download {
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem;
+    box-sizing: border-box;
+    background-color: $white;
+
+    @include small-tablet {
+        padding: 1.6rem;
+    }
+    & span {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__img {
+        width: 5.2rem;
+        height: 5.2rem;
+        justify-content: center;
+        background: linear-gradient(90deg, #016192 0%, #014B7B 100%);
+        @include small-tablet{
+            width: 10rem;
+            height: 10rem;
+        }
+
+        & svg,
+        & img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    &__link {
+        justify-content: center;
+
+        & img,
+        & svg {
+            width: 2.4rem;
+            height: 2.4rem;
+            @include small-tablet{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
 
 }

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html"></include>
+        <main class="disable-margin">
+            <include src="./components/_breadCrumps.html"></include>
+            <section class="card-page-top">
+                <div class="container card-page-top__c">
+                    <h1 class=" card-page-top__c-head tl2">название Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Voluptatem odio,
+                        quos minus eum eaque libero? Rem eos fugiat beatae? Vel?</h1>
+                    <div class="card-page-top__c-img">
+                        <div class="card-page-top__c-img-overlay">
+                            <span class="bg bg_ye txt16 card-page-top__c-img-overlay-discount">10</span>
+                            <button class="card-page-top__c-img-overlay-favorite">
+                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.58812 16.9424L6.58901 16.9433L16.118 25.8049C16.3555 26.0257 16.6706 26.15 17 26.15C17.3294 26.15 17.6445 26.0257 17.882 25.8049L27.411 16.9433L27.4119 16.9424C28.8412 15.617 29.65 13.7576 29.65 11.8137V11.509C29.65 8.25535 27.29 5.4773 24.0643 4.94091L6.58812 16.9424ZM6.58812 16.9424C5.1588 15.617 4.35 13.7576 4.35 11.8137V11.509C4.35 8.25535 6.71003 5.47731 9.9357 4.94091L6.58812 16.9424ZM17 8.02842L16.4001 7.43088L15.7673 6.80052C14.2426 5.28171 12.0711 4.58646 9.93589 4.94088L17 8.02842ZM17 8.02842L17.5999 7.43088M17 8.02842L17.5999 7.43088M17.5999 7.43088L18.2327 6.80052C19.7574 5.28171 21.9289 4.58646 24.0641 4.94088L17.5999 7.43088Z"
+                                        stroke="#162E3A" stroke-width="1.7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-page-top__c-img-top swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <img src="./assets/images/item-card.webp" alt="card">
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="./assets/images/item-card.webp" alt="card">
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="./assets/images/item-card.webp" alt="card">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-page-top__c-img-bottom swiper">
+                            <button
+                                class="card-page-top__c-img-bottom-prev btn-swiper btn-swiper_overlayed btn-swiper_left desktop">
+                                <img src="../assets/images/icons/arrow-white-right.svg" alt="arrow">
+                            </button>
+                            <button
+                                class="card-page-top__c-img-bottom-next btn-swiper btn-swiper_overlayed btn-swiper_right desktop">
+                                <img src="../assets/images/icons/arrow-white-right.svg" alt="arrow">
+                            </button>
+                            <ul class="swiper-wrapper">
+                                <li class="card-page-top__c-img-bottom-slide swiper-slide">
+                                    <img src="./assets/images/item-card.webp" alt="card">
+                                </li>
+                                <li class="card-page-top__c-img-bottom-slide swiper-slide">
+                                    <img src="./assets/images/item-card.webp" alt="card">
+                                </li>
+                                <li class="card-page-top__c-img-bottom-slide swiper-slide">
+                                    <img src="./assets/images/item-card.webp" alt="card">
+                                </li>
+                                <li class="card-page-top__c-img-bottom-slide swiper-slide">
+                                    <img src="./assets/images/item-card.webp" alt="card">
+                                </li>
+                                <li class="card-page-top__c-img-bottom-slide swiper-slide">
+                                    <img src="./assets/images/item-card.webp" alt="card">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mobile">
+                            <div class="card-page-top__c-img-bottom-pagination">
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-page-top__c-info">
+
+                        <p class="card-page-top__c-info-art txt18 col-gr">Артикул: <span
+                                id="itemArticul">22222222222222</span></p>
+                        <p class="card-page-top__c-info-art card-page-top__c-info-art_org txt18 col-gr">Артикул для
+                            проектных организаций: <span id="orgArticul">22222222222222</span></p>
+
+                        <div class="card-page-top__c-info-stars input-stars">
+                            <span class="txt18 col-gr">99999 отзывов</span>
+                            <div class="input-stars__c">
+
+                                <input class=" input-stars__c-item" type="radio" disabled data-defaultv="3" value="1"
+                                    name="raiting">
+                                <input class=" input-stars__c-item" type="radio" disabled value="2" name="raiting">
+                                <input class=" input-stars__c-item" type="radio" disabled value="3" name="raiting"
+                                    checked="">
+                                <input class=" input-stars__c-item" type="radio" disabled value="4" name="raiting">
+                                <input class=" input-stars__c-item" type="radio" disabled value="5" name="raiting">
+                                <div class="input-stars__c-stars">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.62936 1.40056L11.6736 5.5277C11.7201 5.63245 11.7933 5.72319 11.8858 5.79087C11.9783 5.85854 12.0869 5.9008 12.2008 5.91341L16.7136 6.58199C16.8443 6.59878 16.9675 6.65241 17.0688 6.7366C17.1702 6.82079 17.2455 6.93208 17.2859 7.05746C17.3263 7.18284 17.3303 7.31714 17.2972 7.44467C17.2642 7.57221 17.1956 7.68772 17.0994 7.7777L13.8465 11.0048C13.7635 11.0824 13.7012 11.1795 13.6652 11.2873C13.6293 11.3951 13.6209 11.5101 13.6408 11.622L14.4251 16.1606C14.4478 16.291 14.4334 16.4251 14.3837 16.5478C14.3339 16.6705 14.2507 16.7767 14.1435 16.8544C14.0363 16.9321 13.9095 16.9781 13.7774 16.9873C13.6454 16.9965 13.5134 16.9684 13.3965 16.9063L9.33365 14.7591C9.22961 14.7081 9.11526 14.6815 8.99936 14.6815C8.88347 14.6815 8.76911 14.7081 8.66508 14.7591L4.60222 16.9063C4.48533 16.9684 4.35335 16.9965 4.2213 16.9873C4.08924 16.9781 3.96241 16.9321 3.85524 16.8544C3.74807 16.7767 3.66486 16.6705 3.61507 16.5478C3.56529 16.4251 3.55094 16.291 3.57365 16.1606L4.35793 11.5706C4.37781 11.4587 4.3694 11.3436 4.33348 11.2359C4.29755 11.1281 4.23524 11.031 4.15222 10.9534L0.860791 7.7777C0.763414 7.68525 0.694934 7.56655 0.663645 7.43598C0.632356 7.3054 0.639601 7.16855 0.684503 7.04201C0.729405 6.91547 0.810036 6.80467 0.916631 6.72302C1.02322 6.64137 1.15121 6.59238 1.28508 6.58199L5.79793 5.91341C5.91185 5.9008 6.02046 5.85854 6.11295 5.79087C6.20544 5.72319 6.27858 5.63245 6.32508 5.5277L8.36936 1.40056C8.42503 1.28035 8.51393 1.17859 8.62556 1.10727C8.73719 1.03594 8.86689 0.998047 8.99936 0.998047C9.13183 0.998047 9.26154 1.03594 9.37317 1.10727C9.4848 1.17859 9.57369 1.28035 9.62936 1.40056Z">
+                                        </path>
+                                    </svg>
+
+
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.62936 1.40056L11.6736 5.5277C11.7201 5.63245 11.7933 5.72319 11.8858 5.79087C11.9783 5.85854 12.0869 5.9008 12.2008 5.91341L16.7136 6.58199C16.8443 6.59878 16.9675 6.65241 17.0688 6.7366C17.1702 6.82079 17.2455 6.93208 17.2859 7.05746C17.3263 7.18284 17.3303 7.31714 17.2972 7.44467C17.2642 7.57221 17.1956 7.68772 17.0994 7.7777L13.8465 11.0048C13.7635 11.0824 13.7012 11.1795 13.6652 11.2873C13.6293 11.3951 13.6209 11.5101 13.6408 11.622L14.4251 16.1606C14.4478 16.291 14.4334 16.4251 14.3837 16.5478C14.3339 16.6705 14.2507 16.7767 14.1435 16.8544C14.0363 16.9321 13.9095 16.9781 13.7774 16.9873C13.6454 16.9965 13.5134 16.9684 13.3965 16.9063L9.33365 14.7591C9.22961 14.7081 9.11526 14.6815 8.99936 14.6815C8.88347 14.6815 8.76911 14.7081 8.66508 14.7591L4.60222 16.9063C4.48533 16.9684 4.35335 16.9965 4.2213 16.9873C4.08924 16.9781 3.96241 16.9321 3.85524 16.8544C3.74807 16.7767 3.66486 16.6705 3.61507 16.5478C3.56529 16.4251 3.55094 16.291 3.57365 16.1606L4.35793 11.5706C4.37781 11.4587 4.3694 11.3436 4.33348 11.2359C4.29755 11.1281 4.23524 11.031 4.15222 10.9534L0.860791 7.7777C0.763414 7.68525 0.694934 7.56655 0.663645 7.43598C0.632356 7.3054 0.639601 7.16855 0.684503 7.04201C0.729405 6.91547 0.810036 6.80467 0.916631 6.72302C1.02322 6.64137 1.15121 6.59238 1.28508 6.58199L5.79793 5.91341C5.91185 5.9008 6.02046 5.85854 6.11295 5.79087C6.20544 5.72319 6.27858 5.63245 6.32508 5.5277L8.36936 1.40056C8.42503 1.28035 8.51393 1.17859 8.62556 1.10727C8.73719 1.03594 8.86689 0.998047 8.99936 0.998047C9.13183 0.998047 9.26154 1.03594 9.37317 1.10727C9.4848 1.17859 9.57369 1.28035 9.62936 1.40056Z">
+                                        </path>
+                                    </svg>
+
+
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.62936 1.40056L11.6736 5.5277C11.7201 5.63245 11.7933 5.72319 11.8858 5.79087C11.9783 5.85854 12.0869 5.9008 12.2008 5.91341L16.7136 6.58199C16.8443 6.59878 16.9675 6.65241 17.0688 6.7366C17.1702 6.82079 17.2455 6.93208 17.2859 7.05746C17.3263 7.18284 17.3303 7.31714 17.2972 7.44467C17.2642 7.57221 17.1956 7.68772 17.0994 7.7777L13.8465 11.0048C13.7635 11.0824 13.7012 11.1795 13.6652 11.2873C13.6293 11.3951 13.6209 11.5101 13.6408 11.622L14.4251 16.1606C14.4478 16.291 14.4334 16.4251 14.3837 16.5478C14.3339 16.6705 14.2507 16.7767 14.1435 16.8544C14.0363 16.9321 13.9095 16.9781 13.7774 16.9873C13.6454 16.9965 13.5134 16.9684 13.3965 16.9063L9.33365 14.7591C9.22961 14.7081 9.11526 14.6815 8.99936 14.6815C8.88347 14.6815 8.76911 14.7081 8.66508 14.7591L4.60222 16.9063C4.48533 16.9684 4.35335 16.9965 4.2213 16.9873C4.08924 16.9781 3.96241 16.9321 3.85524 16.8544C3.74807 16.7767 3.66486 16.6705 3.61507 16.5478C3.56529 16.4251 3.55094 16.291 3.57365 16.1606L4.35793 11.5706C4.37781 11.4587 4.3694 11.3436 4.33348 11.2359C4.29755 11.1281 4.23524 11.031 4.15222 10.9534L0.860791 7.7777C0.763414 7.68525 0.694934 7.56655 0.663645 7.43598C0.632356 7.3054 0.639601 7.16855 0.684503 7.04201C0.729405 6.91547 0.810036 6.80467 0.916631 6.72302C1.02322 6.64137 1.15121 6.59238 1.28508 6.58199L5.79793 5.91341C5.91185 5.9008 6.02046 5.85854 6.11295 5.79087C6.20544 5.72319 6.27858 5.63245 6.32508 5.5277L8.36936 1.40056C8.42503 1.28035 8.51393 1.17859 8.62556 1.10727C8.73719 1.03594 8.86689 0.998047 8.99936 0.998047C9.13183 0.998047 9.26154 1.03594 9.37317 1.10727C9.4848 1.17859 9.57369 1.28035 9.62936 1.40056Z">
+                                        </path>
+                                    </svg>
+
+
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.62936 1.40056L11.6736 5.5277C11.7201 5.63245 11.7933 5.72319 11.8858 5.79087C11.9783 5.85854 12.0869 5.9008 12.2008 5.91341L16.7136 6.58199C16.8443 6.59878 16.9675 6.65241 17.0688 6.7366C17.1702 6.82079 17.2455 6.93208 17.2859 7.05746C17.3263 7.18284 17.3303 7.31714 17.2972 7.44467C17.2642 7.57221 17.1956 7.68772 17.0994 7.7777L13.8465 11.0048C13.7635 11.0824 13.7012 11.1795 13.6652 11.2873C13.6293 11.3951 13.6209 11.5101 13.6408 11.622L14.4251 16.1606C14.4478 16.291 14.4334 16.4251 14.3837 16.5478C14.3339 16.6705 14.2507 16.7767 14.1435 16.8544C14.0363 16.9321 13.9095 16.9781 13.7774 16.9873C13.6454 16.9965 13.5134 16.9684 13.3965 16.9063L9.33365 14.7591C9.22961 14.7081 9.11526 14.6815 8.99936 14.6815C8.88347 14.6815 8.76911 14.7081 8.66508 14.7591L4.60222 16.9063C4.48533 16.9684 4.35335 16.9965 4.2213 16.9873C4.08924 16.9781 3.96241 16.9321 3.85524 16.8544C3.74807 16.7767 3.66486 16.6705 3.61507 16.5478C3.56529 16.4251 3.55094 16.291 3.57365 16.1606L4.35793 11.5706C4.37781 11.4587 4.3694 11.3436 4.33348 11.2359C4.29755 11.1281 4.23524 11.031 4.15222 10.9534L0.860791 7.7777C0.763414 7.68525 0.694934 7.56655 0.663645 7.43598C0.632356 7.3054 0.639601 7.16855 0.684503 7.04201C0.729405 6.91547 0.810036 6.80467 0.916631 6.72302C1.02322 6.64137 1.15121 6.59238 1.28508 6.58199L5.79793 5.91341C5.91185 5.9008 6.02046 5.85854 6.11295 5.79087C6.20544 5.72319 6.27858 5.63245 6.32508 5.5277L8.36936 1.40056C8.42503 1.28035 8.51393 1.17859 8.62556 1.10727C8.73719 1.03594 8.86689 0.998047 8.99936 0.998047C9.13183 0.998047 9.26154 1.03594 9.37317 1.10727C9.4848 1.17859 9.57369 1.28035 9.62936 1.40056Z">
+                                        </path>
+                                    </svg>
+
+
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.62936 1.40056L11.6736 5.5277C11.7201 5.63245 11.7933 5.72319 11.8858 5.79087C11.9783 5.85854 12.0869 5.9008 12.2008 5.91341L16.7136 6.58199C16.8443 6.59878 16.9675 6.65241 17.0688 6.7366C17.1702 6.82079 17.2455 6.93208 17.2859 7.05746C17.3263 7.18284 17.3303 7.31714 17.2972 7.44467C17.2642 7.57221 17.1956 7.68772 17.0994 7.7777L13.8465 11.0048C13.7635 11.0824 13.7012 11.1795 13.6652 11.2873C13.6293 11.3951 13.6209 11.5101 13.6408 11.622L14.4251 16.1606C14.4478 16.291 14.4334 16.4251 14.3837 16.5478C14.3339 16.6705 14.2507 16.7767 14.1435 16.8544C14.0363 16.9321 13.9095 16.9781 13.7774 16.9873C13.6454 16.9965 13.5134 16.9684 13.3965 16.9063L9.33365 14.7591C9.22961 14.7081 9.11526 14.6815 8.99936 14.6815C8.88347 14.6815 8.76911 14.7081 8.66508 14.7591L4.60222 16.9063C4.48533 16.9684 4.35335 16.9965 4.2213 16.9873C4.08924 16.9781 3.96241 16.9321 3.85524 16.8544C3.74807 16.7767 3.66486 16.6705 3.61507 16.5478C3.56529 16.4251 3.55094 16.291 3.57365 16.1606L4.35793 11.5706C4.37781 11.4587 4.3694 11.3436 4.33348 11.2359C4.29755 11.1281 4.23524 11.031 4.15222 10.9534L0.860791 7.7777C0.763414 7.68525 0.694934 7.56655 0.663645 7.43598C0.632356 7.3054 0.639601 7.16855 0.684503 7.04201C0.729405 6.91547 0.810036 6.80467 0.916631 6.72302C1.02322 6.64137 1.15121 6.59238 1.28508 6.58199L5.79793 5.91341C5.91185 5.9008 6.02046 5.85854 6.11295 5.79087C6.20544 5.72319 6.27858 5.63245 6.32508 5.5277L8.36936 1.40056C8.42503 1.28035 8.51393 1.17859 8.62556 1.10727C8.73719 1.03594 8.86689 0.998047 8.99936 0.998047C9.13183 0.998047 9.26154 1.03594 9.37317 1.10727C9.4848 1.17859 9.57369 1.28035 9.62936 1.40056Z">
+                                        </path>
+                                    </svg>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-page-top__c-description">
+                        <div class="card-page-top__c-description-guarantee">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2116_16349)">
+                                    <path d="M12 16.0007L14.6667 18.6673L20 13.334" stroke="#6DB547" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M15.9985 4C19.1129 6.75543 23.1778 8.19009 27.3318 8C27.9366 10.0574 28.1217 12.2153 27.876 14.3456C27.6303 16.4759 26.9589 18.535 25.9017 20.4007C24.8445 22.2664 23.423 23.9005 21.7217 25.206C20.0205 26.5114 18.0742 27.4616 15.9985 28C13.9228 27.4616 11.9764 26.5114 10.2752 25.206C8.57396 23.9005 7.15249 22.2664 6.09527 20.4007C5.03805 18.535 4.36666 16.4759 4.12098 14.3456C3.8753 12.2153 4.06035 10.0574 4.66514 8C8.81918 8.19009 12.884 6.75543 15.9985 4"
+                                        stroke="#6DB547" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2116_16349">
+                                        <rect width="32" height="32" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="txt16 txt16_medium">
+                                Гарантия <span id="descriptionGuarantee">11111</span> лет
+                            </span>
+                        </div>
+                        <p class="txt16">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam eveniet illo dolorem velit,
+                            nemo deserunt. A in natus amet ullam suscipit consequatur maiores architecto saepe, error
+                            dolorum voluptates nesciunt deserunt. Ipsum cumque, dignissimos itaque maiores quia
+                            blanditiis facilis suscipit similique iusto et nesciunt, expedita fuga at quibusdam. Nisi
+                            quod obcaecati facere sunt recusandae dicta voluptatibus, blanditiis repudiandae, ad,
+                            delectus quidem placeat repellat animi laudantium perspiciatis! Laudantium facilis quibusdam
+                            assumenda explicabo unde reprehenderit! Doloribus pariatur similique, enim ex voluptates
+                            amet, atque quas quos fugit ratione aliquam obcaecati architecto. Velit neque earum
+                            asperiores odit quis aliquid fugiat hic sapiente, recusandae quod laudantium.
+                        </p>
+                        <p class="tl4">Характеристики</p>
+                        <ul class="card-page-top__c-description-list">
+                            <li class="card-page-top__c-description-list-e">
+                                <span class="card-page-top__c-description-list-e-key txt16 col-gr">key</span>
+                                <hr>
+                                <span class="card-page-top__c-description-list-e-value txt16"> value </span>
+                            </li>
+                            <li class="card-page-top__c-description-list-e">
+                                <span class="card-page-top__c-description-list-e-key txt16 col-gr">key</span>
+                                <hr>
+                                <span class="card-page-top__c-description-list-e-value txt16"> value </span>
+                            </li>
+                        </ul>
+
+                        <button class="btn-nav btn-nav_ul">
+                            Подробнее</button>
+
+                    </div>
+                    <div class="card-page-top__c-cash">
+                        <div class="card-page-top__c-cash-price">
+                            <p class="tl4">Стоимость</p>
+                            <div class="card-page-top__c-cash-price-count">
+                                <p class="tl4 price">999 999</p>
+                                <p class="tl4 price price_discount">999 999</p>
+                            </div>
+                        </div>
+                        <div class="card-page-top__c-cash-btns">
+                            <div class="card-page-top__c-cash-btns-counter">
+                                <button>-</button>
+                                <span>1111</span>
+                                <button>+</button>
+                            </div>
+
+                            <button class="btn-primary btn-primary_blue">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-page-top__c-optional">
+
+                        <div class="aside-delivery">
+                            <span class="tl4 aside-delivery__bottom">
+                                Рассрочка от сбербанка
+                                <span class="show-help" data-text="сюда писать текст">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.85" y="0.85" width="22.3" height="22.3" rx="11.15" stroke="#162E3A"
+                                            stroke-width="1.7" />
+                                        <path
+                                            d="M12.33 14.424H10.764V13.776C10.764 11.184 13.446 10.986 13.446 9.15C13.446 8.178 12.798 7.566 11.52 7.566C10.386 7.548 9.522 7.98 9 8.34L9.144 6.63C9.99 6.216 10.782 6 11.826 6C13.842 6 15.264 7.026 15.264 8.88C15.264 11.652 12.33 11.85 12.33 14.01V14.424ZM11.556 18.276C10.908 18.276 10.422 17.772 10.422 17.124C10.422 16.512 10.908 16.008 11.556 16.008C12.204 16.008 12.69 16.494 12.69 17.124C12.69 17.772 12.204 18.276 11.556 18.276Z"
+                                            fill="#162E3A" />
+                                    </svg>
+
+                                </span>
+
+                            </span>
+
+                        </div>
+
+                        <div class="aside-delivery">
+                            <img class="aside-delivery__img" src="./assets/images/icons/car.svg" alt="car">
+                            <div class="aside-delivery__top">
+                                <p class="tl4">Бесплатная доставка</p>
+                            </div>
+                            <div class="aside-delivery__bottom">
+                                <ul class="marked-list">
+                                    <li class="marked-list__e">
+                                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect y="0.104004" width="6" height="6" fill="#6DB547"></rect>
+                                        </svg>
+                                        <span class="marked-list__e-txt txt18">Курьер </span>
+                                    </li>
+                                    <li class="marked-list__e">
+                                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect y="0.104004" width="6" height="6" fill="#6DB547"></rect>
+                                        </svg>
+                                        <span class="marked-list__e-txt txt18">Пункт выдачи СДЭК </span>
+                                    </li>
+                                    <li class="marked-list__e">
+                                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect y="0.104004" width="6" height="6" fill="#6DB547"></rect>
+                                        </svg>
+                                        <span class="marked-list__e-txt txt18">Самовывоз из г. Мытищи </span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <section class="card-page-description">
+                <div class="container card-page-description__c">
+                    <div class="card-page-description__c-nav">
+                        <button class="card-page-description__c-nav-btn _opened tl4">
+                            Описание
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L11 10L1 19" stroke="rgba(22, 46, 58, 1)" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                        <button class="card-page-description__c-nav-btn tl4">
+                            Характеристики
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L11 10L1 19" stroke="rgba(22, 46, 58, 1)" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="card-page-description__c-nav-btn tl4 ">
+                            Состав комплекта
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L11 10L1 19" stroke="rgba(22, 46, 58, 1)" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="card-page-description__c-nav-btn tl4 ">
+                            Документация
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L11 10L1 19" stroke="rgba(22, 46, 58, 1)" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-page-description__c-slider swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide txt18">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fuga aliquam sunt et
+                                quos, minima, a magni ratione magnam expedita illo unde ipsum. Laboriosam atque
+                                voluptate voluptatem animi id ratione alias officiis, totam reiciendis placeat autem,
+                                dolorem optio labore. Tempore adipisci ratione sunt deserunt optio nostrum maiores error
+                                quis vel odio cumque fugit modi dicta, unde omnis dolore quas facere expedita possimus
+                                ullam quisquam et. Laborum aspernatur perspiciatis rem, quis nobis ab repellat. Nisi
+                                velit exercitationem saepe sed hic ratione numquam aperiam ipsum! Nam velit facilis
+                                soluta culpa consectetur corporis repudiandae maxime enim autem nobis fuga modi dolorem
+                                quibusdam doloremque incidunt pariatur voluptatum repellendus, minus excepturi, eligendi
+                                error! Laborum nesciunt delectus quia error corrupti voluptas porro ullam ut voluptates
+                                repellat necessitatibus, blanditiis, cumque suscipit dolore earum dolorem quos molestias
+                                cupiditate aliquid quae! Nihil similique ducimus aliquid quas enim placeat delectus,
+                                dolor, blanditiis velit quod vel pariatur molestiae illo rem eligendi at. Magnam
+                                molestiae in dicta blanditiis quia iure recusandae at aspernatur est? Ducimus quia est
+                                nulla laboriosam deleniti maiores in temporibus dolores ab, expedita, excepturi iusto!
+                                Perspiciatis rerum blanditiis quis deleniti incidunt debitis veritatis, odio aut
+                                necessitatibus vel voluptatum praesentium id eum. Non maiores a alias. Beatae numquam
+                                temporibus repellat.
+                            </li>
+                            <li class="swiper-slide">
+                                <ul class="card-page-top__c-description-list">
+                                    <li class="card-page-top__c-description-list-e">
+                                        <span class="card-page-top__c-description-list-e-key txt16 col-gr">key</span>
+                                        <hr>
+                                        <span class="card-page-top__c-description-list-e-value txt16"> value </span>
+                                    </li>
+                                    <li class="card-page-top__c-description-list-e">
+                                        <span class="card-page-top__c-description-list-e-key txt16 col-gr">Lorem ipsum
+                                            dolor, sit amet consectetur adipisicing elit. Eum eveniet ipsam optio</span>
+                                        <hr>
+                                        <span class="card-page-top__c-description-list-e-value txt16"> Lorem ipsum dolor
+                                            sit amet, consectetur adipisicing elit. Consequuntur, eaque. </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="swiper-slide">
+                                <ul class="card-page-description__c-slider-e-complect">
+                                    <li class="card-page-description__c-slider-e-complect-item">
+                                        <div class="card-page-description__c-slider-e-complect-item-img">
+                                            <img src="./assets/images/item-card.webp" alt="card">
+                                        </div>
+                                        <p class="txt18 two-line">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                            elit.
+                                            Cupiditate, corrupti?</p>
+                                        <p class=" txt18 col-gr">Артикул:
+                                            <span>1111</span>
+                                        </p>
+                                        <div class="card-page-description__c-slider-e-complect-item-counts">
+                                            <span
+                                                class="card-page-description__c-slider-e-complect-item-counts-count tl4">1</span>
+                                            <span class="price tl4 col-bl">9999 9999</span>
+                                        </div>
+                                    </li>
+                                    <li class="card-page-description__c-slider-e-complect-item">
+                                        <div class="card-page-description__c-slider-e-complect-item-img">
+                                            <img src="./assets/images/item-card.webp" alt="card">
+                                        </div>
+                                        <p class="txt18 two-line">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                            elit.
+                                            Cupiditate, corrupti?</p>
+                                        <p class=" txt18 col-gr">Артикул:
+                                            <span>1111</span>
+                                        </p>
+                                        <div class="card-page-description__c-slider-e-complect-item-counts">
+                                            <span
+                                                class="card-page-description__c-slider-e-complect-item-counts-count tl4">1</span>
+                                            <span class="price tl4 col-bl">9999 9999</span>
+                                        </div>
+                                    </li>
+                                    <li class="card-page-description__c-slider-e-complect-item">
+                                        <div class="card-page-description__c-slider-e-complect-item-img">
+                                            <img src="./assets/images/item-card.webp" alt="card">
+                                        </div>
+                                        <p class="txt18 two-line">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                            elit.
+                                            Cupiditate, corrupti?</p>
+                                        <p class=" txt18 col-gr">Артикул:
+                                            <span>1111</span>
+                                        </p>
+                                        <div class="card-page-description__c-slider-e-complect-item-counts">
+                                            <span
+                                                class="card-page-description__c-slider-e-complect-item-counts-count tl4">1</span>
+                                            <span class="price tl4 col-bl">9999 9999</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="btn-download tl4">
+                                    <span>
+                                        <span class="btn-download__img">
+                                            <img src="./assets/images/icons/document.svg" alt="document">
+                                        </span>
+                                        Инструкция
+                                    </span>
+
+                                    <a href="#" class="btn-download__link btn-nav btn-nav_ul">
+                                        Скачать pdf
+                                        <img src="./assets/images/icons/download.svg" alt="download">
+                                    </a>
+
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="card-page-description__c-form form">
+                        <p class="tl2 col-wh">Оставить заявку!</p>
+                        <p class="txt18 col-wh">Затрудняетесь с выбором? Закажите обратный звонок и наши специалисты вас
+                            проконсультируют.</p>
+                        <label class="input-container input-text form-input">
+                            <input type="text" name="name" placeholder="имя" data-required="true">
+                            <span class="input-text-error-msg "></span>
+                        </label>
+                        <div class="input-text form-input">
+                            <div class="input-phone">
+                                <div class="input-phone__select drop-down-container">
+                                    <button class="input-phone__select-current drop-down-target">
+                                        <img class="input-phone__select-flag input-phone__select-current-flag"
+                                            src="./assets/images/icons/flag-rus.svg" alt="flag">
+                                        <img class="input-phone__select-current-arrow"
+                                            src="./assets/images/icons/arrow-black.svg" alt="arrow">
+                                    </button>
+                                    <div class="input-phone__select-list">
+                                        <div class="input-phone__select-list-wrp">
+                                            <button class="input-phone__select-list-btn" data-mask="ru">
+                                                <img class="input-phone__select-flag "
+                                                    src="./assets/images/icons/flag-rus.svg" alt="flag">
+                                                +7
+                                            </button>
+                                            <button class="input-phone__select-list-btn" data-mask="br">
+                                                <img class="input-phone__select-flag "
+                                                    src="./assets/images/icons/flag-br.svg" alt="flag">
+                                                +375
+                                            </button>
+                                            <button class="input-phone__select-list-btn" data-mask="kz">
+                                                <img class="input-phone__select-flag "
+                                                    src="./assets/images/icons/flag-kz.svg" alt="flag">
+                                                +7
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="text" autocomplete="off" data-required="true" name="phone"
+                                    placeholder="номер телефона">
+                            </div>
+                            <span class="input-text-error-msg "></span>
+                        </div>
+
+                        <label class="checkbox checkbox_light form-input">
+                            <input type="checkbox" name="policy" data-required="true">
+                            <span class="checkbox-check">
+                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.41445 5.47216L8.88627 0.187083C9.0154 0.0623609 9.16884 0 9.34661 0C9.52438 0 9.67761 0.0623609 9.80631 0.187083C9.93544 0.311804 10 0.460015 10 0.631715C10 0.803415 9.93544 0.951418 9.80631 1.07572L3.8664 6.81292C3.73727 6.93764 3.58662 7 3.41445 7C3.24228 7 3.09163 6.93764 2.9625 6.81292L0.186243 4.1314C0.0571146 4.00668 -0.00486715 3.85847 0.000297988 3.68677C0.00546312 3.51507 0.0728249 3.36707 0.202384 3.24276C0.331512 3.11804 0.48496 3.05568 0.662727 3.05568C0.840493 3.05568 0.993726 3.11804 1.12242 3.24276L3.41445 5.47216Z"
+                                        fill="white"></path>
+                                </svg>
+                            </span>
+                            <span class="checkbox-text txt14 col-wh">Нажимая на кнопку, Вы соглашаетесь с Политикой
+                                конфиденциальности</span>
+                        </label>
+
+                        <button type="submit" class="btn-primary btn-primary_green">
+                            Оставить заявку
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <include src="./components/_video.html"></include>
+            <include src="./components/_feedback.html"></include>
+            <!-- Похожие товары -->
+            <include src="./components/_special-offer.html"></include>
+        </main>
+        <include src="./components/_footer.html"></include>
+        <include src="./components/_mobile-nav.html"></include>
+
+
+
+    </div>
+
+</body>
+
+</html>

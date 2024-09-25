@@ -8,8 +8,8 @@
 @import './marked-list';
 @import './aside-delivery';
 @import './category-slide';
-@import './filter-tag'; 
-@import './drop-down'; 
+@import './filter-tag';
+@import './drop-down';
 
 
 
@@ -46,6 +46,9 @@
     &-gr {
         color: $gray-dark !important;
     }
+    &-grn {
+        color: $green !important;
+    }
 
     &-bl {
         color: $blue !important;
@@ -54,7 +57,8 @@
     &-wh {
         color: $white !important;
     }
-    &-bl{
+
+    &-blk {
         color: $black !important;
     }
 
@@ -84,6 +88,51 @@
         background-color: $yellow;
     }
 }
-.fit{
+
+.fit {
     width: fit-content;
+}
+
+.price {
+    width: fit-content;
+    letter-spacing: .1rem;
+
+    @include small-tablet {
+        font-size: 4rem;
+    }
+
+    &::after {
+        content: '₽';
+        font-size: .8em;
+        line-height: .9em;
+    }
+
+    &_discount {
+        color: $gray-dark;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 45%;
+            width: 87%;
+            height: .2rem;
+            background-color: $gray-dark;
+        }
+    }
+
+
+}
+
+.two-line{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;
 }

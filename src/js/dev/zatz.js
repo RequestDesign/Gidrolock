@@ -5,6 +5,8 @@ import { rem } from "../utils/constants";
 import initForms from "../utils/forms";
 import initSelect from "../utils/select";
 import initCatalogFilterOpener from '../components/catalog'
+import initCardPage from "../components/cardView";
+import initFeedBack from "../components/feedback";
 
 
 
@@ -17,17 +19,8 @@ $(function () {
     initSelect()
     initMobileNav()
     initCatalogFilterOpener()
-
-    /*   const forms = document.querySelectorAll('.form')
-      if (forms) {
-          forms.forEach((e) => {
-              new Form(e, formSubmit)
-              new Inputmask('+7 (999) 999-99-99')
-                  .mask($(e).find('.form-input-txt-el[name="phone"]'));
-  
-          })
-      } */
-
+    initCardPage()
+    initFeedBack()
 
 });
 
@@ -284,6 +277,8 @@ function initSwipers() {
 
     }
 
+   
+
 }
 function choiceSystemSwiper() {
     const choiceSystem = document.querySelector('.choice-system__c-left-slider')
@@ -315,7 +310,7 @@ function choiceSystemSwiper() {
 function initMobileNav() {
     const target = document.querySelector('.mobile-nav')
     if (!target) return
-    
+
     let scrollStart = 0
     document.addEventListener('scroll', () => {
         if (window.scrollY > scrollStart + 50) {
@@ -333,52 +328,7 @@ function initMobileNav() {
 
 
 /*
-function feedBackOpenReview() {
-    if (!document.querySelector('.feedback__slider-list-e-body-c-txt')) return
 
-    const container = $('.feedback-container'),
-        textSelector = '.feedback__slider-list-e-body-c-txt',
-        text = $(textSelector).toArray(),
-        textContainerSelector = '.feedback__slider-list-e-body-c',
-        shortenedTextSelecor = 'feedback__slider-list-e-body-c-txt_closed'
-
-    const maxHeight = 150
-    text.forEach((e) => {
-        if (e.offsetHeight > maxHeight) {
-            e = $(e)
-            e.addClass(shortenedTextSelecor)
-            e.closest(textContainerSelector)
-                .append('<button class="feedback__slider-list-e-body-c-more txt18 "> еще</button>')
-        }
-
-    })
-
-    container.on('click', (ev) => {
-        if (!ev.target.classList.contains('feedback__slider-list-e-body-c-more')) return
-
-        if (!ev.target.closest(textContainerSelector).classList.contains('_opened')) {
-            const parent = ev.target.closest(textContainerSelector)
-            parent.classList.add('_opened')
-            parent.querySelector(textSelector)
-                .classList.remove(shortenedTextSelecor)
-            ev.target.textContent = 'скрыть'
-
-
-        } else {
-            const parent = ev.target.closest(textContainerSelector)
-            parent.classList.remove('_opened')
-            parent.querySelector(textSelector)
-                .classList.add(shortenedTextSelecor)
-            ev.target.textContent = 'еще'
-        }
-
-
-
-    })
-
-
-
-}
  */
 
 /*  function modalsOpenHandler() {
