@@ -10,6 +10,7 @@
 @import './category-slide';
 @import './filter-tag';
 @import './drop-down';
+@import './item-card-row';
 
 
 
@@ -142,6 +143,16 @@
 
     & svg,
     img {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.flex-row{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    & img, & svg{
         width: 2rem;
         height: 2rem;
     }

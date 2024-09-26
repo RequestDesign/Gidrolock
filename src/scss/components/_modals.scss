@@ -1,0 +1,97 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 111;
+    &.modal-mail-help{
+        z-index: 112;
+    }
+
+    &._opened>.modal-wrp>.modal__c {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+
+    &-wrp {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(22, 46, 58, 0.3);
+        backdrop-filter: 4rem;
+    }
+
+    &__c {
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform .5s, opacity .5s;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        padding: 5.4rem;
+        box-sizing: border-box;
+        position: relative;
+        gap: 3.2rem;
+        
+       width: 75rem;
+       @include small-tablet{
+        width: 100%;
+    }
+
+        & ol {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        &-btn {
+            position: absolute;
+            right: 2.4rem;
+            top: 2.4rem;
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../../assets/images/icons/x-black.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    &-sign {
+        width: 63rem;
+        @include small-tablet{
+            width: 100%;
+        }
+
+
+        &__slider {
+            width: 100%;
+            overflow: hidden;
+            &-list {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 100% 100%;
+                &-e {
+                    &-body {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3.2rem;
+                        justify-content: space-between;
+                        & .btn-primary{
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

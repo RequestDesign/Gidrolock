@@ -7,6 +7,9 @@ import initSelect from "../utils/select";
 import initCatalogFilterOpener from '../components/catalog'
 import initCardPage from "../components/cardView";
 import initFeedBack from "../components/feedback";
+import initUserPage from "../components/userPage";
+import initSignUp from "../components/signUp";
+
 
 
 
@@ -21,6 +24,9 @@ $(function () {
     initCatalogFilterOpener()
     initCardPage()
     initFeedBack()
+    initUserPage()
+    initSignUp()
+    modalsHandler()
 
 });
 
@@ -277,7 +283,7 @@ function initSwipers() {
 
     }
 
-   
+
 
 }
 function choiceSystemSwiper() {
@@ -327,14 +333,13 @@ function initMobileNav() {
 
 
 
-/*
+function modalsHandler() {
 
- */
 
-/*  function modalsOpenHandler() {
+    const modalOpeners = $('.modal-opener'),
+        modalClosers = $('.modal-closer'),
+        html = $('html')
 
-    const modalOpeners = $('.modal-opener')
-    const modalClosers = $('.modal-closer')
 
     if (!modalOpeners || !modalClosers) return
 
@@ -344,7 +349,7 @@ function initMobileNav() {
         $(`.modal-${modal}`)
             .fadeIn()
             .addClass('_opened')
-
+        html.addClass('lock')
     })
 
 
@@ -359,8 +364,9 @@ function initMobileNav() {
             $(ev.target.closest('.modal')).fadeOut().removeClass('_opened')
 
         }
+        html.removeClass('lock')
     })
-}  */
+}
 
 /* function formSubmit(inputsData) {
     console.log(inputsData);
