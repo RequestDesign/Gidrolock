@@ -46,6 +46,7 @@
     &-gr {
         color: $gray-dark !important;
     }
+
     &-grn {
         color: $green !important;
     }
@@ -65,11 +66,11 @@
 }
 
 .bg {
-    padding: .5rem 2rem;
+    padding: .5rem 1rem;
     box-sizing: border-box;
 
     @include small-tablet {
-        padding: 1rem 2.2rem;
+        padding: .5rem 1rem;
     }
 
     &_wh {
@@ -125,7 +126,7 @@
 
 }
 
-.two-line{
+.two-line {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -moz-box;
@@ -135,4 +136,13 @@
     -webkit-box-orient: vertical;
     line-clamp: 2;
     box-orient: vertical;
+}
+
+.show-help {
+
+    & svg,
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
 }

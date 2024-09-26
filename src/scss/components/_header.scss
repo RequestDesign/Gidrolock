@@ -304,7 +304,7 @@
             background-color: $white;
             width: 70%;
             transform: translate(-100%, 0);
-            transition:  transform .5s;
+            transition: transform .5s;
 
             &-list {
 
@@ -342,5 +342,21 @@
         }
     }
 
-   
+
+}
+
+.header-small {
+    background-color: $white;
+
+    &__c {
+        display: flex;
+        justify-content: space-between;
+       
+        padding: 2.8rem 0;
+        box-sizing: border-box;
+        &-links{
+            display: flex;
+            gap: 1rem;
+        }
+    }
 }

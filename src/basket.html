@@ -10,10 +10,567 @@
 
 <body>
     <div class="wrapper">
-        <include src="./components/_header.html"></include>
-        <main >
-        
-            <!-- Похожие товары -->
+        <include src="./components/_header-small.html"></include>
+        <main>
+            <div class="container basket-main">
+                <aside class="basket-main-aside">
+
+                    <div class="basket-main-aside__row">
+                        <span class=" basket-main-aside__row-head tl4">Ваш заказ</span>
+                        <span class="txt16">5555 <span>товаров</span></span>
+                    </div>
+
+                    <div class="basket-main-aside__row">
+                        <span class=" basket-main-aside__row-head txt18">Цена:</span>
+                        <span class="price tl4">9999 9999</span>
+                    </div>
+                    <div class="basket-main-aside__row">
+                        <span class=" basket-main-aside__row-head txt18">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, non.
+                            <span class="txt16 col-gr">Lorem ipsum dolor sit amet consectetur.</span>
+                        </span>
+                        <span class="price tl4">9999 9999</span>
+                    </div>
+                    <hr>
+                    <div class="basket-main-aside__row">
+                        <span class=" basket-main-aside__row-head tl4">Итого:</span>
+                        <span class="price tl4">9999 9999</span>
+                    </div>
+
+                    <button class="basket-submit btn-primary btn-primary_green">
+                        Оформить заказ
+                    </button>
+                </aside>
+
+                <section class="basket-list">
+
+                    <h1 class="tl1">Корзина</h1>
+
+                    <div class="basket-list__banners">
+                        <!-- banners не нужен -->
+                        <!-- unlogin -->
+                        <div class="basket-list-c  basket-list__banner basket-list__banner-unlogin">
+                            <div class=" basket-list__banner-text">
+                                <p class="tl4">Получайте скидки до 25%!</p>
+                                <p class="txt18">Войдите или зарегистрируйтесь, чтобы получать скидки</p>
+                            </div>
+
+                            <button class="btn-primary btn-primary_green">
+                                Вход или регистрация
+                            </button>
+                        </div>
+                        <!-- login -->
+                        <div class="basket-list-c  basket-list__banner basket-list__banner-login">
+                            <div class="basket-list__banner-text">
+                                <span class="tl4">Ваша скидка <span>15</span>%
+                                    <span class="show-help" data-text="ты крутой 😎">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.85" y="0.85" width="22.3" height="22.3" rx="11.15"
+                                                stroke="#162E3A" stroke-width="1.7" />
+                                            <path
+                                                d="M12.33 14.424H10.764V13.776C10.764 11.184 13.446 10.986 13.446 9.15C13.446 8.178 12.798 7.566 11.52 7.566C10.386 7.548 9.522 7.98 9 8.34L9.144 6.63C9.99 6.216 10.782 6 11.826 6C13.842 6 15.264 7.026 15.264 8.88C15.264 11.652 12.33 11.85 12.33 14.01V14.424ZM11.556 18.276C10.908 18.276 10.422 17.772 10.422 17.124C10.422 16.512 10.908 16.008 11.556 16.008C12.204 16.008 12.69 16.494 12.69 17.124C12.69 17.772 12.204 18.276 11.556 18.276Z"
+                                                fill="#162E3A" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <p class="txt18">Купите товары на сумму от <span>90 000</span> ₽, чтобы получить скидку
+                                    <span>20</span>%
+                                </p>
+                            </div>
+                            <div class="basket-list__banner-login-indication">
+
+
+                                <div class="basket-list__banner-login-indication-e  _active">
+                                    <p class="txt18">до 50 000 ₽ </p>
+
+                                    <svg class="basket-list__banner-login-indication-e-circle" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
+                                        <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
+                                    </svg>
+                                    <p class="tl4">0%</p>
+                                </div>
+                                <div class="basket-list__banner-login-indication-line"></div>
+
+                                <div class="basket-list__banner-login-indication-e  _active">
+                                    <p class="txt18">до 50 000 ₽ </p>
+
+                                    <svg class="basket-list__banner-login-indication-e-circle" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
+                                        <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
+                                    </svg>
+                                    <p class="tl4">15%</p>
+                                </div>
+                                <div class="basket-list__banner-login-indication-e">
+                                    <p class="txt18">до 50 000 ₽ </p>
+
+                                    <svg class="basket-list__banner-login-indication-e-circle" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
+                                        <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
+                                    </svg>
+                                    <p class="tl4">20%</p>
+                                </div>
+
+                                <div class="basket-list__banner-login-indication-e">
+                                    <p class="txt18">до 50 000 ₽ </p>
+                                    <svg class="basket-list__banner-login-indication-e-circle" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
+                                        <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
+                                    </svg>
+                                    <p class="tl4">25%</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="basket-list-c basket-list__list">
+                        <li class="basket-list__list-e">
+                            <div class="basket-list__list-e-img">
+                                <img src="./assets/images/item-card.webp" alt="card">
+                            </div>
+                            <div class="basket-list__list-e-text">
+                                <h3 class="tl4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                                    perspiciatis exercitationem molestiae, praesentium quas tenetur quibusdam veniam
+                                    iste a vel.
+                                </h3>
+                                <p class="txt16">Артикул <span>88888888888</span></p>
+                            </div>
+                            <div class="basket-list__list-e-counts">
+                                <div class="btn-counter">
+                                    <button>-</button>
+                                    <span>1111</span>
+                                    <button>+</button>
+                                </div>
+                                <span class="txt16">
+                                    <span class="price ">999 999</span>/шт
+                                </span>
+
+                            </div>
+
+                            <div class="basket-list__list-e-prices">
+                                <span class="price tl4">777 777 7</span>
+                                <span class="price price_discount txt20"> 4 444 444</span>
+                                <span class="basket-list__list-e-prices-discount bg bg_ye fit txt14">-10%</span>
+                            </div>
+                            <button class="basket-list__list-e-delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.9997 6.73046C20.9797 6.73046 20.9497 6.73046 20.9197 6.73046C15.6297 6.20046 10.3497 6.00046 5.11967 6.53046L3.07967 6.73046C2.65967 6.77046 2.28967 6.47046 2.24967 6.05046C2.20967 5.63046 2.50967 5.27046 2.91967 5.23046L4.95967 5.03046C10.2797 4.49046 15.6697 4.70046 21.0697 5.23046C21.4797 5.27046 21.7797 5.64046 21.7397 6.05046C21.7097 6.44046 21.3797 6.73046 20.9997 6.73046Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                    <path
+                                        d="M8.49977 5.72C8.45977 5.72 8.41977 5.72 8.36977 5.71C7.96977 5.64 7.68977 5.25 7.75977 4.85L7.97977 3.54C8.13977 2.58 8.35977 1.25 10.6898 1.25H13.3098C15.6498 1.25 15.8698 2.63 16.0198 3.55L16.2398 4.85C16.3098 5.26 16.0298 5.65 15.6298 5.71C15.2198 5.78 14.8298 5.5 14.7698 5.1L14.5498 3.8C14.4098 2.93 14.3798 2.76 13.3198 2.76H10.6998C9.63977 2.76 9.61977 2.9 9.46977 3.79L9.23977 5.09C9.17977 5.46 8.85977 5.72 8.49977 5.72Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                    <path
+                                        d="M15.2104 22.7496H8.79039C5.30039 22.7496 5.16039 20.8196 5.05039 19.2596L4.40039 9.18959C4.37039 8.77959 4.69039 8.41959 5.10039 8.38959C5.52039 8.36959 5.87039 8.67959 5.90039 9.08959L6.55039 19.1596C6.66039 20.6796 6.70039 21.2496 8.79039 21.2496H15.2104C17.3104 21.2496 17.3504 20.6796 17.4504 19.1596L18.1004 9.08959C18.1304 8.67959 18.4904 8.36959 18.9004 8.38959C19.3104 8.41959 19.6304 8.76959 19.6004 9.18959L18.9504 19.2596C18.8404 20.8196 18.7004 22.7496 15.2104 22.7496Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                    <path
+                                        d="M13.6601 17.25H10.3301C9.92008 17.25 9.58008 16.91 9.58008 16.5C9.58008 16.09 9.92008 15.75 10.3301 15.75H13.6601C14.0701 15.75 14.4101 16.09 14.4101 16.5C14.4101 16.91 14.0701 17.25 13.6601 17.25Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                    <path
+                                        d="M14.5 13.25H9.5C9.09 13.25 8.75 12.91 8.75 12.5C8.75 12.09 9.09 11.75 9.5 11.75H14.5C14.91 11.75 15.25 12.09 15.25 12.5C15.25 12.91 14.91 13.25 14.5 13.25Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                </svg>
+
+                            </button>
+                        </li>
+                        <li class="basket-list__list-e _disabled">
+                            <div class="basket-list__list-e-img">
+                                <img src="./assets/images/item-card.webp" alt="card">
+                            </div>
+                            <div class="basket-list__list-e-text">
+                                <h3 class="tl4">Lorem ipsum dolor sit amet consectetur
+                                </h3>
+                                <p class="txt16">Артикул <span>88888888888</span></p>
+                            </div>
+                            <div class="basket-list__list-e-counts">
+                                <span class="txt18"> Товар закончился</span>
+                            </div>
+
+                            <div class="basket-list__list-e-prices">
+                                <span class="price tl4">777 777 7</span>
+                            </div>
+                            <button class="basket-list__list-e-delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.9997 6.73046C20.9797 6.73046 20.9497 6.73046 20.9197 6.73046C15.6297 6.20046 10.3497 6.00046 5.11967 6.53046L3.07967 6.73046C2.65967 6.77046 2.28967 6.47046 2.24967 6.05046C2.20967 5.63046 2.50967 5.27046 2.91967 5.23046L4.95967 5.03046C10.2797 4.49046 15.6697 4.70046 21.0697 5.23046C21.4797 5.27046 21.7797 5.64046 21.7397 6.05046C21.7097 6.44046 21.3797 6.73046 20.9997 6.73046Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                    <path
+                                        d="M8.49977 5.72C8.45977 5.72 8.41977 5.72 8.36977 5.71C7.96977 5.64 7.68977 5.25 7.75977 4.85L7.97977 3.54C8.13977 2.58 8.35977 1.25 10.6898 1.25H13.3098C15.6498 1.25 15.8698 2.63 16.0198 3.55L16.2398 4.85C16.3098 5.26 16.0298 5.65 15.6298 5.71C15.2198 5.78 14.8298 5.5 14.7698 5.1L14.5498 3.8C14.4098 2.93 14.3798 2.76 13.3198 2.76H10.6998C9.63977 2.76 9.61977 2.9 9.46977 3.79L9.23977 5.09C9.17977 5.46 8.85977 5.72 8.49977 5.72Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                    <path
+                                        d="M15.2104 22.7496H8.79039C5.30039 22.7496 5.16039 20.8196 5.05039 19.2596L4.40039 9.18959C4.37039 8.77959 4.69039 8.41959 5.10039 8.38959C5.52039 8.36959 5.87039 8.67959 5.90039 9.08959L6.55039 19.1596C6.66039 20.6796 6.70039 21.2496 8.79039 21.2496H15.2104C17.3104 21.2496 17.3504 20.6796 17.4504 19.1596L18.1004 9.08959C18.1304 8.67959 18.4904 8.36959 18.9004 8.38959C19.3104 8.41959 19.6304 8.76959 19.6004 9.18959L18.9504 19.2596C18.8404 20.8196 18.7004 22.7496 15.2104 22.7496Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                    <path
+                                        d="M13.6601 17.25H10.3301C9.92008 17.25 9.58008 16.91 9.58008 16.5C9.58008 16.09 9.92008 15.75 10.3301 15.75H13.6601C14.0701 15.75 14.4101 16.09 14.4101 16.5C14.4101 16.91 14.0701 17.25 13.6601 17.25Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                    <path
+                                        d="M14.5 13.25H9.5C9.09 13.25 8.75 12.91 8.75 12.5C8.75 12.09 9.09 11.75 9.5 11.75H14.5C14.91 11.75 15.25 12.09 15.25 12.5C15.25 12.91 14.91 13.25 14.5 13.25Z"
+                                        fill="#162E3A" fill-opacity="0.5" />
+                                </svg>
+
+                            </button>
+                        </li>
+                    </ul>
+                    <form class=" basket-list__code">
+                        <p class="tl4">Промокод</p>
+                        <label class="input-container input-text form-input">
+                            <input type="text" name="promocode" autocomplete="off" placeholder="input-text">
+                            <span class="input-text-error-msg "></span>
+                        </label>
+
+                        <button type="submit" class="btn-primary btn-primary_blue">
+                            Применить
+                        </button>
+                    </form>
+
+
+                </section>
+
+                <section class="basket-order">
+                    <h2 class="tl2">Оформление заказа</h2>
+                    <div class="basket-order-c basket-order__userdata">
+                        <p class="tl3"> <strong>Ваши данные </strong> /// залогинен</p>
+                        <a href="#" class="col-bl basket-order__userdata-e-link txt20">
+                            Lorem ipsum dolor sit amet consectetur.
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.08987 8.54789C9.02287 8.53832 8.93674 8.53832 8.86018 8.54789C7.17579 8.49047 5.83594 7.11234 5.83594 5.41838C5.83594 3.68614 7.23321 2.2793 8.97502 2.2793C10.7073 2.2793 12.1141 3.68614 12.1141 5.41838C12.1045 7.11234 10.7743 8.49047 9.08987 8.54789Z"
+                                    stroke="#005C8F" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M15.1942 15.2297C14.8149 14.2452 14.471 13.711 13.732 12.958C11.1298 10.3065 6.78183 10.2684 4.21906 12.958C3.49842 13.7143 3.1459 14.1106 2.80664 15.2297"
+                                    stroke="#005C8F" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                        <label
+                            class="basket-order__userdata-e basket-order__userdata-e_row input-container input-text form-input">
+                            <input type="text" name="name" value="user name" disabled>
+
+                        </label>
+                        <label class="basket-order__userdata-e input-container input-text form-input">
+                            <input type="text" name="phone" value="+7 (777) 777-77-77" disabled>
+
+                        </label>
+                        <label class="basket-order__userdata-e input-container input-text form-input">
+                            <input type="text" name="email" value="example@mail.com" disabled>
+
+                        </label>
+
+                    </div>
+                    <div class="basket-order-c basket-order__userdata">
+                        <p class="tl3"> <strong>Ваши данные</strong> /// не залогинен</p>
+                        <a href="#" class="col-bl basket-order__userdata-e-link txt20">
+                            Войти в аккаунт
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.08987 8.54789C9.02287 8.53832 8.93674 8.53832 8.86018 8.54789C7.17579 8.49047 5.83594 7.11234 5.83594 5.41838C5.83594 3.68614 7.23321 2.2793 8.97502 2.2793C10.7073 2.2793 12.1141 3.68614 12.1141 5.41838C12.1045 7.11234 10.7743 8.49047 9.08987 8.54789Z"
+                                    stroke="#005C8F" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M15.1942 15.2297C14.8149 14.2452 14.471 13.711 13.732 12.958C11.1298 10.3065 6.78183 10.2684 4.21906 12.958C3.49842 13.7143 3.1459 14.1106 2.80664 15.2297"
+                                    stroke="#005C8F" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="basket-order__userdata-e basket-order__userdata-e_row">
+
+                            <label class="basket-order__userdata-e-radio radio txt18">
+                                <input type="radio" name="face" data-required="true" checked>
+                                <span class="radio-default">
+                                </span>
+                                Физическое лицо
+
+                            </label>
+                            <label class="basket-order__userdata-e-radio radio txt18">
+                                <input type="radio" name="face" data-required="true">
+                                <span class="radio-default">
+                                </span>
+                                Юридическое лицо
+
+                            </label>
+
+                        </div>
+
+                        <label
+                            class="basket-order__userdata-e basket-order__userdata-e_row input-container input-text form-input">
+                            <input type="text" name="name" data-required="true" placeholder="фио">
+                            <span class="input-text-error-msg "></span>
+                        </label>
+                        <div class="basket-order__userdata-e input-text form-input">
+                            <div class="input-phone">
+                                <div class="input-phone__select drop-down-container">
+                                    <button class="input-phone__select-current drop-down-target">
+                                        <img class="input-phone__select-flag input-phone__select-current-flag"
+                                            src="./assets/images/icons/flag-rus.svg" alt="flag">
+                                        <img class="input-phone__select-current-arrow"
+                                            src="./assets/images/icons/arrow-black.svg" alt="arrow">
+                                    </button>
+                                    <div class="input-phone__select-list">
+                                        <div class="input-phone__select-list-wrp">
+                                            <button class="input-phone__select-list-btn" data-mask="ru">
+                                                <img class="input-phone__select-flag "
+                                                    src="./assets/images/icons/flag-rus.svg" alt="flag">
+                                                +7
+                                            </button>
+                                            <button class="input-phone__select-list-btn" data-mask="br">
+                                                <img class="input-phone__select-flag "
+                                                    src="./assets/images/icons/flag-br.svg" alt="flag">
+                                                +375
+                                            </button>
+                                            <button class="input-phone__select-list-btn" data-mask="kz">
+                                                <img class="input-phone__select-flag "
+                                                    src="./assets/images/icons/flag-kz.svg" alt="flag">
+                                                +7
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="text" autocomplete="off" data-required="true" name="phone"
+                                    placeholder="номер телефона">
+                            </div>
+                            <span class="input-text-error-msg "></span>
+                        </div>
+                        <label class="basket-order__userdata-e  input-container input-text form-input">
+                            <input type="text" name="email" data-required="true" placeholder="Электронная почта">
+                            <span class="input-text-error-msg "></span>
+                        </label>
+                        <label class="basket-order__userdata-e  input-container input-text form-input">
+                            <input type="text" name="inn" data-required="true" placeholder="Номер ИНН">
+                            <span class="input-text-error-msg "></span>
+                        </label>
+                        <label class="basket-order__userdata-e  input-container input-text form-input">
+                            <input type="text" name="companyName" data-required="true" placeholder="Название компании">
+                            <span class="input-text-error-msg "></span>
+                        </label>
+                        <p class="basket-order__userdata-e basket-order__userdata-e_row tl3"> <strong>Карточка
+                                предприятия*</strong></p>
+                        <a href="#"
+                            class="basket-order__userdata-e basket-order__userdata-e_row basket-order__userdata-e-addfile txt18">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3164 12.9082L12.906 19.3187" stroke="#005C8F" stroke-width="1.7"
+                                    stroke-linecap="square" />
+                                <path
+                                    d="M13.5916 8.55484L16.1099 6.03656C18.8915 3.25495 23.4014 3.25494 26.183 6.03656V6.03656C28.9647 8.81817 28.9647 13.3281 26.183 16.1097L23.6648 18.628"
+                                    stroke="#005C8F" stroke-width="1.7" stroke-linecap="square" />
+                                <path
+                                    d="M18.6291 23.6678L16.1108 26.1861C13.3292 28.9677 8.81927 28.9677 6.03766 26.1861V26.1861C3.25604 23.4045 3.25604 18.8946 6.03766 16.113L8.55594 13.5947"
+                                    stroke="#005C8F" stroke-width="1.7" stroke-linecap="square" />
+                            </svg>
+                            Прикрепите файл с карточкой предприятия
+                        </a>
+
+                    </div>
+
+                    <div class="basket-order-c basket-order__delivery ">
+                        <p class="tl3"> <strong>Выберите спосбо доставки</strong></p>
+                        <p class="txt18">Доставка и самовывоз осуществляются только после поступления денежных средств
+                        </p>
+
+                        <div class="select drop-down-container ">
+                            <button class="select__target drop-down-target ">
+                                <input class="select__target-input txt16 txt16_medium" type="text" readonly=""
+                                    name="choice one" value="Москва">
+                                <img src="./assets/images/icons/arrow-black.svg" alt="V">
+                            </button>
+                            <div class="select__items">
+                                <div class="select__items-list">
+                                    <button class="select__items-list-e txt16 txt16_medium" disabled>Москва</button>
+                                    <button class="select__items-list-e txt16 txt16_medium">Не москва</button>
+                                    <button class="select__items-list-e txt16 txt16_medium">Снова москва</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="basket-order__delivery-type">
+                            <input class="basket-order__delivery-type-switchers" type="radio" name="deliveyType"
+                                id="samovivoz" checked>
+                            <input class="basket-order__delivery-type-switchers" type="radio" name="deliveyType"
+                                id="delline">
+                            <input class="basket-order__delivery-type-switchers" type="radio" name="deliveyType"
+                                id="cdek">
+                            <input class="basket-order__delivery-type-switchers" type="radio" name="deliveyType"
+                                id="currier">
+
+
+                            <label for="samovivoz" id="samovivozLabel"
+                                class="basket-order__delivery-type-target btn-primary btn-primary_blue btn-primary_small">
+                                Самовывоз (Мытищи)
+                            </label>
+                            <label for="delline" id="dellineLabel"
+                                class="basket-order__delivery-type-target btn-primary btn-primary_blue btn-primary_small">
+                                Деловые линии
+                            </label>
+                            <label for="cdek" id="cdekLabel"
+                                class="basket-order__delivery-type-target btn-primary btn-primary_blue btn-primary_small">
+                                СДЭК (пункт выдачи)
+                            </label>
+                            <label for="currier" id="currierLabel"
+                                class="basket-order__delivery-type-target btn-primary btn-primary_blue btn-primary_small">
+                                Курьер
+                                <span class="show-help" data-text="ты крутой 😎">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.85" y="0.85" width="22.3" height="22.3" rx="11.15" stroke="#162E3A"
+                                            stroke-width="1.7" />
+                                        <path
+                                            d="M12.33 14.424H10.764V13.776C10.764 11.184 13.446 10.986 13.446 9.15C13.446 8.178 12.798 7.566 11.52 7.566C10.386 7.548 9.522 7.98 9 8.34L9.144 6.63C9.99 6.216 10.782 6 11.826 6C13.842 6 15.264 7.026 15.264 8.88C15.264 11.652 12.33 11.85 12.33 14.01V14.424ZM11.556 18.276C10.908 18.276 10.422 17.772 10.422 17.124C10.422 16.512 10.908 16.008 11.556 16.008C12.204 16.008 12.69 16.494 12.69 17.124C12.69 17.772 12.204 18.276 11.556 18.276Z"
+                                            fill="#162E3A" />
+                                    </svg>
+                                </span>
+                            </label>
+
+                            <div class="basket-order__delivery-type-options">
+                                <button
+                                    class="basket-order__delivery-type-option basket-order__delivery-type-option-cdek">
+                                    <span class="tl3 col-wh">Выбрать пункт выдачи</span>
+                                </button>
+
+                                <div class="basket-order__delivery-type-option-cdek-item">
+                                    <div class="basket-order__delivery-type-option-cdek-item-data">
+                                        <p class="tl4">Пункт выдачи СДЭК №21</p>
+                                        <p class="txt18">107113, Москва, улица Сокольнический Вал, 2</p>
+                                        <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
+                                    </div>
+
+                                    <button
+                                        class="basket-order__delivery-type-option-cdek-item-btn btn-primary btn-primary_blue">
+                                        Изменить
+                                    </button>
+
+
+                                </div>
+                                <div
+                                    class="basket-order__delivery-type-option basket-order__delivery-type-option-currier">
+
+
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="input-text">
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="input-text">
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="input-text">
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="input-text">
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+                                    <label
+                                        class="basket-order__delivery-type-option-currier-comment input-container input-text form-input">
+                                        <textarea type="text" name="name" placeholder="Комментарий к доставке"></textarea>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+
+                                </div>
+
+                                <div class="basket-order__delivery-type-option-samovivoz">
+                                    <p class="txt18">Самовывоз осуществляется с офиса компании по адресу:</p>
+                                    <span class="basket-order__delivery-type-option-samovivoz-txt  txt18">
+                                        <img src="./assets/images/icons/location.svg" alt="loca">
+                                        г. Мытищи, 1-й Силикатный переулок, дом 6 литера "О"
+                                    </span>
+                                    <span class="basket-order__delivery-type-option-samovivoz-txt  txt18">
+                                        <img src="./assets/images/icons/time.svg" alt="loca">
+                                        График работы офиса: пн-пт с 9:00 до 18:00
+                                    </span>
+
+                                    <label
+                                        class="basket-order__delivery-type-option-samovivoz-comment input-container input-text form-input">
+                                        <textarea type="text" name="name" placeholder="input-text"></textarea>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="basket-order-c basket-order__pay">
+                        <p class="tl3"> <strong>Выберите способ оплаты</strong></p>
+
+                        <label class="radio radio_pay">
+                            <input type="radio" name="payment">
+                            <span class="radio-default">
+                            </span>
+                            <span class="radio-img">
+                                <img src="./assets/images/MasterCard.png" alt="master">
+                                <img src="./assets/images/MasterCard.png" alt="master">
+                                <img src="./assets/images/MasterCard.png" alt="master">
+                            </span>
+                            <span class="tl4 radio-txt">
+                                Картой на сайте
+                            </span>
+                            <span class="radio-border"></span>
+
+
+                        </label>
+                        <label class="radio radio_pay">
+                            <input type="radio" name="payment">
+                            <span class="radio-default">
+                            </span>
+                            <span class="radio-img">
+                                <img src="./assets/images/MasterCard.png" alt="master">
+                                <img src="./assets/images/MasterCard.png" alt="master">
+                                <img src="./assets/images/MasterCard.png" alt="master">
+                            </span>
+                            <span class="tl4 radio-txt">
+                                Картой на сайте
+                            </span>
+                            <span class="radio-border"></span>
+
+
+                        </label>
+
+
+                    </div>
+                    <div class="basket-order-c basket-order__comment">
+                        <p class="tl3"> <strong>Комментарий</strong></p>
+
+                        <label class="input-container input-text form-input">
+                            <textarea type="text" name="name" placeholder="input-text"></textarea>
+                        </label>
+
+                    </div>
+                </section>
+
+
+            </div>
             <include src="./components/_special-offer.html"></include>
         </main>
         <include src="./components/_footer.html"></include>

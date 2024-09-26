@@ -1,6 +1,43 @@
 .radio {
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &_pay {
+        min-width: 34rem;
+        height: 20rem;
+        padding: 1.6rem;
+        justify-content: space-between;
+        flex-direction: column;
+
+        & .radio-default {
+            margin-right: auto;
+        }
+
+        & .radio-img {
+            max-width: 100%;
+            max-height: 60%;
+            display: flex;
+            gap: 1rem;
+        }
+
+        & .radio-txt {
+            opacity: .7;
+        }
+
+        & .radio-border {
+            left: 0rem;
+            top: 0rem;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            border: .2rem solid $gray;
+        }
+    }
 
     & span {
         display: block;
@@ -11,30 +48,41 @@
         z-index: 1;
         opacity: 0;
 
-        &:checked+.radio-square {
-            background-color: $blue;
-            border: .2px solid $blue;
-            color: $white;
-            opacity: 1 !important;
-        }
-
-        &:checked+.radio-slider {
-            background-color: $blue;
-            border-color: $blue;
-
-            &:after {
-                left: 100%;
-                transform: translate(-100%, 0);
-                right: 0;
+        &:checked {
+            &+.radio-square {
                 background-color: $blue;
+                border: .2px solid $blue;
+                color: $white;
+                opacity: 1 !important;
             }
-        }
 
-        &:checked+.radio-default {
-            &::after {
+            &+.radio-slider {
+                background-color: $blue;
+                border-color: $blue;
+
+                &:after {
+                    left: 100%;
+                    transform: translate(-100%, 0);
+                    right: 0;
+                    background-color: $blue;
+                }
+            }
+
+            &+.radio-default {
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &~.radio-txt {
                 opacity: 1;
             }
+
+            &~.radio-border {
+                border-color: $blue;
+            }
         }
+
     }
 
 
@@ -204,7 +252,7 @@
     }
 
     &._error {
-        & input {
+        & input , & textarea {
             border-color: $red;
 
             &::placeholder {
@@ -218,7 +266,7 @@
         }
     }
 
-    & input {
+    & input , & textarea {
         border: .2rem solid $gray-dark;
         padding: 1.6rem 2.4rem;
         background-color: $white;
@@ -227,6 +275,7 @@
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 120%;
+        resize: none;
 
         @include small-tablet {
             font-size: 3rem;
@@ -385,7 +434,7 @@
 
     }
 
-    & input {
+    & input, & textarea {
         width: 100%;
         padding: 1.6rem 2.4rem;
         background-color: $white;
@@ -425,7 +474,7 @@
             grid-template-columns: repeat(5, 4rem);
             grid-template-rows: 4rem;
         }
-       
+
 
         &-item {
             position: relative;
@@ -446,12 +495,13 @@
                     fill: $green;
                 }
             }
+
             &[value="3"]:checked {
                 &~.input-stars__c-stars svg:nth-of-type(-n+3) {
                     fill: $green;
                 }
             }
-            
+
             &[value="4"]:checked {
                 &~.input-stars__c-stars svg:nth-of-type(-n+4) {
                     fill: $green;

@@ -156,46 +156,6 @@
                 display: flex;
                 justify-content: space-between;
 
-                &-counter {
-
-                    display: grid;
-                    grid-template-columns: 5.5rem auto 5.5rem;
-                    grid-template-rows: 5.5rem;
-                    gap: 1rem;
-                    align-items: center;
-                    border: .2rem solid $gray-dark;
-
-                    @include small-tablet {
-                        grid-template-columns: 9rem auto 9rem;
-                        grid-template-rows: 9rem;
-                    }
-
-                    & button {
-                        height: 100%;
-                        text-align: center;
-                        font-size: 2.4rem;
-                        font-weight: 600;
-
-                        @include small-tablet {
-                            font-size: 4rem;
-                        }
-
-                        &:active {
-                            background-color: $gray;
-                        }
-
-                    }
-
-                    & span {
-                        font-weight: 600;
-                        font-size: 2.6rem;
-
-                        @include small-tablet {
-                            font-size: 4rem;
-                        }
-
-                    }
-                }
 
             }
 

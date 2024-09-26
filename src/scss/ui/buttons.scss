@@ -3,7 +3,7 @@
     width: fit-content;
     border-radius: .3rem;
     box-sizing: border-box;
-    padding: 1.8rem 4.4rem;
+    padding: 1.6rem 4.4rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -126,7 +126,7 @@
         line-height: 3.4rem;
     }
 
- 
+
 
 
     & svg,
@@ -206,7 +206,7 @@
     & svg,
     & img {
         max-width: 30%;
-        
+
 
 
         @include small-tablet {
@@ -217,7 +217,7 @@
 
     &:disabled {
         background-color: $gray !important;
-      display: none;
+        display: none;
     }
 
     &:hover {
@@ -284,6 +284,7 @@
     @include small-tablet {
         padding: 1.6rem;
     }
+
     & span {
         align-items: center;
         display: flex;
@@ -295,7 +296,8 @@
         height: 5.2rem;
         justify-content: center;
         background: linear-gradient(90deg, #016192 0%, #014B7B 100%);
-        @include small-tablet{
+
+        @include small-tablet {
             width: 10rem;
             height: 10rem;
         }
@@ -314,11 +316,55 @@
         & svg {
             width: 2.4rem;
             height: 2.4rem;
-            @include small-tablet{
+
+            @include small-tablet {
                 width: 4rem;
                 height: 4rem;
             }
         }
+    }
+
+}
+
+.btn-counter {
+    display: grid;
+    grid-template-columns: 5.5rem auto 5.5rem;
+    grid-template-rows: 5.5rem;
+    gap: 1rem;
+    align-items: center;
+    border: .2rem solid $gray-dark;
+    height: fit-content;
+    width: fit-content;
+
+    @include small-tablet {
+        grid-template-columns: 9rem auto 9rem;
+        grid-template-rows: 9rem;
+    }
+
+    & button {
+        height: 100%;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 600;
+
+        @include small-tablet {
+            font-size: 4rem;
+        }
+
+        &:active {
+            background-color: $gray;
+        }
+
+    }
+
+    & span {
+        font-weight: 600;
+        font-size: 2.6rem;
+
+        @include small-tablet {
+            font-size: 4rem;
+        }
+
     }
 
 }
