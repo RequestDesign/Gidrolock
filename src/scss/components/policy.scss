@@ -1,0 +1,13 @@
+.policy{
+    &__c{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        gap: 2rem;
+        & .tl1, & .tl3{
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+    }
+}

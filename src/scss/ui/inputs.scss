@@ -252,7 +252,9 @@
     }
 
     &._error {
-        & input , & textarea {
+
+        & input,
+        & textarea {
             border-color: $red;
 
             &::placeholder {
@@ -266,7 +268,12 @@
         }
     }
 
-    & input , & textarea {
+    & textarea {
+        height: 100%;
+    }
+
+    & input,
+    & textarea {
         border: .2rem solid $gray-dark;
         padding: 1.6rem 2.4rem;
         background-color: $white;
@@ -276,6 +283,7 @@
         font-weight: 400;
         line-height: 120%;
         resize: none;
+
 
         @include small-tablet {
             font-size: 3rem;
@@ -434,7 +442,8 @@
 
     }
 
-    & input, & textarea {
+    & input,
+    & textarea {
         width: 100%;
         padding: 1.6rem 2.4rem;
         background-color: $white;
@@ -467,12 +476,12 @@
     &__c {
         display: grid;
         width: fit-content;
-        grid-template-columns: repeat(5, 2rem);
-        grid-template-rows: 2rem;
+        grid-template-columns: repeat(5, 3.2rem);
+        grid-template-rows: 3.2rem;
 
         @include small-tablet {
-            grid-template-columns: repeat(5, 4rem);
-            grid-template-rows: 4rem;
+            grid-template-columns: repeat(5, 6.4rem);
+            grid-template-rows: 6.4rem;
         }
 
 
@@ -526,12 +535,12 @@
             z-index: 1;
             display: grid;
             width: fit-content;
-            grid-template-columns: repeat(5, 2rem);
-            grid-template-rows: 2rem;
+            grid-template-columns: repeat(5, 3.2rem);
+            grid-template-rows: 3.2rem;
 
             @include small-tablet {
-                grid-template-columns: repeat(5, 4rem);
-                grid-template-rows: 4rem;
+                grid-template-columns: repeat(5, 6.4rem);
+                grid-template-rows: 6.4rem;
             }
 
             & svg {

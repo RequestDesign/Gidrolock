@@ -1,5 +1,6 @@
 .breadcrumps {
-    overflow: auto;
+    overflow-x: auto;
+    margin-top: 6rem;
     &+section {
         margin-top: 6rem !important;
     }
@@ -7,9 +8,16 @@
     &__c {
         display: flex;
         flex-wrap: nowrap;
-        
         gap: .5rem;
+        @include small-tablet{
+            gap: 1rem;
+            padding-bottom: 3rem;
+           
+        }
 
+        &-e{
+            white-space: nowrap;
+        }
         &-e:hover{
             color: $gray-dark;
         }

@@ -45,6 +45,18 @@
 
 
 // --------------------------------------------------------------------------
+.txt22 {
+  font-family: 'Rebrand Txt';
+  font-size: 2.2rem;
+  line-height: 110%;
+  font-weight: 400;
+
+  @include small-tablet {
+    font-size: 3rem;
+    line-height: 110%;
+
+  }
+}
 .txt20 {
   font-family: 'Rebrand Txt';
   font-size: 2rem;

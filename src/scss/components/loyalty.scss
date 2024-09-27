@@ -1,0 +1,99 @@
+.loyalty {}
+
+
+.loyalty-programm {
+    & .tl1 {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    &__c {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        width: 100%;
+
+        @include small-tablet {
+            grid-template-columns: 100%;
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        &-right {
+            background-color: $white;
+            padding: 6rem;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+
+            &-line {
+                position: absolute;
+                top: 48%;
+                left: 14%;
+                z-index: 2;
+                width: 70%;
+                height: .5rem;
+                background-color: $gray;
+            }
+
+            &-item {
+                position: relative;
+                z-index: 3;
+                display: flex;
+                flex-direction: column;
+                gap: .6rem;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+}
+
+.loyalty-partners {
+    background-color: $white;
+    padding: 8rem 0 0;
+    background-image: url(../../assets/images/partners-bg.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    &__c {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        &-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: min-content;
+            gap: 1rem 3rem;
+
+            &-row {
+                grid-column: 1 / span 2;
+            }
+
+
+            &-margin {
+                margin: 1.5rem 0;
+            }
+        }
+
+        &-img {
+            display: flex;
+            overflow: hidden;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(0, 92, 143, 0.3) 0%, rgba(0, 92, 143, 0) 100%);
+
+
+            & img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+    }
+}

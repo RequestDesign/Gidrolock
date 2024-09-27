@@ -11,6 +11,7 @@
 @import './filter-tag';
 @import './drop-down';
 @import './item-card-row';
+@import './api-pagination';
 
 
 
@@ -153,7 +154,12 @@
     gap: 1rem;
     align-items: center;
     & img, & svg{
-        width: 2rem;
-        height: 2rem;
+        max-width: 2rem;
+        max-height: 2rem;
+        flex-shrink: 0;
+        @include small-tablet{
+            max-width: 4rem;
+            max-height: 4rem;
+        }
     }
 }

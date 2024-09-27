@@ -12,16 +12,18 @@
         & .select__target {
             background-color: $green;
             color: $white;
-            & img{
+
+            & img {
                 width: 1rem;
                 height: .7rem;
-                @include small-tablet{
+
+                @include small-tablet {
                     width: 2rem;
                     height: 1.4rem;
                 }
             }
 
-           
+
         }
     }
 
@@ -35,7 +37,7 @@
         background-color: $white;
 
         & img {
-            transition:  transform .5s;
+            transition: transform .5s;
             max-width: 2.4rem;
             max-height: 2.4rem;
 
@@ -88,4 +90,19 @@
     }
 
 
+}
+
+
+.select-default {
+    padding: 1.4rem 2rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: .2rem solid $gray-dark;
+    min-width: 29.1rem;
+
+    &:hover,
+    & :focus {
+        outline: none;
+        background-color: $white;
+    }
 }

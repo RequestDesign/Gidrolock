@@ -9,6 +9,7 @@ import initCardPage from "../components/cardView";
 import initFeedBack from "../components/feedback";
 import initUserPage from "../components/userPage";
 import initSignUp from "../components/signUp";
+import { Toggler } from "../utils/toggler";
 
 
 
@@ -27,6 +28,8 @@ $(function () {
     initUserPage()
     initSignUp()
     modalsHandler()
+    new Toggler('.toggler-input-feedback', '.toggler-target-feedback', '_opened')
+    initNewsSwiper()
 
 });
 
@@ -330,6 +333,34 @@ function initMobileNav() {
     })
 
 }
+function initNewsSwiper() {
+    const sliders = document.querySelectorAll('.news-detail-slider')
+    if (!sliders) return
+    sliders.forEach((e) => {
+     
+        new Swiper(e.querySelector('.swiper'), {
+            modules: [Navigation, Pagination],
+            loop: false,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: rem(3),
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+
+                }
+            },
+            navigation: {
+                prevEl: e.querySelector('.btn-swiper_left'),
+                nextEl: e.querySelector('.btn-swiper_right'),
+            },
+            pagination: {
+                el: e.querySelector('.slider-pagination')
+            }
+        })
+
+    })
+}
 
 
 
@@ -367,6 +398,9 @@ function modalsHandler() {
         html.removeClass('lock')
     })
 }
+
+
+
 
 /* function formSubmit(inputsData) {
     console.log(inputsData);

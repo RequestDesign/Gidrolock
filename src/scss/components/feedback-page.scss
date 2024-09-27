@@ -1,0 +1,430 @@
+.feedback-page {
+    &-mobile-actions {
+        display: none;
+
+        @include small-tablet {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+            width: 100vw;
+            display: flex;
+            background-color: $white;
+            box-sizing: border-box;
+            padding: 3rem;
+            gap: 2rem;
+            align-items: center;
+
+            & button {
+                margin-left: auto;
+            }
+
+            & p {
+                height: fit-content;
+            }
+        }
+    }
+
+    &-mobile-raiting {
+        display: none;
+
+        @include small-tablet {
+            position: fixed;
+            display: block;
+            z-index: 20;
+            bottom: 0;
+            left: 0;
+
+        }
+
+        &._opened {
+            & .feedback-page-mobile-raiting__c {
+                transform: translateY(0);
+            }
+        }
+
+        &__c {
+            transition: transform .5s;
+            transform: translateY(100%);
+            position: relative;
+            width: 100vw;
+            padding: 3rem 2rem;
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            gap: 2.6rem;
+
+            &-head {
+                display: flex;
+                gap: 2rem;
+                justify-content: flex-start;
+
+                &+.txt14 {
+                    margin-bottom: 2.6rem;
+                }
+            }
+
+            & .flex-row {
+                justify-content: space-between;
+            }
+
+        }
+    }
+
+    &-top {
+        grid-column: 1;
+
+        &__c {
+            display: flex;
+            justify-content: space-between;
+            background-color: $white;
+            padding: 2rem 3.2rem;
+            align-items: center;
+
+            @include small-tablet {
+                flex-direction: column;
+                gap: 2rem;
+                padding: 3rem;
+            }
+
+            &-card {
+                display: flex;
+                gap: 2rem;
+
+                &-img {
+                    height: 13rem;
+                    display: flex;
+                    flex-shrink: 0;
+                    max-width: 21rem;
+
+                    @include small-tablet {
+                        width: 17rem;
+                        height: 10rem;
+                    }
+
+                    & img {
+                        object-fit: contain;
+                        height: 100%;
+
+                    }
+                }
+
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .8rem;
+
+                    @include small-tablet {
+                        gap: 1rem;
+                    }
+
+                    &-link {
+                        @include small-tablet {
+                            margin-top: 2rem;
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+
+            &-actions {
+                flex-shrink: 0;
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+
+                @include small-tablet {
+                    display: none;
+                }
+
+
+                & * {
+                    height: fit-content;
+                }
+            }
+        }
+    }
+
+    &-main {
+
+        &__c {
+            display: grid;
+            grid-template-columns: auto 45rem;
+            gap: 0 15rem;
+
+            @include small-tablet {
+                grid-template-columns: 100%;
+            }
+
+            &-sorting {
+
+                margin: 4rem 0;
+
+                &-e {
+                    &.desktop {
+                        display: flex;
+
+                        @include small-tablet {
+                            display: none;
+                        }
+                    }
+
+                    &.mobile {
+                        display: none;
+
+                        @include small-tablet {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: row;
+
+                            & div {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2rem;
+
+                            }
+
+
+                        }
+                    }
+                }
+
+
+                & .flex-row {
+                    margin-right: 4rem;
+
+                    @include small-tablet {
+                        margin-right: 0;
+                    }
+                }
+
+                &-check {
+                    margin-left: auto;
+
+                    &+& {
+                        margin-left: 4rem;
+                    }
+
+
+                }
+
+            }
+
+            &-raiting {
+                grid-column: 2;
+                grid-row: 1 / span 2;
+                position: sticky;
+                top: 10rem;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+                width: 100%;
+                background-color: $white;
+                padding: 3.2rem;
+
+                @include small-tablet {
+                    grid-column: 1;
+                    grid-row: 1;
+                    position: relative;
+                    top: 0;
+                }
+
+                & button {
+                    margin: 2.8rem 0;
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                & .flex-row {
+                    justify-content: space-between;
+
+                    @include small-tablet {
+                        justify-content: flex-start;
+                        gap: 2rem;
+
+                    }
+
+                    & .flex-row {
+                        justify-content: baseline;
+                        gap: 1rem;
+                    }
+                }
+
+            }
+
+
+            &-list {
+                grid-column: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+
+                &-e {
+                    background-color: $white;
+                    padding: 4rem;
+                    display: grid;
+                    grid-template-rows: auto 1fr;
+                    gap: 4.8rem;
+
+                    &-self {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.6rem;
+
+                        &-body {
+                            margin-top: 1.6rem;
+                        }
+
+                        &-attachments {
+                            display: flex;
+                            gap: 1rem;
+
+                            &-e {
+                                width: 6.4rem;
+                                height: 9.2rem;
+                                display: flex;
+                                overflow: hidden;
+                                position: relative;
+                                border-radius: 1rem;
+
+                                @include small-tablet {
+                                    width: 12rem;
+                                    height: 18rem;
+                                }
+
+                                & img {
+                                    object-fit: cover;
+                                    height: 100%;
+
+                                }
+
+                                &-video {
+                                    position: absolute;
+                                    z-index: 1;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    background-color: rgba(0, 0, 0, 0.2);
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    & img {
+                                        width: 3rem;
+                                        height: 3rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-comments {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3rem;
+                        padding-left: 10rem;
+
+                        &-item {
+                            display: grid;
+                            grid-template-columns: min-content auto;
+                            grid-template-rows: auto auto auto;
+                            gap: 0 2.4rem;
+                            grid-template-areas:
+                                'img name'
+                                'img status'
+                                'body body';
+
+                            &-img {
+                                grid-area: img;
+                                overflow: hidden;
+                                height: 6.7rem;
+                                width: 6.7rem;
+                                display: flex;
+
+                                @include small-tablet {
+                                    width: 9rem;
+                                    height: 9rem;
+                                }
+
+                                & img {
+                                    object-fit: cover;
+                                    height: 100%;
+                                }
+                            }
+
+                            &-name {
+                                grid-area: name;
+                            }
+
+                            &-status {
+                                grid-area: status;
+                            }
+
+                            &-body {
+                                margin-top: 2rem;
+                                grid-area: body;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    &-form {
+        margin-top: 0;
+
+        &__c {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 3.6rem;
+            @include small-tablet{
+                grid-template-columns: 100%;
+            }
+
+            &-row {
+                grid-column: 1 / span 2;
+                @include small-tablet{
+                    grid-column: 1;
+                }
+
+                &.input-stars {
+                    margin-right: auto;
+                }
+            }
+
+            & .flex-row {
+                justify-content: space-between;
+                
+            }
+
+            & .tl3 {
+                margin-bottom: 2rem;
+                margin-top: 4rem;
+                @include small-tablet{
+                    margin-top: 8rem;
+                    margin-bottom: 4rem;
+                }
+            }
+
+            &-footer {
+                justify-content: flex-start !important;
+                gap: 4rem !important;
+                margin-top: 4rem;
+                @include small-tablet{
+                    margin-top: 8rem;
+                    flex-direction: column-reverse;
+                    & button{
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+            &-comment{
+                height: 20rem;
+
+            }
+        }
+    }
+}

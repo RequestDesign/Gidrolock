@@ -1,0 +1,61 @@
+.delivery-pay {
+    &__c {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10rem;
+        margin-top: 4rem;
+
+
+        @include small-tablet {
+            gap: 20rem 0;
+            margin-top: 8rem;
+
+            &_payback {
+                gap: 5rem 0;
+            }
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            grid-column: 1;
+
+            &_payback {
+                gap: 2rem;
+            }
+
+
+            & li {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+
+            }
+
+        }
+
+        &-right {
+            grid-row: 1 / span 2;
+            grid-column: 2;
+
+            @include small-tablet {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            & .banner-fs {
+                position: sticky;
+                top: 10rem;
+
+                @include small-tablet {
+                    position: relative;
+                    top: 0;
+                }
+            }
+        }
+
+    }
+}

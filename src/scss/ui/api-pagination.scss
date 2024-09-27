@@ -1,0 +1,70 @@
+.api-pagination {
+    margin: auto;
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+    height: 4.6rem;
+
+    @include small-tablet {
+        height: 9rem
+    }
+
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 4.6rem;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:active {
+            background-color: $white;
+        }
+
+        @include small-tablet {
+            width: 9rem;
+        }
+
+        & img {
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        &_prev {
+            transform: rotate(90deg);
+        }
+
+        &_next {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &-pages {
+        display: flex;
+        gap: 1rem;
+
+        &-btn {
+            height: 100%;
+            width: 4.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include small-tablet {
+                width: 9rem;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+
+            &:disabled {
+                background-color: $white;
+            }
+        }
+
+    }
+}

@@ -12,6 +12,22 @@
     <div class="wrapper">
         <include src="./components/_header-small.html"></include>
         <main>
+            <section class="basket-placeholder">
+                <div class="container">
+                    <h1 class="tl1"> Корзина</h1>
+                    <div class="basket-placeholder__c">
+                        <p class="tl3"><strong>В корзине пока ничего нет</strong></p>
+                        <p class="txt20">Более 10 000 товаров в наличии и под заказ. Найдите то, что Вам нужно в
+                            каталоге товаров.</p>
+                        <button class="btn-primary btn-primary_blue">
+                            Перейти в каталог
+                        </button>
+
+                    </div>
+                </div>
+
+            </section>
+
             <div class="container basket-main">
                 <aside class="basket-main-aside">
 
@@ -46,8 +62,9 @@
 
                     <h1 class="tl1">Корзина</h1>
 
+                    <!-- basket-list__banners не нужен, на деплое убрать обертку -->
                     <div class="basket-list__banners">
-                        <!-- banners не нужен -->
+
                         <!-- unlogin -->
                         <div class="basket-list-c  basket-list__banner basket-list__banner-unlogin">
                             <div class=" basket-list__banner-text">
@@ -481,7 +498,8 @@
 
                                     <label
                                         class="basket-order__delivery-type-option-currier-comment input-container input-text form-input">
-                                        <textarea type="text" name="name" placeholder="Комментарий к доставке"></textarea>
+                                        <textarea type="text" name="name"
+                                            placeholder="Комментарий к доставке"></textarea>
                                         <span class="input-text-error-msg "></span>
                                     </label>
 
