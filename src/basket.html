@@ -238,7 +238,8 @@
                     <form class=" basket-list__code">
                         <p class="tl4">Промокод</p>
                         <label class="input-container input-text form-input">
-                            <input type="text" name="promocode" autocomplete="off" placeholder="input-text">
+                            <input type="text" name="promocode" autocomplete="off" placeholder="123qwe">
+                            <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
 
@@ -250,8 +251,9 @@
 
                 </section>
 
-                <section class="basket-order">
-                    <h2 class="tl2">Оформление заказа</h2>
+                <!-- ФОРМА НЕ ОБРАБАТЫВАЕТСЯ -->
+                <section class="basket-order form switcher">
+                    <h2 class="tl2">Оформление заказа </h2>
                     <div class="basket-order-c basket-order__userdata">
                         <p class="tl3"> <strong>Ваши данные </strong> /// залогинен</p>
                         <a href="#" class="col-bl basket-order__userdata-e-link txt20">
@@ -322,6 +324,7 @@
                         <label
                             class="basket-order__userdata-e basket-order__userdata-e_row input-container input-text form-input">
                             <input type="text" name="name" data-required="true" placeholder="фио">
+                            <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
                         <div class="basket-order__userdata-e input-text form-input">
@@ -355,19 +358,23 @@
                                 </div>
                                 <input type="text" autocomplete="off" data-required="true" name="phone"
                                     placeholder="номер телефона">
+                                <span class="input-text-placeholder"></span>
                             </div>
                             <span class="input-text-error-msg "></span>
                         </div>
                         <label class="basket-order__userdata-e  input-container input-text form-input">
                             <input type="text" name="email" data-required="true" placeholder="Электронная почта">
+                            <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
                         <label class="basket-order__userdata-e  input-container input-text form-input">
                             <input type="text" name="inn" data-required="true" placeholder="Номер ИНН">
+                            <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
                         <label class="basket-order__userdata-e  input-container input-text form-input">
                             <input type="text" name="companyName" data-required="true" placeholder="Название компании">
+                            <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
                         <p class="basket-order__userdata-e basket-order__userdata-e_row tl3"> <strong>Карточка
@@ -412,101 +419,48 @@
 
                         </div>
                         <div class="basket-order__delivery-type">
-                            <input class="basket-order__delivery-type-switchers" type="radio" name="deliveyType"
-                                id="samovivoz" checked>
-                            <input class="basket-order__delivery-type-switchers" type="radio" name="deliveyType"
-                                id="delline">
-                            <input class="basket-order__delivery-type-switchers" type="radio" name="deliveyType"
-                                id="cdek">
-                            <input class="basket-order__delivery-type-switchers" type="radio" name="deliveyType"
-                                id="currier">
 
-
-                            <label for="samovivoz" id="samovivozLabel"
-                                class="basket-order__delivery-type-target btn-primary btn-primary_blue btn-primary_small">
-                                Самовывоз (Мытищи)
-                            </label>
-                            <label for="delline" id="dellineLabel"
-                                class="basket-order__delivery-type-target btn-primary btn-primary_blue btn-primary_small">
-                                Деловые линии
-                            </label>
-                            <label for="cdek" id="cdekLabel"
-                                class="basket-order__delivery-type-target btn-primary btn-primary_blue btn-primary_small">
-                                СДЭК (пункт выдачи)
-                            </label>
-                            <label for="currier" id="currierLabel"
-                                class="basket-order__delivery-type-target btn-primary btn-primary_blue btn-primary_small">
-                                Курьер
-                                <span class="show-help" data-text="ты крутой 😎">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="0.85" y="0.85" width="22.3" height="22.3" rx="11.15" stroke="#162E3A"
-                                            stroke-width="1.7" />
-                                        <path
-                                            d="M12.33 14.424H10.764V13.776C10.764 11.184 13.446 10.986 13.446 9.15C13.446 8.178 12.798 7.566 11.52 7.566C10.386 7.548 9.522 7.98 9 8.34L9.144 6.63C9.99 6.216 10.782 6 11.826 6C13.842 6 15.264 7.026 15.264 8.88C15.264 11.652 12.33 11.85 12.33 14.01V14.424ZM11.556 18.276C10.908 18.276 10.422 17.772 10.422 17.124C10.422 16.512 10.908 16.008 11.556 16.008C12.204 16.008 12.69 16.494 12.69 17.124C12.69 17.772 12.204 18.276 11.556 18.276Z"
-                                            fill="#162E3A" />
-                                    </svg>
+                            <label class="radio switcher-btn">
+                                <input type="radio" name="test">
+                                <span class="radio-square txt18">
+                                    Самовывоз (Мытищи)
                                 </span>
                             </label>
+                            <label class="radio switcher-btn">
+                                <input type="radio" name="test">
+                                <span class="radio-square txt18">
+                                    Деловые линии
+                                </span>
+                            </label>
+                            <label class="radio switcher-btn">
+                                <input type="radio" name="test">
+                                <span class="radio-square txt18">
+                                    СДЭК (пункт выдачи)
+                                </span>
+                            </label>
+                            <label class="radio switcher-btn">
+                                <input type="radio" name="test">
+                                <span class="radio-square txt18">
+                                    Курьер
+                                    <span class="show-help" data-text="ты крутой 😎">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.85" y="0.85" width="22.3" height="22.3" rx="11.15"
+                                                stroke="#162E3A" stroke-width="1.7" />
+                                            <path
+                                                d="M12.33 14.424H10.764V13.776C10.764 11.184 13.446 10.986 13.446 9.15C13.446 8.178 12.798 7.566 11.52 7.566C10.386 7.548 9.522 7.98 9 8.34L9.144 6.63C9.99 6.216 10.782 6 11.826 6C13.842 6 15.264 7.026 15.264 8.88C15.264 11.652 12.33 11.85 12.33 14.01V14.424ZM11.556 18.276C10.908 18.276 10.422 17.772 10.422 17.124C10.422 16.512 10.908 16.008 11.556 16.008C12.204 16.008 12.69 16.494 12.69 17.124C12.69 17.772 12.204 18.276 11.556 18.276Z"
+                                                fill="#162E3A" />
+                                        </svg>
+                                    </span>
+                                </span>
 
-                            <div class="basket-order__delivery-type-options">
-                                <button
-                                    class="basket-order__delivery-type-option basket-order__delivery-type-option-cdek">
-                                    <span class="tl3 col-wh">Выбрать пункт выдачи</span>
-                                </button>
+                            </label>
+                        </div>
 
-                                <div class="basket-order__delivery-type-option-cdek-item">
-                                    <div class="basket-order__delivery-type-option-cdek-item-data">
-                                        <p class="tl4">Пункт выдачи СДЭК №21</p>
-                                        <p class="txt18">107113, Москва, улица Сокольнический Вал, 2</p>
-                                        <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
-                                    </div>
-
-                                    <button
-                                        class="basket-order__delivery-type-option-cdek-item-btn btn-primary btn-primary_blue">
-                                        Изменить
-                                    </button>
-
-
-                                </div>
-                                <div
-                                    class="basket-order__delivery-type-option basket-order__delivery-type-option-currier">
-
-
-                                    <label class="input-container input-text form-input">
-                                        <input type="text" name="name" placeholder="input-text">
-                                        <span class="input-text-error-msg "></span>
-                                    </label>
-
-
-                                    <label class="input-container input-text form-input">
-                                        <input type="text" name="name" placeholder="input-text">
-                                        <span class="input-text-error-msg "></span>
-                                    </label>
-
-                                    <label class="input-container input-text form-input">
-                                        <input type="text" name="name" placeholder="input-text">
-                                        <span class="input-text-error-msg "></span>
-                                    </label>
+                        <div class="basket-order__delivery-type-options">
 
 
-                                    <label class="input-container input-text form-input">
-                                        <input type="text" name="name" placeholder="input-text">
-                                        <span class="input-text-error-msg "></span>
-                                    </label>
-
-
-                                    <label
-                                        class="basket-order__delivery-type-option-currier-comment input-container input-text form-input">
-                                        <textarea type="text" name="name"
-                                            placeholder="Комментарий к доставке"></textarea>
-                                        <span class="input-text-error-msg "></span>
-                                    </label>
-
-
-
-                                </div>
-
+                            <div class="switcher-slide">
                                 <div class="basket-order__delivery-type-option-samovivoz">
                                     <p class="txt18">Самовывоз осуществляется с офиса компании по адресу:</p>
                                     <span class="basket-order__delivery-type-option-samovivoz-txt  txt18">
@@ -520,23 +474,93 @@
 
                                     <label
                                         class="basket-order__delivery-type-option-samovivoz-comment input-container input-text form-input">
-                                        <textarea type="text" name="name" placeholder="input-text"></textarea>
+                                        <textarea type="text" name="name"
+                                            placeholder="Комментарий к доставке"></textarea>
+                                        <span class="input-text-placeholder"></span>
                                         <span class="input-text-error-msg "></span>
                                     </label>
 
 
                                 </div>
+                            </div>
+
+                            <div class="switcher-slide">
+                                <p class="tl1">деловые линии</p>
+                            </div>
+
+                            <div class="switcher-slide">
+                                <button
+                                    class="basket-order__delivery-type-option basket-order__delivery-type-option-cdek modal-opener "
+                                    data-modal="cdek">
+                                    <span class="tl3 col-wh">Выбрать пункт выдачи</span>
+                                </button>
+                                <div class="basket-order__delivery-type-option-cdek-item"></div>
+                                <div class="basket-order__delivery-type-option-cdek-item-data">
+                                    <p class="tl4">Пункт выдачи СДЭК №21</p>
+                                    <p class="txt18">107113, Москва, улица Сокольнический Вал, 2</p>
+                                    <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
+                                </div>
+
+                                <button
+                                    class="basket-order__delivery-type-option-cdek-item-btn btn-primary btn-primary_blue">
+                                    Изменить
+                                </button>
 
 
                             </div>
 
+                            <div class="switcher-slide">
+                                <div
+                                    class="basket-order__delivery-type-option basket-order__delivery-type-option-currier">
 
 
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="Улица, дом" data-required="true">
+                                        <span class="input-text-placeholder"></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="Квартира" data-required="true">
+                                        <span class="input-text-placeholder"></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="Подъезд" data-required="true">
+                                        <span class="input-text-placeholder"></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="Этаж" data-required="true">
+                                        <span class="input-text-placeholder"></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+                                    <label
+                                        class="basket-order__delivery-type-option-currier-comment input-container input-text form-input">
+                                        <textarea type="text" name="name"
+                                            placeholder="Комментарий к доставке"></textarea>
+                                        <span class="input-text-placeholder"></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+
+                                </div>
+                            </div>
                         </div>
 
 
-
                     </div>
+
+
+
+
 
 
                     <div class="basket-order-c basket-order__pay">
@@ -581,7 +605,8 @@
                         <p class="tl3"> <strong>Комментарий</strong></p>
 
                         <label class="input-container input-text form-input">
-                            <textarea type="text" name="name" placeholder="input-text"></textarea>
+                            <textarea type="text" name="name" placeholder="Комментарий к доствке"></textarea>
+                            <span class="input-text-placeholder"></span>
                         </label>
 
                     </div>
@@ -589,8 +614,40 @@
 
 
             </div>
-            <include src="./components/_special-offer.html"></include>
+
+            <section class="complects">
+                <div class="container complects__c">
+                    <div class="complects__c-top">
+                        <h2 class="tl1 bg bg_grn col-wh">Рекомендуем к покупке</h2>
+
+                    </div>
+
+                    <div class="complects__c-slider swiper">
+                        <button
+                            class="complects__c-slider-prev btn-swiper btn-swiper_overlayed btn-swiper_left desktop">
+                            <img src="../assets/images/icons/arrow-white-right.svg" alt="arrow">
+                        </button>
+                        <button
+                            class="complects__c-slider-next btn-swiper btn-swiper_overlayed btn-swiper_right desktop">
+                            <img src="../assets/images/icons/arrow-white-right.svg" alt="arrow">
+                        </button>
+                        <ul class="swiper-wrapper complects__c-slider-list">
+                            <include src="./components/_item-card.html"></include>
+                            <include src="./components/_item-card.html"></include>
+                        </ul>
+
+                    </div>
+                    <div class="mobile">
+                        <div class="complects__c-slider-pagination ">
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
         </main>
+        <include src="./components/_modals.html"></include>
         <include src="./components/_footer.html"></include>
     </div>
 

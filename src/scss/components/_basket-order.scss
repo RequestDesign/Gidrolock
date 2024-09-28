@@ -77,59 +77,16 @@
         }
 
         &-type {
-            display: grid;
+            display: flex;
             position: relative;
-            grid-template-columns: repeat(4, auto) 1fr;
             justify-content: flex-start;
             width: 100%;
             gap: 2rem;
 
-            &-switchers {
-                display: none;
 
-                &#samovivoz:checked~label#samovivozLabel {
-                    background-color: $blue;
-                    color: white;
-                    border-color: $blue;
-                    opacity: 1;
-                }
-
-                &#delline:checked~label#dellineLabel {
-                    background-color: $blue;
-                    color: white;
-                    border-color: $blue;
-                    opacity: 1;
-                }
-
-                &#cdek:checked~label#cdekLabel {
-                    background-color: $blue;
-                    color: white;
-                    border-color: $blue;
-                    opacity: 1;
-                }
-
-                &#currier:checked~label#currierLabel {
-                    background-color: $blue;
-                    color: white;
-                    border-color: $blue;
-                    opacity: 1;
-                }
-            }
-
-            &-target {
-                border: .2rem solid $black;
-                color: $black;
-                opacity: 0.7;
-                background: none;
-                cursor: pointer;
-
-                &:hover {
-                    opacity: .9;
-                }
-            }
+           
 
             &-options {
-                grid-column: 1 / span 5;
                 display: flex;
                 flex-direction: column;
 

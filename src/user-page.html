@@ -18,12 +18,12 @@
                 <div class="container ">
                     <h2 class="tl1">Личный кабинет</h2>
                     <div class="user-page-c">
-
                         <div class="user-page__left">
                             <p class="tl3">
                                 <strong>Lorem ipsum dolor sit amet, consectetur adipisicing!</strong>
                             </p>
-                            <button data-open="personal" class="user-page__left-btn btn-primary _opened btn-primary_blue btn-primary_small">
+                            <button 
+                                class="user-page__left-btn switcher-btn btn-primary  btn-primary_blue btn-primary_small">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -40,7 +40,8 @@
                                 </span>
 
                             </button>
-                            <button data-open="history" class="user-page__left-btn btn-primary btn-primary_blue btn-primary_small">
+                            <button 
+                                class="user-page__left-btn switcher-btn btn-primary btn-primary_blue btn-primary_small">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_3085_27976)">
@@ -67,7 +68,8 @@
                                 </span>
 
                             </button>
-                            <button data-open="favorite" class="user-page__left-btn btn-primary btn-primary_blue btn-primary_small">
+                            <button
+                                class="user-page__left-btn switcher-btn btn-primary btn-primary_blue btn-primary_small">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -97,399 +99,361 @@
                             </a>
                         </div>
 
-                        <div class="user-page__main" id="userPersonal">
-                            <form class="user-page__main-personal">
-                                <p class="tl3"> <strong>Личные данные</strong></p>
+                        <div class="switcher-slide">
+                            <div class="user-page__main" >
+                                <form class="user-page__main-personal">
+                                    <p class="tl3"> <strong>Личные данные</strong></p>
 
-                                <button class="btn-nav user-page__main-personal-change">
-                                    Редактировать
-                                    <img src="./assets/images/icons/change-blue.svg" alt="change">
-                                </button>
-
-                                <label class="user-page__main-personal-row input-container input-text form-input">
-                                    <input type="text" name="name" placeholder="input-text">
-                                    <span class="input-text-error-msg "></span>
-                                </label>
-
-                                <label class=" input-container input-text form-input">
-                                    <input type="text" name="name" placeholder="input-text">
-                                    <span class="input-text-error-msg "></span>
-                                </label>
-
-                                <label class=" input-container input-text form-input">
-                                    <input type="text" name="name" placeholder="input-text">
-                                    <span class="input-text-error-msg "></span>
-                                </label>
-
-                                <p class="tl3 user-page__main-personal-row"><strong>Данные для входа</strong></p>
-
-                                <label class="input-container input-text form-input">
-                                    <input type="text" name="name" placeholder="input-text">
-                                    <span class="input-text-error-msg "></span>
-                                </label>
-
-                                <label class="input-container input-text input-pass form-input">
-                                    <input type="text" name="name" placeholder="input-text">
-                                    <span class="input-text-error-msg "></span>
-                                </label>
-
-
-                                <button class="btn-primary btn-primary_blue" type="submit">
-                                    Сохранить
-                                </button>
-
-
-
-
-
-
-                            </form>
-                        </div>
-
-                        <!-- history main -->
-                        <div class="user-page__main  user-page__main_fs" id="userPageHistory">
-                            <div class="user-page__main-history">
-                                <div class="user-page__main-history-top">
-                                    <label class="radio">
-                                        <input type="radio" name="test">
-                                        <span class="radio-square txt18">
-                                            Текущие заказы
-                                        </span>
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="test">
-                                        <span class="radio-square txt18">
-                                            История заказов
-                                        </span>
-                                    </label>
-                                </div>
-                                <ul class="user-page__main-history-heading">
-                                    <li class="tl4">Номер заказа</li>
-                                    <li class="tl4">Дата</li>
-                                    <li class="tl4">Способ доставки</li>
-                                    <li class="tl4">Сумма заказа</li>
-                                    <li class="tl4">Статус</li>
-                                    <li class="tl4"></li>
-                                </ul>
-                                <div
-                                    class="user-page__main-history-item drop-down-container drop-down-container-default">
-                                    <button
-                                        class="user-page__main-history-item-target drop-down-target drop-down-target-default">
-                                        <span class="txt20"> №77777777 </span>
-                                        <span class="txt20"> 18.07.24 </span>
-                                        <span class="txt20"> Курьер (в пределах МКАД) </span>
-                                        <span class="price txt20"> 22 708 </span>
-                                        <span class="col-grn txt20"> Активен </span>
-                                        <img class="drop-down-target-default-img"
-                                            src="./assets/images/icons/arrow-black.svg" alt="v">
+                                    <button class="btn-nav user-page__main-personal-change">
+                                        Редактировать
+                                        <img src="./assets/images/icons/change-blue.svg" alt="change">
                                     </button>
-                                    <div class="user-page__main-history-item-list">
-                                        <div class="user-page__main-history-item-list-wrp">
-                                            <p class="txt18 col-gr">Доставка: <span>Самовывоз</span></p>
-                                            <span class="txt18 user-page__main-history-item-list-adress">
-                                                <img src="./assets/images/icons/location.svg" alt="loca">
-                                                г. Мытищи, 1-й Силикатный переулок, дом 6 литера "О"
+
+                                    <label class="user-page__main-personal-row input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="ФИО" data-required="true">
+                                        <span class="input-text-placeholder "></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+                                    <label class=" input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="input-text">
+                                        <span class="input-text-placeholder "></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+                                    <label class=" input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="input-text">
+                                        <span class="input-text-placeholder "></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+                                    <p class="tl3 user-page__main-personal-row"><strong>Данные для входа</strong></p>
+
+                                    <label class="input-container input-text form-input">
+                                        <input type="text" name="name" placeholder="input-text">
+                                        <span class="input-text-placeholder "></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+                                    <label class="input-container input-text input-pass form-input">
+                                        <input type="text" name="name" placeholder="input-text">
+                                        <span class="input-text-placeholder "></span>
+                                        <span class="input-text-error-msg "></span>
+                                    </label>
+
+
+                                    <button class="btn-primary btn-primary_blue" type="submit">
+                                        Сохранить
+                                    </button>
+
+
+
+
+
+
+                                </form>
+                                <!-- обертка только для дэва -->
+                                <div class="user-page__deleteme">
+                                <!-- обертка только для дэва -->
+                                
+                                    <div class="user-page__right">
+                                        <p class="tl3"><strong>Ваша скидка <span>15</span>%</strong></p>
+                                        <p class="txt18">Купите товары на сумму от <span>8000</span>₽, чтобы получить
+                                            скидку
+                                            <span>20</span>%
+                                        </p>
+                                        <p class="txt18"><strong>Скидка зависит от суммы выкупа</strong></p>
+                                        <ul class="user-page__right-list">
+                                            <li class="txt18"><span class="col-grn">от 50 000 ₽</span> 15%</li>
+                                            <li class="txt18"><span class="col-grn">от 90 000 ₽</span> 20%</li>
+                                            <li class="txt18"><span class="col-grn">от 150 000 ₽</span> 25%</li>
+                                        </ul>
+                                        <div class="user-page__right-indication">
+
+                                            <span class="user-page__right-indication-item tl4 _active">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
+                                                    <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
+                                                </svg>
+                                                0%
                                             </span>
-                                            <div class="item-card-row item-card-row_history">
-                                                <div class="item-card-row-img">
-                                                    <img src="./assets/images/item-card.webp" alt="card">
-                                                </div>
-                                                <div class="item-card-row-text">
-                                                    <h3 class="tl4">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                        elit.
-                                                    </h3>
-                                                    <p class="txt16">Артикул <span>88888888888</span></p>
-                                                </div>
-                                                <div class="item-card-row-counts">
-                                                    <p class="txt18 col-gr">Кол-во: <span class="col-blk">5</span>шт</p>
+                                            <div class="user-page__right-indication-line"></div>
+                                            <span class="user-page__right-indication-item tl4 _active">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
+                                                    <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
+                                                </svg>
+                                                15%
+                                            </span>
+                                            <span class="user-page__right-indication-item tl4">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
+                                                    <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
+                                                </svg>
+                                                20%
+                                            </span>
+                                            <span class="user-page__right-indication-item tl4">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
+                                                    <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
+                                                </svg>
+                                                25%
+                                            </span>
 
-                                                </div>
-
-                                                <a href="#" class="col-bl txt20 item-card-row-link">
-                                                    В корзину
-                                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M8.16699 7.66952V6.69952C8.16699 4.44952 9.97699 2.23952 12.227 2.02952C14.907 1.76952 17.167 3.87952 17.167 6.50952V7.88952"
-                                                            stroke="#005C8F" stroke-width="1.7" stroke-miterlimit="10"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path
-                                                            d="M9.66682 22H15.6668C19.6868 22 20.4068 20.39 20.6168 18.43L21.3668 12.43C21.6368 9.99 20.9368 8 16.6668 8H8.66682C4.39682 8 3.69682 9.99 3.96682 12.43L4.71682 18.43C4.92682 20.39 5.64682 22 9.66682 22Z"
-                                                            stroke="#005C8F" stroke-width="1.7" stroke-miterlimit="10"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-
-                                                </a>
-
-
-                                                <div class="item-card-row-prices">
-                                                    <span class="price tl4">777 777 7</span>
-                                                </div>
-                                                <div>
-                                                    &nbsp;
-                                                </div>
-
-                                            </div>
-                                            <div class="item-card-row item-card-row_history">
-                                                <div class="item-card-row-img">
-                                                    <img src="./assets/images/item-card.webp" alt="card">
-                                                </div>
-                                                <div class="item-card-row-text">
-                                                    <h3 class="tl4">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                        elit.
-                                                    </h3>
-                                                    <p class="txt16">Артикул <span>88888888888</span></p>
-                                                </div>
-                                                <div class="item-card-row-counts">
-                                                    <p class="txt18 col-gr">Кол-во: <span class="col-blk">5</span>шт</p>
-
-                                                </div>
-
-                                                <a href="#" class="col-bl txt20 item-card-row-link">
-                                                    В корзину
-                                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M8.16699 7.66952V6.69952C8.16699 4.44952 9.97699 2.23952 12.227 2.02952C14.907 1.76952 17.167 3.87952 17.167 6.50952V7.88952"
-                                                            stroke="#005C8F" stroke-width="1.7" stroke-miterlimit="10"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path
-                                                            d="M9.66682 22H15.6668C19.6868 22 20.4068 20.39 20.6168 18.43L21.3668 12.43C21.6368 9.99 20.9368 8 16.6668 8H8.66682C4.39682 8 3.69682 9.99 3.96682 12.43L4.71682 18.43C4.92682 20.39 5.64682 22 9.66682 22Z"
-                                                            stroke="#005C8F" stroke-width="1.7" stroke-miterlimit="10"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-
-                                                </a>
-
-
-                                                <div class="item-card-row-prices">
-                                                    <span class="price tl4">777 777 7</span>
-                                                </div>
-                                                <div>
-                                                    &nbsp;
-                                                </div>
-
-                                            </div>
-                                            <div class="user-page__main-history-item-list-summary">
-
-                                                <a href="#" class="btn-nav btn-nav_ul col-blk">
-                                                    Отменить заказ</a>
-
-                                                <a href="#" class="btn-nav btn-nav_ul ">
-                                                    Повторить заказ</a>
-                                                <p class="tl4 user-page__main-history-item-list-summary-data">
-
-                                                    Итого: <span class="price">444 444</span>
-
-                                                </p>
-
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- history main -->
 
-                        <!-- history placeholder -->
-                        <div class="user-page__main  user-page__main_fs" id="userPageHistoryPlaceholder">
-                            <div class="catalog-choice user-page__main_history-banner">
-                                <div class=" catalog-choice__c">
-                                    <div class="catalog-choice__c-img">
-                                        <img src="./assets/images/catalog-choice.webp" alt="choice">
+                                    <div class="user-page__right">
+                                        <p class="tl3"><strong>Ваша скидка 25%</strong></p>
+                                        <p class="txt18">С нами выгодно!</p>
                                     </div>
-                                    <div class="catalog-choice__c-info">
-                                        <div class="catalog-choice__c-info-left">
-                                            <p class="tl2 col-wh">Заказов пока нет</p>
-                                            <p class="txt20 col-wh">Более 10 000 товаров в наличии и под заказ. Найдите
-                                                то,
-                                                что Вам нужно в каталоге товаров.</p>
-                                            <button class="btn-primary btn-primary_green">
-                                                Подобрать
-                                            </button>
+
+                                    <div class="user-page__right">
+                                        <p class="tl3"><strong>Ответим на ваши вопросы!</strong></p>
+                                        <p class="txt18">Если Ваши данные изменились, свяжитесь с нами любым удобным для Вас
+                                            способом!
+                                        </p>
+                                        <div class="user-page__right-links">
+                                            <span class=" user-page__right-links-e">
+                                                <img src="./assets/images/icons/phone-blue.svg" alt="phone">
+                                                8 (495) 120-23-29
+                                            </span>
+                                            <a href="#" class=" user-page__right-links-e">
+                                                <img src="./assets/images/icons/wa-blue.svg" alt="wa">
+                                                Whats App
+                                            </a>
                                         </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- history placeholder -->
-
-                        <!-- favorite -->
-                        <div class="user-page__main user-page__main_fs" id="userPageFavorite">
-                            <div class="user-page__main-favorite">
-                                <div class="item-card">
-                                    <div class="item-card__top ">
-                                        <span class="item-card__top-discount txt16">10</span>
-
-                                        <button class="item-card__top-favorite item-card__top-favorite_active">
-                                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.58812 16.9424L6.58901 16.9433L16.118 25.8049C16.3555 26.0257 16.6706 26.15 17 26.15C17.3294 26.15 17.6445 26.0257 17.882 25.8049L27.411 16.9433L27.4119 16.9424C28.8412 15.617 29.65 13.7576 29.65 11.8137V11.509C29.65 8.25535 27.29 5.4773 24.0643 4.94091L6.58812 16.9424ZM6.58812 16.9424C5.1588 15.617 4.35 13.7576 4.35 11.8137V11.509C4.35 8.25535 6.71003 5.47731 9.9357 4.94091L6.58812 16.9424ZM17 8.02842L16.4001 7.43088L15.7673 6.80052C14.2426 5.28171 12.0711 4.58646 9.93589 4.94088L17 8.02842ZM17 8.02842L17.5999 7.43088M17 8.02842L17.5999 7.43088M17.5999 7.43088L18.2327 6.80052C19.7574 5.28171 21.9289 4.58646 24.0641 4.94088L17.5999 7.43088Z"
-                                                    stroke="#005c8f" stroke-width="1.7"></path>
-                                            </svg>
+            
+                                        <button class="btn-primary btn-primary_blue">
+                                            Оставить заявку
                                         </button>
-
-
-
+            
                                     </div>
-                                    <a href="#" class="item-card__img">
-                                        <img src="./assets/images/item-card.webp" alt="item-card">
-                                    </a>
-                                    <h3 class="tl4"><a href="#"> Умный манипулятор для шарового крана SCW1 (Wi-Fi)
-                                            (81102020)</a></h3>
+                                </div>
+                            </div>
+                        </div>
 
-                                    <div class="item-card__drop-down select select_just-watch drop-down-container ">
-                                        <button class="select__target drop-down-target ">
-                                            <input class="test-input txt16 txt16_medium" type="text" readonly=""
-                                                value="defalut">
-                                            <img src="./assets/images/icons/arrow-white.svg" alt="V">
+                        <div class="switcher-slide">
+                            <!-- history main -->
+                            <div class="user-page__main " >
+                                <div class="user-page__main-history">
+                                    <div class="user-page__main-history-top">
+                                        <label class="radio">
+                                            <input type="radio" name="test">
+                                            <span class="radio-square txt18">
+                                                Текущие заказы
+                                            </span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="test">
+                                            <span class="radio-square txt18">
+                                                История заказов
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <ul class="user-page__main-history-heading">
+                                        <li class="tl4">Номер заказа</li>
+                                        <li class="tl4">Дата</li>
+                                        <li class="tl4">Способ доставки</li>
+                                        <li class="tl4">Сумма заказа</li>
+                                        <li class="tl4">Статус</li>
+                                        <li class="tl4"></li>
+                                    </ul>
+                                    <div
+                                        class="user-page__main-history-item drop-down-container drop-down-container-default">
+                                        <button
+                                            class="user-page__main-history-item-target drop-down-target drop-down-target-default">
+                                            <span class="txt20"> №77777777 </span>
+                                            <span class="txt20"> 18.07.24 </span>
+                                            <span class="txt20"> Курьер (в пределах МКАД) </span>
+                                            <span class="price txt20"> 22 708 </span>
+                                            <span class="col-grn txt20"> Активен </span>
+                                            <img class="drop-down-target-default-img"
+                                                src="./assets/images/icons/arrow-black.svg" alt="v">
                                         </button>
-                                        <div class="select__items">
-                                            <div class="select__items-list">
-                                                <button class="select__items-list-e txt16 txt16_medium">value 1</button>
-                                                <button class="select__items-list-e txt16 txt16_medium">value 2</button>
-                                                <button class="select__items-list-e txt16 txt16_medium">value 3</button>
+                                        <div class="user-page__main-history-item-list">
+                                            <div class="user-page__main-history-item-list-wrp">
+                                                <p class="txt18 col-gr">Доставка: <span>Самовывоз</span></p>
+                                                <span class="txt18 user-page__main-history-item-list-adress">
+                                                    <img src="./assets/images/icons/location.svg" alt="loca">
+                                                    г. Мытищи, 1-й Силикатный переулок, дом 6 литера "О"
+                                                </span>
+                                                <div class="item-card-row item-card-row_history">
+                                                    <div class="item-card-row-img">
+                                                        <img src="./assets/images/item-card.webp" alt="card">
+                                                    </div>
+                                                    <div class="item-card-row-text">
+                                                        <h3 class="tl4">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing
+                                                            elit.
+                                                        </h3>
+                                                        <p class="txt16">Артикул <span>88888888888</span></p>
+                                                    </div>
+                                                    <div class="item-card-row-counts">
+                                                        <p class="txt18 col-gr">Кол-во: <span class="col-blk">5</span>шт
+                                                        </p>
+
+                                                    </div>
+
+                                                    <a href="#" class="col-bl txt20 item-card-row-link">
+                                                        В корзину
+                                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M8.16699 7.66952V6.69952C8.16699 4.44952 9.97699 2.23952 12.227 2.02952C14.907 1.76952 17.167 3.87952 17.167 6.50952V7.88952"
+                                                                stroke="#005C8F" stroke-width="1.7"
+                                                                stroke-miterlimit="10" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path
+                                                                d="M9.66682 22H15.6668C19.6868 22 20.4068 20.39 20.6168 18.43L21.3668 12.43C21.6368 9.99 20.9368 8 16.6668 8H8.66682C4.39682 8 3.69682 9.99 3.96682 12.43L4.71682 18.43C4.92682 20.39 5.64682 22 9.66682 22Z"
+                                                                stroke="#005C8F" stroke-width="1.7"
+                                                                stroke-miterlimit="10" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                    </a>
+
+
+                                                    <div class="item-card-row-prices">
+                                                        <span class="price tl4">777 777 7</span>
+                                                    </div>
+                                                    <div>
+                                                        &nbsp;
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-card-row item-card-row_history">
+                                                    <div class="item-card-row-img">
+                                                        <img src="./assets/images/item-card.webp" alt="card">
+                                                    </div>
+                                                    <div class="item-card-row-text">
+                                                        <h3 class="tl4">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing
+                                                            elit.
+                                                        </h3>
+                                                        <p class="txt16">Артикул <span>88888888888</span></p>
+                                                    </div>
+                                                    <div class="item-card-row-counts">
+                                                        <p class="txt18 col-gr">Кол-во: <span class="col-blk">5</span>шт
+                                                        </p>
+
+                                                    </div>
+
+                                                    <a href="#" class="col-bl txt20 item-card-row-link">
+                                                        В корзину
+                                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M8.16699 7.66952V6.69952C8.16699 4.44952 9.97699 2.23952 12.227 2.02952C14.907 1.76952 17.167 3.87952 17.167 6.50952V7.88952"
+                                                                stroke="#005C8F" stroke-width="1.7"
+                                                                stroke-miterlimit="10" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path
+                                                                d="M9.66682 22H15.6668C19.6868 22 20.4068 20.39 20.6168 18.43L21.3668 12.43C21.6368 9.99 20.9368 8 16.6668 8H8.66682C4.39682 8 3.69682 9.99 3.96682 12.43L4.71682 18.43C4.92682 20.39 5.64682 22 9.66682 22Z"
+                                                                stroke="#005C8F" stroke-width="1.7"
+                                                                stroke-miterlimit="10" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                    </a>
+
+
+                                                    <div class="item-card-row-prices">
+                                                        <span class="price tl4">777 777 7</span>
+                                                    </div>
+                                                    <div>
+                                                        &nbsp;
+                                                    </div>
+
+                                                </div>
+                                                <div class="user-page__main-history-item-list-summary">
+
+                                                    <a href="#" class="btn-nav btn-nav_ul col-blk">
+                                                        Отменить заказ</a>
+
+                                                    <a href="#" class="btn-nav btn-nav_ul ">
+                                                        Повторить заказ</a>
+                                                    <p class="tl4 user-page__main-history-item-list-summary-data">
+
+                                                        Итого: <span class="price">444 444</span>
+
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- history main -->
+
+                            <!-- history placeholder -->
+                            <div class="user-page__main " >
+                                <div class="catalog-choice user-page__main_history-banner">
+                                    <div class=" catalog-choice__c">
+                                        <div class="catalog-choice__c-img">
+                                            <img src="./assets/images/catalog-choice.webp" alt="choice">
+                                        </div>
+                                        <div class="catalog-choice__c-info">
+                                            <div class="catalog-choice__c-info-left">
+                                                <p class="tl2 col-wh">Заказов пока нет</p>
+                                                <p class="txt20 col-wh">Более 10 000 товаров в наличии и под заказ.
+                                                    Найдите
+                                                    то,
+                                                    что Вам нужно в каталоге товаров.</p>
+                                                <button class="btn-primary btn-primary_green">
+                                                    Подобрать
+                                                </button>
                                             </div>
 
                                         </div>
-
-                                    </div>
-
-                                    <div class="item-card__info">
-                                        <div class="item-card__info-price">
-                                            <span class="item-card__info-price-e tl4">777777</span>
-                                            <span
-                                                class="item-card__info-price-e tl4 item-card__info-price-e_discount">777777</span>
-                                        </div>
-                                        <div class="item-card__info-basket">
-                                            <button class="item-card__info-basket-btn tl4" disabled="">-</button>
-                                            <span class="item-card__info-basket-count tl4">111</span>
-                                            <button class="item-card__info-basket-btn tl4">+</button>
-                                        </div>
-                                    </div>
-                                    <button class=" btn-primary btn-primary_blue btn-primary_blue-active">
-                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 7.66952V6.69952C8 4.44952 9.81 2.23952 12.06 2.02952C14.74 1.76952 17 3.87952 17 6.50952V7.88952"
-                                                stroke="white" stroke-width="1.7" stroke-miterlimit="10"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path
-                                                d="M9.5008 22H15.5008C19.5208 22 20.2408 20.39 20.4508 18.43L21.2008 12.43C21.4708 9.99 20.7708 8 16.5008 8H8.5008C4.2308 8 3.5308 9.99 3.8008 12.43L4.5508 18.43C4.7608 20.39 5.4808 22 9.5008 22Z"
-                                                stroke="white" stroke-width="1.7" stroke-miterlimit="10"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-
-                                        <span> В корзину</span>
-                                    </button>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- favorite -->
-
-                        <!-- favorite placeholder -->
-                        <div class="user-page__main user-page__main_fs" id="userPageFavoritePlaceholder">
-                            <div class="catalog-choice user-page__main_history-banner">
-                                <div class=" catalog-choice__c">
-                                    <div class="catalog-choice__c-img">
-                                        <img src="./assets/images/catalog-choice.webp" alt="choice">
-                                    </div>
-                                    <div class="catalog-choice__c-info">
-                                        <div class="catalog-choice__c-info-left">
-                                            <p class="tl2 col-wh">В избранном пока ничего нет</p>
-                                            <p class="txt20 col-wh">Более 10 000 товаров в наличии и под заказ. Найдите
-                                                то,
-                                                что Вам нужно в каталоге товаров.</p>
-                                            <button class="btn-primary btn-primary_green">
-                                                Подобрать
-                                            </button>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
+                            <!-- history placeholder -->
                         </div>
-                        <!-- favorite placeholder -->
-
-                        <div class="user-page__right">
-                            <p class="tl3"><strong>Ваша скидка <span>15</span>%</strong></p>
-                            <p class="txt18">Купите товары на сумму от <span>8000</span>₽, чтобы получить скидку
-                                <span>20</span>%
-                            </p>
-                            <p class="txt18"><strong>Скидка зависит от суммы выкупа</strong></p>
-                            <ul class="user-page__right-list">
-                                <li class="txt18"><span class="col-grn">от 50 000 ₽</span> 15%</li>
-                                <li class="txt18"><span class="col-grn">от 90 000 ₽</span> 20%</li>
-                                <li class="txt18"><span class="col-grn">от 150 000 ₽</span> 25%</li>
-                            </ul>
-                            <div class="user-page__right-indication">
-
-                                <span class="user-page__right-indication-item tl4 _active">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
-                                        <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
-                                    </svg>
-                                    0%
-                                </span>
-                                <div class="user-page__right-indication-line"></div>
-                                <span class="user-page__right-indication-item tl4 _active">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
-                                        <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
-                                    </svg>
-                                    15%
-                                </span>
-                                <span class="user-page__right-indication-item tl4">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
-                                        <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
-                                    </svg>
-                                    20%
-                                </span>
-                                <span class="user-page__right-indication-item tl4">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="11.5" fill="white" stroke="#E6E6E6" />
-                                        <circle cx="12" cy="12" r="8" fill="#E6E6E6" />
-                                    </svg>
-                                    25%
-                                </span>
-
+                        <div class="switcher-slide">
+                            <!-- favorite -->
+                            <div class="user-page__main" >
+                                <ul class="user-page__main-favorite">
+                                    <include src="./components/_item-card.html"></include>
+                                    <include src="./components/_item-card.html"></include>
+                                </ul>
                             </div>
-                        </div>
+                            <!-- favorite -->
 
-                        <div class="user-page__right">
-                            <p class="tl3"><strong>Ваша скидка 25%</strong></p>
-                            <p class="txt18">С нами выгодно!</p>
-                        </div>
+                            <!-- favorite placeholder -->
+                            <div class="user-page__main" >
+                                <div class="catalog-choice user-page__main_history-banner">
+                                    <div class=" catalog-choice__c">
+                                        <div class="catalog-choice__c-img">
+                                            <img src="./assets/images/catalog-choice.webp" alt="choice">
+                                        </div>
+                                        <div class="catalog-choice__c-info">
+                                            <div class="catalog-choice__c-info-left">
+                                                <p class="tl2 col-wh">В избранном пока ничего нет</p>
+                                                <p class="txt20 col-wh">Более 10 000 товаров в наличии и под заказ.
+                                                    Найдите
+                                                    то,
+                                                    что Вам нужно в каталоге товаров.</p>
+                                                <button class="btn-primary btn-primary_green">
+                                                    Подобрать
+                                                </button>
+                                            </div>
 
-                        <div class="user-page__right">
-                            <p class="tl3"><strong>Ответим на ваши вопросы!</strong></p>
-                            <p class="txt18">Если Ваши данные изменились, свяжитесь с нами любым удобным для Вас
-                                способом!
-                            </p>
-                            <div class="user-page__right-links">
-                                <span class=" user-page__right-links-e">
-                                    <img src="./assets/images/icons/phone-blue.svg" alt="phone">
-                                    8 (495) 120-23-29
-                                </span>
-                                <a href="#" class=" user-page__right-links-e">
-                                    <img src="./assets/images/icons/wa-blue.svg" alt="wa">
-                                    Whats App
-                                </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <button class="btn-primary btn-primary_blue">
-                                Оставить заявку
-                            </button>
-
+                            <!-- favorite placeholder -->
                         </div>
+
+
+                       
                     </div>
                 </div>
             </section>

@@ -5,6 +5,44 @@
     align-items: center;
     gap: 1rem;
 
+    &._opened,
+    &._active {
+        & input {
+            &+.radio-square {
+                background-color: $blue;
+                border: .2px solid $blue;
+                color: $white;
+                opacity: 1 !important;
+            }
+
+            &+.radio-slider {
+                background-color: $blue;
+                border-color: $blue;
+
+                &:after {
+                    left: 100%;
+                    transform: translate(-100%, 0);
+                    right: 0;
+                    background-color: $blue;
+                }
+            }
+
+            &+.radio-default {
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &~.radio-txt {
+                opacity: 1;
+            }
+
+            &~.radio-border {
+                border-color: $blue;
+            }
+        }
+    }
+
     &_pay {
         min-width: 34rem;
         height: 20rem;
@@ -39,9 +77,6 @@
         }
     }
 
-    & span {
-        display: block;
-    }
 
     & input {
         position: absolute;
@@ -97,6 +132,10 @@
         transition: opacity .5s, color .5s, background-color .5s;
         text-transform: uppercase;
         cursor: pointer;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: nowrap;
+        align-items: center;
 
         &:hover {
 
@@ -179,6 +218,25 @@
     align-items: center;
     gap: 1rem;
 
+    &-hiden {
+        cursor: pointer;
+        font-weight: 500;
+
+        & input {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+
+            &:checked {
+                &+span {
+                    color: $blue;
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+
     &_light {
 
         & .checkbox-check {
@@ -245,6 +303,7 @@
     display: flex;
     flex-direction: column;
     gap: .4rem;
+    position: relative;
 
     @include small-tablet {
         gap: 1rem;
@@ -252,20 +311,54 @@
     }
 
     &._error {
+        & .input-text-placeholder {
+            color: $red;
+
+            &::after {
+                color: $red;
+            }
+        }
 
         & input,
         & textarea {
             border-color: $red;
 
-            &::placeholder {
-                color: $red;
-            }
+
 
         }
 
         & .input-phone {
             border-color: $red;
         }
+    }
+
+    &-placeholder {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 1.6rem 2.4rem;
+        box-sizing: border-box;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 120%;
+        color: $gray-dark;
+
+        @include small-tablet {
+            font-size: 3rem;
+            padding: 1.4rem 5rem;
+            min-height: 8rem;
+        }
+
+        &::after {
+            content: attr(data-end);
+            color: $blue;
+        }
+
+
+
+
     }
 
     & textarea {
@@ -276,13 +369,15 @@
     & textarea {
         border: .2rem solid $gray-dark;
         padding: 1.6rem 2.4rem;
-        background-color: $white;
+        /* background-color: $white; */
         border-radius: .3rem;
         font-family: Rebrand Txt;
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 120%;
         resize: none;
+        position: relative;
+        z-index: 2;
 
 
         @include small-tablet {
@@ -293,6 +388,10 @@
 
         &:focus {
             border-color: $blue;
+        }
+
+        &::placeholder {
+            color: transparent;
         }
 
 
@@ -321,11 +420,21 @@
     display: flex;
     border: .2px solid $gray-dark;
     border-radius: .3rem;
-    background-color: $gray;
 
+    & input:focus {
+        &+.input-text-placeholder {
+            display: none !important;
+        }
+    }
+
+
+    & .input-text-placeholder {
+        width: 85%;
+        right: 0;
+    }
 
     &__select {
-
+        background-color: $gray;
 
         display: flex;
         transition: all .5s;
@@ -446,7 +555,7 @@
     & textarea {
         width: 100%;
         padding: 1.6rem 2.4rem;
-        background-color: $white;
+
         font-family: Rebrand Txt;
         font-size: 1.8rem;
         font-weight: 400;
@@ -470,6 +579,63 @@
     align-items: center;
     flex-direction: row-reverse;
     gap: 1rem;
+
+    &-static {
+        display: grid;
+        width: fit-content;
+        grid-template-columns: repeat(5, 1.8rem);
+        grid-template-rows: 1.8rem;
+        gap: .5rem;
+
+        & svg {
+            fill: rgba(217, 217, 217, 1);
+        }
+
+        &-1 {
+            & svg:nth-of-type(1) {
+                fill: $green;
+
+            }
+        }
+
+        &-2 {
+            & svg:nth-of-type(-n+2) {
+                fill: $green;
+            }
+        }
+
+        &-3 {
+            & svg:nth-of-type(-n+3) {
+                fill: $green;
+            }
+        }
+
+        &-4 {
+            & svg:nth-of-type(-n+4) {
+                fill: $green;
+            }
+        }
+
+        &-5 {
+            & svg:nth-of-type(-n+5) {
+                fill: $green;
+            }
+        }
+
+
+
+        @include small-tablet {
+            grid-template-columns: repeat(5, 3.6rem);
+            grid-template-rows: 3.6rem;
+            gap: 1rem;
+        }
+
+        & svg {
+            width: 100%;
+            height: 100%;
+
+        }
+    }
 
 
 

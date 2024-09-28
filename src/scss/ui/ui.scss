@@ -41,8 +41,41 @@
 .swiper-pagination-bullet-active {
     opacity: 1;
 }
-
 /* swiper */
+
+/* nouislider */
+.noUi-target{
+    
+    background-color: $gray;
+    border: none;
+    height: .5rem;
+}
+.noUi-connect{
+    background-color: $blue;
+}
+.noUi-handle{
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+    top: -.8rem !important;
+    border: 3px solid $white;
+    border-radius: 50%;
+    @include small-tablet{
+        width: 4.8rem !important;
+        height: 4.8rem !important;
+    }
+    &::after, &::before{
+        display: none;
+     }
+}
+.noUi-touch-area{
+    background-color: $blue;
+    border-radius: 50%;
+   
+    &::after, &::before{
+       display: none;
+    }
+}
+/* nouislider */
 
 .col {
     &-gr {
@@ -79,8 +112,11 @@
         background-color: $white;
     }
 
-    &_gr {
+    &_grn {
         background-color: $green;
+    }
+    &_gr {
+        background-color: $gray;
     }
 
     &_bl {

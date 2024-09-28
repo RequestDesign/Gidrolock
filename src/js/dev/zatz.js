@@ -7,9 +7,10 @@ import initSelect from "../utils/select";
 import initCatalogFilterOpener from '../components/catalog'
 import initCardPage from "../components/cardView";
 import initFeedBack from "../components/feedback";
-import initUserPage from "../components/userPage";
+
 import initSignUp from "../components/signUp";
 import { Toggler } from "../utils/toggler";
+import { Switcher } from "../utils/Switcher";
 
 
 
@@ -25,11 +26,13 @@ $(function () {
     initCatalogFilterOpener()
     initCardPage()
     initFeedBack()
-    initUserPage()
+
     initSignUp()
     modalsHandler()
     new Toggler('.toggler-input-feedback', '.toggler-target-feedback', '_opened')
     initNewsSwiper()
+    initSwichers()
+
 
 });
 
@@ -52,29 +55,31 @@ function dropDowns() {
 
 function initSwipers() {
 
-    const complects = document.querySelector('.complects__c-slider')
+    const complects = document.querySelectorAll('.complects__c-slider')
     if (complects) {
-        new Swiper(complects, {
-            modules: [Navigation, Pagination],
-            loop: false,
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: rem(3),
-            breakpoints: {
-                768: {
-                    slidesPerView: 5,
-                    slidesPerGroup: 1,
+        complects.forEach((e) => {
+            new Swiper(e, {
+                modules: [Navigation, Pagination],
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: rem(3),
+                breakpoints: {
+                    768: {
+                        slidesPerView: 5,
+                        slidesPerGroup: 1,
 
-                }
-            },
-            pagination: {
-                el: '.complects__c-slider-pagination'
-            },
-            navigation: {
-                prevEl: '.complects__c-slider-prev',
-                nextEl: '.complects__c-slider-next'
-            },
+                    }
+                },
+                pagination: {
+                    el: e.querySelector('.complects__c-slider-pagination')
+                },
+                navigation: {
+                    prevEl: e.querySelector('.complects__c-slider-prev'),
+                    nextEl: e.querySelector('.complects__c-slider-next')
+                },
 
+            })
         })
     }
 
@@ -337,7 +342,7 @@ function initNewsSwiper() {
     const sliders = document.querySelectorAll('.news-detail-slider')
     if (!sliders) return
     sliders.forEach((e) => {
-     
+
         new Swiper(e.querySelector('.swiper'), {
             modules: [Navigation, Pagination],
             loop: false,
@@ -361,9 +366,6 @@ function initNewsSwiper() {
 
     })
 }
-
-
-
 function modalsHandler() {
 
 
@@ -399,14 +401,28 @@ function modalsHandler() {
     })
 }
 
+function initSwichers() {
+    const basketDelivery = document.querySelector('.basket-order')
+    if (basketDelivery) {
+        new Switcher(basketDelivery, 0)
+    }
+
+    const modalCdek = document.querySelector('.modal-cdek')
+    if (modalCdek) {
+        new Switcher(modalCdek, 0)
+    }
+    const supportList = document.querySelector('.support-list')
+    if(supportList){
+        new Switcher(supportList, 0)
+    }
+    const userPage = document.querySelector('.user-page')
+    if(userPage){
+        new Switcher(userPage, 0)
+    }
 
 
+}
 
-/* function formSubmit(inputsData) {
-    console.log(inputsData);
-    $('.modal-send-call').fadeOut().removeClass('_opened')
-    $('.modal-success').fadeIn().addClass('_opened')
-} */
 
 
 

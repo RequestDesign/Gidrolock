@@ -1,15 +1,24 @@
 .user-page {
+&__deleteme{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
     &-c {
         margin-top: 4rem;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 33rem auto;
         gap: 3.2rem;
+        & .switcher-slide{
+            grid-column: 2;
+        }
     }
 
     &__left {
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
+       
 
         &-btn {
             background-color: $gray;
@@ -42,12 +51,11 @@
     }
 
     &__main {
-        grid-column: 2;
+        display: flex;
         width: 100%;
+      
 
-        &_fs {
-            grid-column: 2 / span 3;
-        }
+      
 
         &-personal {
             background-color: $white;
@@ -57,6 +65,7 @@
             box-sizing: border-box;
             gap: 1rem 3rem;
             padding: 4rem;
+            height: fit-content;
 
             &-row {
                 grid-column: 1 / span 2;
@@ -162,7 +171,7 @@
     }
 
     &__right {
-        grid-column: 3;
+        margin-left: 3.2rem;
         padding: 3.2rem;
         box-sizing: border-box;
         background-color: $white;

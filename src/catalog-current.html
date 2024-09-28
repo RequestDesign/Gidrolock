@@ -25,7 +25,7 @@
                         <h1 class="tl1">Название категории</h1>
 
                     </div>
-                    <div class="catalog-current__filter">
+                    <form class="catalog-current__filter form">
                         <div class="catalog-current__filter-wrp">
 
                             <div class="mobile">
@@ -48,44 +48,38 @@
                                         <div>
                                             <ul>
                                                 <li class="txt18 ">
-                                                    item
+                                                    <label class="checkbox-hiden">
+                                                        <input type="checkbox" name="complects1"
+                                                            >
+                                                        <span> Готовые комплекты</span>
+                                                    </label>
                                                 </li>
                                                 <li class="txt18 ">
-                                                    item
+                                                    <label class="checkbox-hiden">
+                                                        <input type="checkbox" name="complects2"
+                                                          >
+                                                        <span> Блоки управления</span>
+                                                    </label>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="drop-down-container drop-down-container-default  ">
-                                        <button class="drop-down-target-default drop-down-target tl4">Защита от протечки
-                                            <span class="drop-down-target-default-img">
-                                                <img src="./assets/images/icons/arrow-black.svg" alt="v">
-                                            </span>
-                                        </button>
-                                        <div>
-                                            <ul>
-                                                <li class="txt18">
-                                                    item
-                                                </li>
-                                                <li class="txt18">
-                                                    item
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+
 
                                     <hr>
                                     <p class="tl3 catalog-current__filter-scroll-list-ttl">Фильтры</p>
                                     <div class="catalog-current__filter-scroll-list-price">
                                         <p class="tl4">Цена</p>
-                                        <input class="txt18" type="text" name="priceMin" placeholder="От">
-                                        <input class="txt18" type="text" name="priceMax" placeholder="До">
+                                        <input id="priceInputMin" class="txt18" type="text" name="priceMin" value="0" min="0"  >
+                                        <input id="priceInputMax" class="txt18" type="text" name="priceMax" value="999" max="999" >
+
+                                        <div class="catalog-current__filter-scroll-list-price-slider"></div>
                                     </div>
                                     <div class="catalog-current__filter-scroll-list-radio">
                                         <p class="tl4">Акция</p>
 
                                         <label class="radio">
-                                            <input type="checkbox" name="test">
+                                            <input type="checkbox" name="discount">
                                             <span class="radio-slider">
                                             </span>
 
@@ -93,7 +87,8 @@
 
                                     </div>
                                     <div class="drop-down-container drop-down-container-default  ">
-                                        <button class="drop-down-target-default drop-down-target tl4">Наличие контроля обрыва цепи
+                                        <button class="drop-down-target-default drop-down-target tl4">Наличие контроля
+                                            обрыва цепи
                                             <span class="drop-down-target-default-img">
                                                 <img src="./assets/images/icons/arrow-black.svg" alt="v">
                                             </span>
@@ -103,7 +98,7 @@
                                                 <li class="txt18 catalog-current__filter-scroll-list-item">
 
                                                     <label class="checkbox form-input">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" name="contoll">
                                                         <span class="checkbox-check">
                                                             <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg">
@@ -116,24 +111,7 @@
                                                     </label>
 
                                                 </li>
-                                                <li class="txt18 catalog-current__filter-scroll-list-item">
-
-                                                    <label class="checkbox form-input">
-                                                        <input type="checkbox">
-                                                        <span class="checkbox-check">
-                                                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M3.41445 5.47216L8.88627 0.187083C9.0154 0.0623609 9.16884 0 9.34661 0C9.52438 0 9.67761 0.0623609 9.80631 0.187083C9.93544 0.311804 10 0.460015 10 0.631715C10 0.803415 9.93544 0.951418 9.80631 1.07572L3.8664 6.81292C3.73727 6.93764 3.58662 7 3.41445 7C3.24228 7 3.09163 6.93764 2.9625 6.81292L0.186243 4.1314C0.0571146 4.00668 -0.00486715 3.85847 0.000297988 3.68677C0.00546312 3.51507 0.0728249 3.36707 0.202384 3.24276C0.331512 3.11804 0.48496 3.05568 0.662727 3.05568C0.840493 3.05568 0.993726 3.11804 1.12242 3.24276L3.41445 5.47216Z"
-                                                                    fill="white"></path>
-                                                            </svg>
-                                                        </span>
-                                                        <span class="checkbox-text txt18">Lorem ipsum dolor sit amet
-                                                            consectetur
-                                                            adipisicing elit. Consequatur, accusamus?</span>
-                                                    </label>
-
-                                                </li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
@@ -167,26 +145,31 @@
                                 Применить
                             </button>
 
-                            <button href="#" class="catalog-current__filter-reset btn-nav btn-nav_ul">
+                            <button href="#" class="catalog-current__filter-reset btn-nav btn-nav_ul" type="reset">
                                 Очистить фильтры
                             </button>
 
                         </div>
 
-                    </div>
+                    </form>
                     <div class="catalog-current__banner">
-                        <div class="catalog-current__banner-main">
-                            <p class="tl2 col-wh">Лидер продаж</p>
-                            <p class="txt20 col-wh">Умный манипулятор для шарового крана SCW1 (Wi-Fi) (81102020)</p>
+                        <div class="catalog-current__banner-wrp">
+                            <div class="catalog-current__banner-main">
+                                <p class="tl2 col-wh">Лидер продаж</p>
+                                <p class="txt20 col-wh">Умный манипулятор для шарового крана SCW1 (Wi-Fi) (81102020)</p>
 
-                            <a href="#" class="btn-nav btn-nav_bg">
-                                Купить
-                                <img src="./assets/images/icons/arrow-black.svg" alt="arr">
-                            </a>
+                                <a href="#" class="btn-nav btn-nav_bg">
+                                    Купить
+                                    <img src="./assets/images/icons/arrow-black.svg" alt="arr">
+                                </a>
 
-                        </div>
-                        <div class="catalog-current__banner-img">
-                            <img src="./assets/images/catalog-choice.png" alt="img">
+                            </div>
+                            <div class="catalog-current__banner-img">
+                                <picture>
+                                    <source media="(max-width: 768px )" srcset="./assets/images/banner-img-mobile.webp">
+                                    <img src="./assets/images/banner-img.webp" alt="img">
+                                </picture>
+                            </div>
                         </div>
                     </div>
                     <div class="catalog-current__items">
@@ -199,7 +182,7 @@
                                     <option value="another">another</option>
                                 </select>
                             </div>
-                            
+
                             <div class="mobile">
                                 <button class="catalog-current__items-top-opener txt16">
                                     Фильтры
@@ -223,156 +206,22 @@
                                         <img src="./assets/images/icons/x-black.svg" alt="x">
                                     </button>
                                 </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
-                                <div class="filter-tag">
-                                    <span class="txt16">filter name</span>
-                                    <button class="filter-tag__btn">
-                                        <img src="./assets/images/icons/x-black.svg" alt="x">
-                                    </button>
-                                </div>
+
 
                             </div>
                         </div>
                         <ul class="catalog-current__items-list">
-                            <li class="item-card">
-                                <div class="item-card__top ">
-                                    <span class="item-card__top-discount txt16">10</span>
-
-                                    <button class="item-card__top-favorite item-card__top-favorite_active">
-                                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.58812 16.9424L6.58901 16.9433L16.118 25.8049C16.3555 26.0257 16.6706 26.15 17 26.15C17.3294 26.15 17.6445 26.0257 17.882 25.8049L27.411 16.9433L27.4119 16.9424C28.8412 15.617 29.65 13.7576 29.65 11.8137V11.509C29.65 8.25535 27.29 5.4773 24.0643 4.94091L6.58812 16.9424ZM6.58812 16.9424C5.1588 15.617 4.35 13.7576 4.35 11.8137V11.509C4.35 8.25535 6.71003 5.47731 9.9357 4.94091L6.58812 16.9424ZM17 8.02842L16.4001 7.43088L15.7673 6.80052C14.2426 5.28171 12.0711 4.58646 9.93589 4.94088L17 8.02842ZM17 8.02842L17.5999 7.43088M17 8.02842L17.5999 7.43088M17.5999 7.43088L18.2327 6.80052C19.7574 5.28171 21.9289 4.58646 24.0641 4.94088L17.5999 7.43088Z"
-                                                stroke="#005c8f" stroke-width="1.7"></path>
-                                        </svg>
-                                    </button>
-
-
-
-                                </div>
-                                <a href="#" class="item-card__img">
-                                    <img src="./assets/images/item-card.webp" alt="item-card">
-                                </a>
-                                <h3 class="tl4"><a href="#"> Умный манипулятор для шарового крана SCW1 (Wi-Fi)
-                                        (81102020)</a></h3>
-
-                                <div class="item-card__drop-down select select_just-watch drop-down-container drop-down-container-default ">
-                                    <button class="select__target drop-down-target-default drop-down-target ">
-                                        <input class="test-input txt16 txt16_medium" type="text" readonly=""
-                                            value="defalut">
-                                        <img src="./assets/images/icons/arrow-white.svg" alt="V">
-                                    </button>
-                                    <div class="select__items">
-                                        <div class="select__items-list">
-                                            <button class="select__items-list-e txt16 txt16_medium">value 1</button>
-                                            <button class="select__items-list-e txt16 txt16_medium">value 2</button>
-                                            <button class="select__items-list-e txt16 txt16_medium">value 3</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="item-card__info">
-                                    <div class="item-card__info-price">
-                                        <span class="item-card__info-price-e tl4">777777</span>
-                                        <span
-                                            class="item-card__info-price-e tl4 item-card__info-price-e_discount">777777</span>
-                                    </div>
-                                    <div class="item-card__info-basket">
-                                        <button class="item-card__info-basket-btn tl4" disabled="">-</button>
-                                        <span class="item-card__info-basket-count tl4">111</span>
-                                        <button class="item-card__info-basket-btn tl4">+</button>
-                                    </div>
-                                </div>
-                                <button class=" btn-primary btn-primary_blue btn-primary_blue-active">
-                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8 7.66952V6.69952C8 4.44952 9.81 2.23952 12.06 2.02952C14.74 1.76952 17 3.87952 17 6.50952V7.88952"
-                                            stroke="white" stroke-width="1.7" stroke-miterlimit="10"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path
-                                            d="M9.5008 22H15.5008C19.5208 22 20.2408 20.39 20.4508 18.43L21.2008 12.43C21.4708 9.99 20.7708 8 16.5008 8H8.5008C4.2308 8 3.5308 9.99 3.8008 12.43L4.5508 18.43C4.7608 20.39 5.4808 22 9.5008 22Z"
-                                            stroke="white" stroke-width="1.7" stroke-miterlimit="10"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-
-                                    <span> В корзину</span>
-                                </button>
-
-                            </li>
+                            <include src="./components/_item-card.html"></include>
                         </ul>
                         <div class="api-pagination">
-                            <button
-                                class="api-pagination-btn api-pagination-btn_prev">
+                            <button class="api-pagination-btn api-pagination-btn_prev">
                                 <img src="./assets/images/icons/arrow-black.svg" alt="arr">
                             </button>
                             <div class="api-pagination-pages">
                                 <button class="api-pagination-pages-btn txt18" disabled>1</button>
                                 <button class="api-pagination-pages-btn txt18">2</button>
                             </div>
-                            <button
-                                class="api-pagination-btn api-pagination-btn_next">
+                            <button class="api-pagination-btn api-pagination-btn_next">
                                 <img src="./assets/images/icons/arrow-black.svg" alt="arr">
                             </button>
                         </div>
@@ -382,11 +231,37 @@
 
             </section>
 
+            <section class="complects">
+                <div class="container complects__c">
+                    <div class="complects__c-top">
+                        <h2 class="tl1 bg bg_grn col-wh">Рекомендуем к покупке</h2>
+
+                    </div>
+
+                    <div class="complects__c-slider swiper">
+                        <button
+                            class="complects__c-slider-prev btn-swiper btn-swiper_overlayed btn-swiper_left desktop">
+                            <img src="../assets/images/icons/arrow-white-right.svg" alt="arrow">
+                        </button>
+                        <button
+                            class="complects__c-slider-next btn-swiper btn-swiper_overlayed btn-swiper_right desktop">
+                            <img src="../assets/images/icons/arrow-white-right.svg" alt="arrow">
+                        </button>
+                        <ul class="swiper-wrapper complects__c-slider-list">
+                            <include src="./components/_item-card.html"></include>
+                            <include src="./components/_item-card.html"></include>
+                        </ul>
+
+                    </div>
+                    <div class="mobile">
+                        <div class="complects__c-slider-pagination ">
+
+                        </div>
+                    </div>
 
 
-
-
-            <include src="./components/_special-offer.html"></include>
+                </div>
+            </section>
             <include src="./components/_footer-before.html"></include>
 
         </main>

@@ -94,6 +94,7 @@
                                     </div>
                                     <input type="text" autocomplete="off" data-required="true" name="phone"
                                         placeholder="номер телефона">
+                                    <span class="input-text-placeholder"></span>
                                 </div>
                                 <span class="input-text-error-msg "></span>
                             </div>
@@ -133,13 +134,15 @@
 
                             <label class="input-container input-text form-input">
                                 <input type="text" name="name" placeholder="input-text">
+                                <span class="input-text-placeholder"></span>
                                 <span class="input-text-error-msg "></span>
                             </label>
 
                             <button class="btn-primary btn-primary_green" type="submit">
                                 Запросить код повторно через <span>0:55</span>
                             </button>
-                            <button data-modal="mail-help" class="modal-opener btn-nav btn-nav_ul txt20 col-gr">Не приходит SMS
+                            <button data-modal="mail-help" class="modal-opener btn-nav btn-nav_ul txt20 col-gr">Не
+                                приходит SMS
                                 с кодом?</button>
                         </div>
                     </li>
@@ -170,12 +173,14 @@
 
                 <label class="input-container input-text form-input">
                     <input type="text" name="name" placeholder="input-text">
+                    <span class="input-text-placeholder"></span>
                     <span class="input-text-error-msg "></span>
                 </label>
 
 
                 <label class="input-container input-text form-input">
                     <input type="text" name="name" placeholder="input-text">
+                    <span class="input-text-placeholder"></span>
                     <span class="input-text-error-msg "></span>
                 </label>
 
@@ -213,13 +218,13 @@
                 </p>
                 <div class="flex-row">
                     <label class="radio txt18">
-                        <input class="sign-form-switcher" type="radio" name="sign"  checked>
+                        <input class="sign-form-switcher" type="radio" name="sign" checked>
                         <span class="radio-default">
                         </span>
                         Физическое лицо
                     </label>
                     <label class="radio txt18">
-                        <input class="sign-form-switcher" type="radio" name="sign" >
+                        <input class="sign-form-switcher" type="radio" name="sign">
                         <span class="radio-default">
                         </span>
                         Юридическое лицо
@@ -233,6 +238,7 @@
 
                 <label class="input-container input-text form-input">
                     <input type="text" name="name" placeholder="input-text">
+                    <span class="input-text-placeholder"></span>
                     <span class="input-text-error-msg "></span>
                 </label>
 
@@ -254,7 +260,8 @@
                     Восстановить пароль
                 </button>
 
-                <span class="btn-nav btn-nav_ul txt20 col-gr modal-closer modal-opener" data-modal="sign-phone">Войти по номеру
+                <span class="btn-nav btn-nav_ul txt20 col-gr modal-closer modal-opener" data-modal="sign-phone">Войти по
+                    номеру
                     телефона</span>
 
             </form>
@@ -280,11 +287,13 @@
 
                 <label class="input-container input-text form-input">
                     <input type="text" name="name" placeholder="input-text">
+                    <span class="input-text-placeholder"></span>
                     <span class="input-text-error-msg "></span>
                 </label>
 
                 <label class="input-container input-text form-input">
                     <input type="text" name="name" placeholder="input-text">
+                    <span class="input-text-placeholder"></span>
                     <span class="input-text-error-msg "></span>
                 </label>
 
@@ -294,6 +303,64 @@
 
 
             </form>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal modal-cdek ">
+    <div class="modal-wrp  modal-closer">
+        <div class="modal__c  modal-cdek__c">
+            <div class="modal-cdek__c-top">
+
+                <label class="radio switcher-btn">
+                    <input type="radio" name="test" >
+                    <span class="radio-square txt18">
+                        Списком
+                    </span>
+                </label>
+
+
+                <label class="radio switcher-btn">
+                    <input type="radio" name="test">
+                    <span class="radio-square txt18">
+                        На карте
+                    </span>
+                </label>
+
+
+                <label class="input-container input-text form-input">
+                    <input type="text" name="name" placeholder="Адрес" data-required="true">
+
+                </label>
+
+
+            </div>
+
+            <div class="switcher-slide">
+                <div class="modal-cdek__c-items ">
+                    <ul class="modal-cdek__c-items-list">
+                        <li class="modal-cdek__c-items-list-e _active">
+                            <div class="flex-row">
+                                <p class="tl4">СДЭК пункт выдачи №32</p>
+                                <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
+                            </div>
+                            <p class="txt18">107113, Москва, улица Сокольнический </p>
+                            <p class="txt18">вал 2</p>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="switcher-slide">
+                <div class="modal-cdek__c-map ">
+                    <p class="tl1">map here</p>
+                </div>
+            </div>
+
+
 
         </div>
     </div>

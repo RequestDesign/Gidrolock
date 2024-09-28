@@ -4,7 +4,8 @@
     left: 0;
     display: none;
     z-index: 111;
-    &.modal-mail-help{
+
+    &.modal-mail-help {
         z-index: 112;
     }
 
@@ -35,11 +36,12 @@
         box-sizing: border-box;
         position: relative;
         gap: 3.2rem;
-        
-       width: 75rem;
-       @include small-tablet{
-        width: 100%;
-    }
+
+        width: 75rem;
+
+        @include small-tablet {
+            width: 100%;
+        }
 
         & ol {
             display: flex;
@@ -66,7 +68,8 @@
 
     &-sign {
         width: 63rem;
-        @include small-tablet{
+
+        @include small-tablet {
             width: 100%;
         }
 
@@ -74,22 +77,98 @@
         &__slider {
             width: 100%;
             overflow: hidden;
+
             &-list {
                 width: 100%;
                 display: grid;
                 grid-template-columns: 100% 100%;
+
                 &-e {
                     &-body {
                         display: flex;
                         flex-direction: column;
                         gap: 3.2rem;
                         justify-content: space-between;
-                        & .btn-primary{
+
+                        & .btn-primary {
                             width: 100%;
                             justify-content: center;
                         }
                     }
                 }
+            }
+
+        }
+    }
+
+    &-cdek {
+        &__c {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            min-width: 100rem;
+            height: 84rem;
+            max-width: 100%;
+            background-color: $bg;
+
+            padding: 8rem;
+            box-sizing: border-box;
+
+            @include small-tablet {
+                padding: 3rem;
+                height: 100vh;
+            }
+
+            &-top {
+                display: grid;
+                grid-template-columns: auto auto 2fr;
+                gap: 3.2rem;
+                
+
+                & label>input::placeholder {
+                    color: $gray-dark;
+                }
+                
+            }
+
+            &-items {
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                scrollbar-width: thin;
+                scrollbar-color: rgba(22, 46, 58, 0.5) rgba(22, 46, 58, 0.2);
+                &-list {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    &-e {
+                        border: .2rem solid transparent;
+                        background-color: $white;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.2rem;
+                        padding: 2.4rem;
+                        box-sizing: border-box;
+
+                        &._active {
+                            border: .2rem solid $green;
+                        }
+
+                        & .flex-row {
+                            margin-bottom: 1.2rem;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+            }
+            &-map{
+               
+              
+                height: 59rem;
+                background-color: green;
             }
 
         }

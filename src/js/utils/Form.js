@@ -1,49 +1,90 @@
 
 export default class Form {
-
+    /**
+     * 
+     * @param {Element} formDomEl 
+     * @param {Function} submitFoo 
+     * 
+     */
     constructor(formDomEl, submitFoo) {
         this._form = formDomEl
         this._form.setAttribute('novalidate', true)
-        this.submitForm = submitFoo
-        this._inputs = Array.from(this._form.querySelectorAll('input'))
-        this._inputsData = this._createInputData(this._inputs)
-        /*  this._btnSubmit = this._form.querySelector('button[type="submit"]')
-            this._btnSubmit.setAttribute('disabled', true) */
         this._inputContainerSelector = 'form-input'
         this._inputErrorMsgSelector = 'input-text-error-msg'
         this._inputErrorSelector = '_error'
+        this._inputPlaceholderSelector = 'input-text-placeholder'
+        this.submitForm = submitFoo
+        this._inputs = this._form.querySelectorAll('input, textarea')
+        this._inputsData = this._createInputData(this._inputs)
+        /**
+         * _inputsData: {[key: input.name] :{
+         *                  value: any,
+         *                  isValid: bool,
+         *                  isRequired: bool
+         *                  }
+         *              }
+         *  */
+
+        /*  this._btnSubmit = this._form.querySelector('button[type="submit"]')
+            this._btnSubmit.setAttribute('disabled', true) */
+
 
         this.initForm()
     }
-    _validation(inputTarget) {
+    _inputHandler(inputTarget) {
 
-        const target = inputTarget
+        if (inputTarget.type == 'checkbox' || inputTarget.type == 'radio') {
+            this._inputsData[inputTarget.name].value = inputTarget.checked;
+        } else if (inputTarget.type == 'file') {
+            console.log(inputTarget.value.split('\\').slice(-1));
+            this._inputsData[inputTarget.name].value = inputTarget.value
+        } else {
 
-        this._inputsData[target.name].value = target.value;
-        console.log(target.value);
+            this._inputsData[inputTarget.name].value = inputTarget.value
+            this._validation(inputTarget);
 
+            if (!inputTarget.placeholder) return
+
+            if (inputTarget.value) {
+                inputTarget.closest('.' + this._inputContainerSelector)
+                    .querySelector('.' + this._inputPlaceholderSelector).style.display = 'none'
+            } else {
+                inputTarget.closest('.' + this._inputContainerSelector)
+                    .querySelector('.' + this._inputPlaceholderSelector).style.display = 'block'
+            }
+
+
+
+        }
+
+    }
+
+    _validation(input) {
         //валидация инпутов
-        switch (target.name) {
+        switch (input.name) {
             case 'name':
-                this._checkInputValid(target, /^[A-Za-zА-Яа-яЁё ]+$/, 'Допустим ввод только букв')
+                this._checkInputValid(input, /^[A-Za-zА-Яа-яЁё ]+$/, 'Допустим ввод только букв')
                 break;
-            /*  case 'secondName':
-                 this._checkInputValid(target, /^[A-Za-zА-Яа-яЁё]+$/, 'Допустим ввод только букв')
-                 break; */
 
             case 'email':
-                this._checkInputValid(target, /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Поле должно быть в формате email@domain.com')
+                this._checkInputValid(input, /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Поле должно быть в формате email@domain.com')
                 break;
 
-
             case 'phone':
-                this._checkInputValid(target, /^\+(7|375) \(\d{3}\) \d{3}-\d{2}-\d{2}$/, 'Формат номера телефона +7 (888) 888-88-88')
+                this._checkInputValid(input, /^\+(7|375) \(\d{3}\) \d{3}-\d{2}-\d{2}$/, 'Формат номера телефона +7 (888) 888-88-88')
+                break;
+            case 'passwordRepeat':
+                /**
+                 * надо сделать првоерку пароля
+                 * 
+                 */
+
                 break;
 
 
 
             default:
-                this._checkInputValid(target)
+                this._checkInputValid(input)
                 break;
         }
 
@@ -51,21 +92,27 @@ export default class Form {
 
     _onSubmit(evt) {
         evt.preventDefault();
-        for (const inp of Object.keys(this._inputsData)) {
-            if (this._inputsData[inp].isValid == false) {
-                this._inputs.forEach(e => { this._validation(e) })
-                return
+        let whatsUp = true
+        for (const inp of this._inputs) {
+            this._inputHandler(inp)
+            console.log(inp);
+            if (!this._inputsData[inp.name].isValid) {
+                whatsUp = false
             }
         }
 
+        if (!whatsUp) return
+        //сабмит
         this.submitForm(this._inputsData)
-        //после сабмита
-        const inputs = this._form.querySelectorAll('.' + this._inputContainerSelector + ' input');
-        inputs.forEach(input => {
-            input.value = '';
-        });
+        //дальше мои полномочия- все
 
-        this._inputsData = this._createInputData(this._inputs)
+
+        /*  const inputs = this._form.querySelectorAll('.' + this._inputContainerSelector + ' input');
+         inputs.forEach(input => {
+             input.value = '';
+         });
+ 
+         this._inputsData = this._createInputData(this._inputs) */
     }
 
     _checkInputValid(target, regex = null, regexMsg = 'че то не так написал, исправляй') {
@@ -97,7 +144,6 @@ export default class Form {
 
         } else if (regex && !regex.test(target.value)) {
             //check regex
-            console.log('regex');
             inputContainer.classList.add(this._inputErrorSelector);
             errorMsg.textContent = regexMsg
             this._inputsData[target.name].isValid = false
@@ -117,17 +163,41 @@ export default class Form {
 
     _createInputData(inputs) {
 
-        return inputs.reduce((acc, curr) => {
-            if (!acc[curr.name]) {
-                const value = curr.dataset.defaultv || curr.value || '',
-                    isValid = curr.dataset.required ? false : true,
-                    isRequired = curr.dataset.required ? true : false
-                acc[curr.name]
-                acc[curr.name] = { value, isValid, isRequired }
-            }
-            return acc
-        }, {})
+        let echo = {}
 
+        for (const input of inputs) {
+            input.setAttribute('autocomplete', 'off')
+
+            if (input.placeholder) {
+
+                const plcaholder = input.closest('.' + this._inputContainerSelector)
+                    .querySelector('.' + this._inputPlaceholderSelector)
+
+                plcaholder.textContent = input.placeholder
+                if (input.dataset.required) {
+                    plcaholder.setAttribute('data-end', ' *')
+                }
+                /*  data-end="*" */
+            }
+
+
+            if (!echo[input.name]) {
+                const isValid = input.dataset.required ? false : true,
+                    isRequired = input.dataset.required ? true : false
+
+                let value = input.dataset.defaultv || input.checked || input.value || ''
+
+                if (input.type == 'checkbox' || input.type == 'radio') {
+                    value = input.checked
+                }
+
+                echo[input.name]
+                echo[input.name] = { value, isValid, isRequired }
+            }
+        }
+
+
+        return echo
 
     }
 
@@ -135,9 +205,9 @@ export default class Form {
         this._form.noValidate = true
         this._form.addEventListener('submit', (e) => this._onSubmit(e))
         this._inputs.forEach(el => {
-            el.addEventListener('input', (e) => this._validation(e.target))
-            el.addEventListener('blur', (e) => this._validation(e.target))
-            el.addEventListener('change', (e) => this._validation(e.target))
+            el.addEventListener('input', (e) => this._inputHandler(e.target))
+            el.addEventListener('blur', (e) => this._inputHandler(e.target))
+            el.addEventListener('change', (e) => this._inputHandler(e.target))
         })
 
     }

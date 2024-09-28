@@ -41,6 +41,7 @@
 
                                 <label class="sign-up__c-row input-container input-text form-input">
                                     <input type="text" name="name" data-required="true" placeholder="Фио">
+                                    <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
 
@@ -73,14 +74,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <input type="text" autocomplete="off" data-required="true" name="phone"
+                                        <input type="text" data-required="true" name="phone" autocomplete="off"
                                             placeholder="номер телефона">
+                                        <span class="input-text-placeholder"></span>
                                     </div>
                                     <span class="input-text-error-msg "></span>
                                 </div>
 
                                 <label class="input-container input-text form-input">
                                     <input type="text" name="email" data-required="true" placeholder="Фио">
+                                    <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
 
@@ -92,15 +95,29 @@
 
                                 <label class=" input-container input-text form-input">
                                     <input type="text" name="password" data-required="true" placeholder="Пароль">
+                                    <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
 
                                 <label class=" input-container input-text form-input">
                                     <input type="text" name="passwordRepeat" data-required="true"
                                         placeholder="Повторите пароль">
+                                    <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
+                                <p class="tl4 sign-up__c-row">Карточка предприятия<span class="col-bl">*</span></p>
+                                <label class="form-input input-file">
+                                    <input type="file">
+                                    <span class="txt18 flex-row">
+                                        <img src="./assets/images/icons/add-file.svg" alt="add">
+                                        Прикрепите файл с карточкой предприятия
+                                    </span>
+                                    <span class="input-file-text flex-row txt18">
+                                        <img src="./assets/images/icons/x-blue.svg" alt="x">
+                                        value
+                                    </span>
 
+                                </label>
                                 <div class="flex-row sign-up__c-row">
                                     <button class="btn-primary btn-primary_green">
                                         Зарегистрироваться
@@ -124,10 +141,11 @@
 
 
                             </form>
-                            <form class="sign-up__c-business form">
+                            <form class="sign-up__c-business form" autocomplete="off">
                                 <p class="tl3 sign-up__c-row"><strong>Личные данные</strong></p>
                                 <label class="sign-up__c-row input-container input-text form-input">
                                     <input type="text" name="name" data-required="true" placeholder="input-text">
+                                    <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
 
@@ -162,6 +180,7 @@
                                         </div>
                                         <input type="text" autocomplete="off" data-required="true" name="phone"
                                             placeholder="номер телефона">
+                                        <span class="input-text-placeholder"></span>
                                     </div>
                                     <span class="input-text-error-msg "></span>
                                 </div>
@@ -169,15 +188,18 @@
                                 <label class=" input-container input-text form-input">
                                     <input type="text" name="email" data-required="true"
                                         placeholder="Электронная почта">
+                                    <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
                                 <label class=" input-container input-text form-input">
                                     <input type="text" name="comapnyName" data-required="true"
                                         placeholder="Название компании">
+                                    <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
                                 <label class=" input-container input-text form-input">
                                     <input type="text" name="inn" data-required="true" placeholder="Номер ИНН">
+                                    <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
 
@@ -233,9 +255,9 @@
         </main>
         <include src="./components/_footer.html"></include>
         <include src="./components/_modals.html"></include>
-    
+
     </div>
-    
+
 
 </body>
 

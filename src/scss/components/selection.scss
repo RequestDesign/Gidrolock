@@ -1,0 +1,56 @@
+.selection {
+
+    &__c {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: min-content min-content 0fr 0fr 0fr min-content;
+        overflow: hidden;
+
+        gap: 4rem;
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 3.2rem;
+            overflow: hidden;
+            height: 100%;
+
+            &-row {
+                grid-column: 1 / span 2;
+            }
+
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                width: 100%;
+                margin-bottom: 2rem;
+
+                &-grid {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    justify-content: flex-start;
+
+                    & .txt18 {
+                        grid-column: 1 / span 3;
+                    }
+                }
+            }
+
+        }
+
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+
+}
