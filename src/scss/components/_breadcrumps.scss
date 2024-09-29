@@ -1,8 +1,11 @@
 .breadcrumps {
-    overflow-x: auto;
+   
     margin-top: 6rem;
     &+section {
         margin-top: 6rem !important;
+    }
+    @include small-tablet{
+        overflow-x: auto;
     }
 
     &__c {

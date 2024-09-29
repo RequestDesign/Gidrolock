@@ -18,15 +18,23 @@
         grid-template-columns: repeat(2, calc(50% - 4rem));
         grid-auto-rows: min-content;
         gap: 3.2rem 4rem;
+        & .switcher-slide{
+            grid-column: 1 / span 2;
+        }
 
-
+        &-form {
+            
+            display: grid;
+            grid-template-columns: repeat(2, calc(50% - 4rem));
+            grid-auto-rows: min-content;
+            gap: 1rem 4rem;
+        }
 
         &-e {
             width: 100%;
 
             &_row {
                 grid-column: 1 / span 2;
-                display: flex;
 
             }
 
@@ -84,7 +92,7 @@
             gap: 2rem;
 
 
-           
+
 
             &-options {
                 display: flex;
@@ -185,10 +193,11 @@
             grid-column: 1 / span 3;
         }
     }
-    &__comment{
-       display: flex;
-       flex-direction: column;
-       gap: 4rem;
-       
+
+    &__comment {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
     }
 }

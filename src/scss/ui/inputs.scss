@@ -40,6 +40,14 @@
             &~.radio-border {
                 border-color: $blue;
             }
+            &+.radio-square_show-help svg{
+                & rect{
+                    stroke: $white;
+                }
+                & path{
+                    fill: $white;
+                }
+            }
         }
     }
 
@@ -115,6 +123,14 @@
 
             &~.radio-border {
                 border-color: $blue;
+            }
+            &+.radio-square_show-help svg{
+                & rect{
+                    stroke: $white;
+                }
+                & path{
+                    fill: $white;
+                }
             }
         }
 
@@ -300,9 +316,8 @@
 }
 
 .input-text {
-    display: flex;
-    flex-direction: column;
-    gap: .4rem;
+    display: grid;
+    gap: .4rem 0;
     position: relative;
 
     @include small-tablet {
@@ -330,6 +345,7 @@
         & .input-phone {
             border-color: $red;
         }
+
     }
 
     &-placeholder {
@@ -365,6 +381,7 @@
         height: 100%;
     }
 
+
     & input,
     & textarea {
         border: .2rem solid $gray-dark;
@@ -378,6 +395,7 @@
         resize: none;
         position: relative;
         z-index: 2;
+        height: fit-content;
 
 
         @include small-tablet {
@@ -394,10 +412,20 @@
             color: transparent;
         }
 
+        &[type='password'] {
+            &~.input-text-password {
+                background-image: url(../../assets/images/icons/password-hiden.svg);
+            }
+
+        }
+
 
     }
 
+
     &-error-msg {
+        grid-column: 1;
+        grid-row: 2;
         min-height: 1.5rem;
         color: $red;
         font-family: 'Rebrand Txt';
@@ -409,6 +437,27 @@
             min-height: 3rem;
             font-size: 2rem;
         }
+    }
+
+    &-password {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        z-index: 2;
+        grid-column: 2;
+        grid-row: 1;
+        width: 3rem;
+        height: 68%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../../assets/images/icons/passowrd-visible.svg);
+        background-position: center;
+        background-size: 2.4rem;
+        background-repeat: no-repeat;
+
+
     }
 
 
@@ -719,5 +768,102 @@
         }
     }
 
+
+}
+
+.input-4x-code {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 4rem;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 3rem auto;
+
+    & input {
+        position: relative;
+        z-index: 3;
+        font-size: 10rem;
+        width: 100%;
+        text-align: center;
+        border: .2rem solid $gray;
+        background-color: transparent;
+    }
+
+    & .input-text-error-msg {
+        grid-column: 1 / span 4;
+    }
+
+    &._error {
+        & input {
+            border-color: $red;
+        }
+
+
+    }
+
+
+}
+
+.input-file {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+
+    &._error span {
+        color: $red;
+    }
+
+    & input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        &[data-required='true'] {
+            &+.input-file-add::after {
+                content: '*';
+                color: $blue;
+            }
+        }
+    }
+
+    & span {
+        cursor: pointer;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    &._active {
+        & .input-file-add {
+            display: none;
+        }
+
+        & .input-file-got {
+            display: flex;
+        }
+    }
+
+    & .input-file-add {
+        display: flex;
+
+        & img {
+            flex-shrink: 0;
+        }
+
+    }
+
+    & .input-file-got {
+        display: none;
+
+        & img {
+            flex-shrink: 0;
+        }
+    }
+
+    & .input-text-error-msg {
+        display: none;
+    }
 
 }

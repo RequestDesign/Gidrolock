@@ -490,8 +490,8 @@
                                     специалисты с вами свяжутся
                                 </p>
                             </div>
-                            <label class="input-container input-text form-input">
-                                <input type="text" name="name" placeholder="ФИО" data-required="true">
+                            <label class=" input-container input-text form-input">
+                                <input class="support-footer__c-form-input" type="text" name="name" placeholder="ФИО" data-required="true">
                                 <span class="input-text-placeholder "></span>
                                 <span class="input-text-error-msg "></span>
                             </label>
@@ -525,15 +525,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="text" autocomplete="off" data-required="true" name="phone"
+                                    <input type="text" autocomplete="off" data-required="true" name="phone" class="support-footer__c-form-input"
                                         placeholder="номер телефона">
                                         <span class="input-text-placeholder "></span>
                                 </div>
                                 <span class="input-text-error-msg "></span>
                             </div>
 
-                            <label class="support-footer__c-form-row input-container input-text form-input">
-                                <input type="text" name="comment" placeholder="Комментарий">
+                            <label class=" support-footer__c-form-row input-container input-text form-input">
+                                <input class="support-footer__c-form-input" type="text" name="comment" placeholder="Комментарий">
                                 <span class="input-text-placeholder "></span>
                                 <span class="input-text-error-msg "></span>
                             </label>
@@ -545,7 +545,7 @@
                                 </button>
 
                                 <label class="checkbox form-input">
-                                    <input type="checkbox">
+                                    <input type="checkbox" data-required="e">
                                     <span class="checkbox-check">
                                         <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -613,7 +613,7 @@
         </main>
         <include src="./components/_footer.html"></include>
         <include src="./components/_mobile-nav.html"></include>
-
+        <include src="./components/_modals.html"></include>
 
 
     </div>

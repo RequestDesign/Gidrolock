@@ -24,6 +24,11 @@
             }
         }
     }
+    &._opened{
+        & .feedback-page-mobile-raiting__c {
+            transform: translateY(0);
+        }
+    }
 
     &-mobile-raiting {
         display: none;
@@ -37,11 +42,6 @@
 
         }
 
-        &._opened {
-            & .feedback-page-mobile-raiting__c {
-                transform: translateY(0);
-            }
-        }
 
         &__c {
             transition: transform .5s;

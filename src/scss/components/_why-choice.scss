@@ -4,6 +4,7 @@
 
     @include small-tablet {
         background-color: $bg;
+        padding: 0;
     }
 
     &__c {

@@ -27,6 +27,31 @@
         }
         &-right{
             width: 100%;
+            &-list {
+                @media screen and (min-width: 49em) {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, auto);
+                    gap: 3.2rem;
+    
+                    & li {
+                        height: 100% !important;
+                        width: 100% !important;
+                        margin: 0 !important;
+    
+                        &._big {
+                            grid-column: 1 / span 2;
+                          
+                            height: 28.8rem !important;
+                        }
+    
+                    }
+                }
+    
+    
+    
+    
+            }
             
         }
         &-link{

@@ -1,15 +1,17 @@
 .user-page {
-&__deleteme{
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-}
+    &__deleteme {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
     &-c {
         margin-top: 4rem;
         display: grid;
         grid-template-columns: 33rem auto;
         gap: 3.2rem;
-        & .switcher-slide{
+
+        & .switcher-slide {
             grid-column: 2;
         }
     }
@@ -18,7 +20,7 @@
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
-       
+
 
         &-btn {
             background-color: $gray;
@@ -53,9 +55,15 @@
     &__main {
         display: flex;
         width: 100%;
-      
 
-      
+        &-banner {
+            margin-top: 3rem;
+            width: 100%;
+            &>.catalog-choice__c>.catalog-choice__c-img{
+                width: 67%;
+            }
+        }
+
 
         &-personal {
             background-color: $white;

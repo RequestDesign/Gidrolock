@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper">
         <include src="./components/_header.html"></include>
-        <main class="disable-margin">
+        <main >
             <include src="./components/_breadCrumps.html"></include>
             <section class="catalog-head">
                 <div class="container">
@@ -80,7 +80,7 @@
 
                     </div>
                     <div class="catalog-defense__c-right swiper">
-                        <ul class="swiper-wrapper">
+                        <ul class="catalog-defense__c-right-list swiper-wrapper">
                             <li class="category-slide line-gr swiper-slide ">
                                 <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
                                 <a href="#" class="tl3 col-wh">
@@ -93,13 +93,13 @@
                                     <strong> Блоки управления </strong>
                                 </a>
                             </li>
-                            <li class="category-slide line-gr swiper-slide ">
+                            <li class="category-slide line-gr swiper-slide  _big">
                                 <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
                                 <a href="#" class="tl3 col-wh">
                                     <strong> Блоки управления </strong>
                                 </a>
                             </li>
-                            <li class="category-slide line-gr swiper-slide ">
+                            <li class="category-slide line-gr swiper-slide">
                                 <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
                                 <a href="#" class="tl3 col-wh">
                                     <strong> Блоки управления </strong>
@@ -126,37 +126,37 @@
 
             </section>
 
-            <section class="catalog-choice">
-                <div class="container catalog-choice__c">
-                    <div class="catalog-choice__c-wrp">
-                        <div class="catalog-choice__c-img">
+            <section class="banner-with-img">
+                <div class="container banner-with-img__c">
+                    <div class="banner-with-img__c-wrp">
+                        <div class="banner-with-img__c-img">
                             <picture>
                                 <source media="(max-width:768px)" srcset="./assets/images/banner-img-mobile.webp">
                                 <img src="./assets/images/banner-img.webp" alt="choice">
                             </picture>
 
                         </div>
-                        <div class="catalog-choice__c-info">
-                            <div class="catalog-choice__c-info-left">
+                        <div class="banner-with-img__c-info">
+                            <div class="banner-with-img__c-info-left">
                                 <h2 class="tl2 col-wh">Подбор системы</h2>
                                 <p class="txt20 col-wh">Заполните форму и получите готовый комплект для Вашей квартиры
                                 </p>
-                                <ul class="catalog-choice__c-info-left-list">
-                                    <li class="catalog-choice__c-info-left-list-e col-wh txt16">
+                                <ul class="banner-with-img__c-info-left-list">
+                                    <li class="banner-with-img__c-info-left-list-e col-wh txt16">
                                         <img src="./assets/images/icons/thumb-up.svg" alt="thumb">
                                         100% оригинальная продукция
                                     </li>
-                                    <li class="catalog-choice__c-info-left-list-e col-wh txt16">
+                                    <li class="banner-with-img__c-info-left-list-e col-wh txt16">
                                         <img src="./assets/images/icons/guard.svg" alt="thumb">
                                         Непревзойденная гарантия
                                     </li>
-                                    <li class="catalog-choice__c-info-left-list-e col-wh txt16">
+                                    <li class="banner-with-img__c-info-left-list-e col-wh txt16">
                                         <img src="./assets/images/icons/champion.svg" alt="thumb">
                                         Контроль качества на всех этапах
                                     </li>
                                 </ul>
                             </div>
-                            <div class="catalog-choice__c-info-right">
+                            <div class="banner-with-img__c-info-right">
                                 <button class="btn-primary btn-primary_img-right">
                                     Подобрать
                                     <img src="./assets/images/icons/arrow-black.svg" alt="arrow">
@@ -167,8 +167,97 @@
                     </div>
                 </div>
             </section>
-            <include src="./components/_category-fs.html"></include>
-            <include src="./components/_category-fs.html"></include>
+            <section class="category-fs">
+                <div class="container category-fs__c">
+                    <div class="category-fs__c-top">
+                        <h2 class="tl2 bg bg_ye fit">Электрический теплый пол</h2>
+                        <a href="#" class="btn-nav btn-nav_ul desktop col-blk">
+                            Перейти в категорию
+                        </a>
+                        <p class="txt20">Надежный и безопасный источник тепла и комфорта в вашем доме</p>
+                    </div>
+                    <div class="category-fs-slider swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="category-slide swiper-slide line-ye">
+                                <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
+                                <a href="#" class="tl3 col-wh">
+                                    <strong> Блоки управления </strong>
+                                </a>
+                            </li>
+                            <li class="category-slide swiper-slide line-ye">
+                                <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
+                                <a href="#" class="tl3 col-wh">
+                                    <strong> Блоки управления </strong>
+                                </a>
+                            </li>
+                            <li class="category-slide swiper-slide line-ye">
+                                <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
+                                <a href="#" class="tl3 col-wh">
+                                    <strong> Блоки управления </strong>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </div>
+                    <div class="mobile">
+                        <div class="category-fs-pagination">
+                            
+                        </div>
+                        <div class="category-fs__c-link">
+                            <a href="#" class="btn-nav btn-nav_ul">
+                                Перейти в категорию
+                            </a>
+                        </div>
+                    </div>
+            
+                </div>
+            </section>
+
+            <section class="category-fs bg-wh">
+                <div class="container category-fs__c">
+                    <div class="category-fs__c-top">
+                        <h2 class="tl2 bg bg_bl col-wh ">Умный дом</h2>
+                        <a href="#" class="btn-nav btn-nav_ul desktop col-blk">
+                            Перейти в категорию
+                        </a>
+                        <p class="txt20">Лучший помощник в вашем доме</p>
+                    </div>
+                    <div class="category-fs-slider swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="category-slide swiper-slide line-ye">
+                                <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
+                                <a href="#" class="tl3 col-wh">
+                                    <strong> Блоки управления </strong>
+                                </a>
+                            </li>
+                            <li class="category-slide swiper-slide line-ye">
+                                <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
+                                <a href="#" class="tl3 col-wh">
+                                    <strong> Блоки управления </strong>
+                                </a>
+                            </li>
+                            <li class="category-slide swiper-slide line-ye">
+                                <img class="category-slide-img" src="../assets/images/categories.webp" alt="category">
+                                <a href="#" class="tl3 col-wh">
+                                    <strong> Блоки управления </strong>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </div>
+                    <div class="mobile">
+                        <div class="category-fs-pagination">
+                            
+                        </div>
+                        <div class="category-fs__c-link">
+                            <a href="#" class="btn-nav btn-nav_ul">
+                                Перейти в категорию
+                            </a>
+                        </div>
+                    </div>
+            
+                </div>
+            </section>
 
 
 
@@ -177,6 +266,7 @@
         </main>
         <include src="./components/_footer.html"></include>
         <include src="./components/_mobile-nav.html"></include>
+        <include src="./components/_modals.html"></include>
 
 
 

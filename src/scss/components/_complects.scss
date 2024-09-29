@@ -5,6 +5,10 @@
             margin-bottom: 4rem;
             display: flex;
             justify-content: space-between;
+            @include small-tablet{
+                flex-direction: column;
+                gap: 2rem;
+            }
 
         }
         &-slider{

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>basket</title>
+    <title>user page</title>
 
 </head>
 
@@ -22,7 +22,7 @@
                             <p class="tl3">
                                 <strong>Lorem ipsum dolor sit amet, consectetur adipisicing!</strong>
                             </p>
-                            <button 
+                            <button
                                 class="user-page__left-btn switcher-btn btn-primary  btn-primary_blue btn-primary_small">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@
                                 </span>
 
                             </button>
-                            <button 
+                            <button
                                 class="user-page__left-btn switcher-btn btn-primary btn-primary_blue btn-primary_small">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -100,8 +100,8 @@
                         </div>
 
                         <div class="switcher-slide">
-                            <div class="user-page__main" >
-                                <form class="user-page__main-personal">
+                            <div class="user-page__main">
+                                <form class="user-page__main-personal form">
                                     <p class="tl3"> <strong>Личные данные</strong></p>
 
                                     <button class="btn-nav user-page__main-personal-change">
@@ -116,31 +116,32 @@
                                     </label>
 
                                     <label class=" input-container input-text form-input">
-                                        <input type="text" name="name" placeholder="input-text">
+                                        <input type="text" name="phone" placeholder="телефон" data-required="true">
                                         <span class="input-text-placeholder "></span>
                                         <span class="input-text-error-msg "></span>
                                     </label>
 
                                     <label class=" input-container input-text form-input">
-                                        <input type="text" name="name" placeholder="input-text">
+                                        <input type="text" name="email" placeholder="Электронная почта" data-required="true">
                                         <span class="input-text-placeholder "></span>
                                         <span class="input-text-error-msg "></span>
                                     </label>
 
                                     <p class="tl3 user-page__main-personal-row"><strong>Данные для входа</strong></p>
 
-                                    <label class="input-container input-text form-input">
-                                        <input type="text" name="name" placeholder="input-text">
-                                        <span class="input-text-placeholder "></span>
+                                    <label class=" input-container input-text form-input">
+                                        <input type="password" name="password" maxlength="20" data-required="true" placeholder="Пароль">
+                                        <span class="input-text-placeholder"></span>
+                                        <span class="input-text-error-msg "></span>
+                                        <button class="input-text-password">X</button>
+                                    </label>
+    
+                                    <label class=" input-container input-text form-input">
+                                        <input type="password" name="passwordRepeat" data-required="true"
+                                            placeholder="Повторите пароль">
+                                        <span class="input-text-placeholder"></span>
                                         <span class="input-text-error-msg "></span>
                                     </label>
-
-                                    <label class="input-container input-text input-pass form-input">
-                                        <input type="text" name="name" placeholder="input-text">
-                                        <span class="input-text-placeholder "></span>
-                                        <span class="input-text-error-msg "></span>
-                                    </label>
-
 
                                     <button class="btn-primary btn-primary_blue" type="submit">
                                         Сохранить
@@ -154,8 +155,8 @@
                                 </form>
                                 <!-- обертка только для дэва -->
                                 <div class="user-page__deleteme">
-                                <!-- обертка только для дэва -->
-                                
+                                    <!-- обертка только для дэва -->
+
                                     <div class="user-page__right">
                                         <p class="tl3"><strong>Ваша скидка <span>15</span>%</strong></p>
                                         <p class="txt18">Купите товары на сумму от <span>8000</span>₽, чтобы получить
@@ -214,7 +215,8 @@
 
                                     <div class="user-page__right">
                                         <p class="tl3"><strong>Ответим на ваши вопросы!</strong></p>
-                                        <p class="txt18">Если Ваши данные изменились, свяжитесь с нами любым удобным для Вас
+                                        <p class="txt18">Если Ваши данные изменились, свяжитесь с нами любым удобным для
+                                            Вас
                                             способом!
                                         </p>
                                         <div class="user-page__right-links">
@@ -227,11 +229,11 @@
                                                 Whats App
                                             </a>
                                         </div>
-            
+
                                         <button class="btn-primary btn-primary_blue">
                                             Оставить заявку
                                         </button>
-            
+
                                     </div>
                                 </div>
                             </div>
@@ -239,7 +241,7 @@
 
                         <div class="switcher-slide">
                             <!-- history main -->
-                            <div class="user-page__main " >
+                            <div class="user-page__main ">
                                 <div class="user-page__main-history">
                                     <div class="user-page__main-history-top">
                                         <label class="radio">
@@ -392,24 +394,30 @@
                             <!-- history main -->
 
                             <!-- history placeholder -->
-                            <div class="user-page__main " >
-                                <div class="catalog-choice user-page__main_history-banner">
-                                    <div class=" catalog-choice__c">
-                                        <div class="catalog-choice__c-img">
-                                            <img src="./assets/images/catalog-choice.webp" alt="choice">
-                                        </div>
-                                        <div class="catalog-choice__c-info">
-                                            <div class="catalog-choice__c-info-left">
-                                                <p class="tl2 col-wh">Заказов пока нет</p>
-                                                <p class="txt20 col-wh">Более 10 000 товаров в наличии и под заказ.
-                                                    Найдите
-                                                    то,
-                                                    что Вам нужно в каталоге товаров.</p>
-                                                <button class="btn-primary btn-primary_green">
-                                                    Подобрать
-                                                </button>
+                            <div class="user-page__main ">
+                                <div class="banner-with-img user-page__main-banner">
+                                    <div class=" banner-with-img__c">
+                                        <div class="banner-with-img__c-wrp">
+                                            <div class="banner-with-img__c-img">
+                                                <picture>
+                                                    <source media="(max-width: 768px)"
+                                                        srcset="./assets/images/banner-img-mobile.png">
+                                                    <img src="./assets/images/banner-img.png" alt="choice">
+                                                </picture>
                                             </div>
+                                            <div class="banner-with-img__c-info">
+                                                <div class="banner-with-img__c-info-left">
+                                                    <p class="tl2 col-wh">заказов пока нет</p>
+                                                    <p class="txt20 col-wh">Более 10 000 товаров в наличии и под заказ.
+                                                        Найдите
+                                                        то,
+                                                        что Вам нужно в каталоге товаров.</p>
+                                                    <button class="btn-primary btn-primary_green">
+                                                        Подобрать
+                                                    </button>
+                                                </div>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -418,7 +426,7 @@
                         </div>
                         <div class="switcher-slide">
                             <!-- favorite -->
-                            <div class="user-page__main" >
+                            <div class="user-page__main">
                                 <ul class="user-page__main-favorite">
                                     <include src="./components/_item-card.html"></include>
                                     <include src="./components/_item-card.html"></include>
@@ -427,24 +435,30 @@
                             <!-- favorite -->
 
                             <!-- favorite placeholder -->
-                            <div class="user-page__main" >
-                                <div class="catalog-choice user-page__main_history-banner">
-                                    <div class=" catalog-choice__c">
-                                        <div class="catalog-choice__c-img">
-                                            <img src="./assets/images/catalog-choice.webp" alt="choice">
-                                        </div>
-                                        <div class="catalog-choice__c-info">
-                                            <div class="catalog-choice__c-info-left">
-                                                <p class="tl2 col-wh">В избранном пока ничего нет</p>
-                                                <p class="txt20 col-wh">Более 10 000 товаров в наличии и под заказ.
-                                                    Найдите
-                                                    то,
-                                                    что Вам нужно в каталоге товаров.</p>
-                                                <button class="btn-primary btn-primary_green">
-                                                    Подобрать
-                                                </button>
+                            <div class="user-page__main">
+                                <div class="banner-with-img user-page__main-banner">
+                                    <div class=" banner-with-img__c">
+                                        <div class="banner-with-img__c-wrp">
+                                            <div class="banner-with-img__c-img">
+                                                <picture>
+                                                    <source media="(max-width: 768px)"
+                                                        srcset="./assets/images/banner-img-mobile.png">
+                                                    <img src="./assets/images/banner-img.png" alt="choice">
+                                                </picture>
                                             </div>
+                                            <div class="banner-with-img__c-info">
+                                                <div class="banner-with-img__c-info-left">
+                                                    <p class="tl2 col-wh">В избранном ничего нет</p>
+                                                    <p class="txt20 col-wh">Более 10 000 товаров в наличии и под заказ.
+                                                        Найдите
+                                                        то,
+                                                        что Вам нужно в каталоге товаров.</p>
+                                                    <button class="btn-primary btn-primary_green">
+                                                        Подобрать
+                                                    </button>
+                                                </div>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -453,7 +467,7 @@
                         </div>
 
 
-                       
+
                     </div>
                 </div>
             </section>
@@ -461,6 +475,8 @@
 
         </main>
         <include src="./components/_footer.html"></include>
+        <include src="./components/_mobile-nav.html"></include>
+        <include src="./components/_modals.html"></include>
     </div>
 
 </body>

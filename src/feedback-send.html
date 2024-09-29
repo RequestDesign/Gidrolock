@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>basket</title>
+    <title>feedback-send</title>
 
 </head>
 
 <body>
     <div class="wrapper">
         <include src="./components/_header.html"></include>
-        <main >
+        <main>
             <include src="./components/_breadCrumps.html"></include>
             <section class="feedback-page feedback-page-top">
                 <div class="container-small feedback-page-top__c">
@@ -92,7 +92,7 @@
                             </div>
                             <input type="text" autocomplete="off" data-required="true" name="phone"
                                 placeholder="номер телефона">
-                                <span class="input-text-placeholder"></span>
+                            <span class="input-text-placeholder"></span>
                         </div>
                         <span class="input-text-error-msg "></span>
                     </div>
@@ -161,15 +161,43 @@
 
 
                     <p class="tl3 feedback-page-form__c-row"><strong>Мнение о товаре</strong></p>
-                    <label class="feedback-page-form__c-row input-container input-text form-input feedback-page-form__c-comment">
-                        <textarea  name="name" placeholder="Комментарий" data-required="true"></textarea>
+                    <label
+                        class="feedback-page-form__c-row input-container input-text form-input feedback-page-form__c-comment">
+                        <textarea name="name" placeholder="Комментарий" data-required="true"></textarea>
                         <span class="input-text-placeholder"></span>
                         <span class="input-text-error-msg "></span>
                     </label>
                     <p class="tl3 feedback-page-form__c-row"><strong>Загрузите 1 видео до 2 минут</strong></p>
-                    <input class="feedback-page-form__c-row" type="file">
+
+                    <label class="  form-input input-file fit ">
+                        <input type="file" data-required="true" name="video">
+                        <span class="txt18 flex-row input-file-add">
+                            <img src="./assets/images/icons/add-file.svg" alt="add">
+                            Прикрепите файл с видео
+                        </span>
+                        <span class=" flex-row txt18 input-file-got">
+                            <img src="./assets/images/icons/x-blue.svg" alt="x">
+                            <span class="input-file-text"></span>
+                        </span>
+                        <span class="input-text-error-msg"></span>
+
+                    </label>
+
                     <p class="tl3 feedback-page-form__c-row"><strong>Загрузите до 5 фото</strong></p>
-                    <input class="feedback-page-form__c-row" type="file">
+
+                    <label class="  form-input input-file fit ">
+                        <input type="file" data-required="true" name="photos">
+                        <span class="txt18 flex-row input-file-add">
+                            <img src="./assets/images/icons/add-file.svg" alt="add">
+                            Прикрепите фото
+                        </span>
+                        <span class=" flex-row txt18 input-file-got">
+                            <img src="./assets/images/icons/x-blue.svg" alt="x">
+                            <span class="input-file-text"></span>
+                        </span>
+                        <span class="input-text-error-msg"></span>
+
+                    </label>
 
                     <div class="feedback-page-form__c-row flex-row feedback-page-form__c-footer">
                         <button class="btn-primary btn-primary_green">
@@ -204,6 +232,8 @@
 
         </main>
         <include src="./components/_footer.html"></include>
+        <include src="./components/_mobile-nav.html"></include>
+        <include src="./components/_modals.html"></include>
     </div>
 
 </body>

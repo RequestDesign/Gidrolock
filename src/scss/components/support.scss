@@ -179,6 +179,11 @@
                 gap: 2rem;
                 margin-bottom: 2rem;
             }
+            &-input{
+                &+.input-text-placeholder{
+                    color: white;
+                }
+            }
 
         }
     }

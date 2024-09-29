@@ -10,7 +10,6 @@
 @import './category-slide';
 @import './filter-tag';
 @import './drop-down';
-@import './item-card-row';
 @import './api-pagination';
 
 
@@ -41,40 +40,49 @@
 .swiper-pagination-bullet-active {
     opacity: 1;
 }
+
 /* swiper */
 
 /* nouislider */
-.noUi-target{
-    
+.noUi-target {
+
     background-color: $gray;
     border: none;
     height: .5rem;
 }
-.noUi-connect{
+
+.noUi-connect {
     background-color: $blue;
 }
-.noUi-handle{
+
+.noUi-handle {
     width: 2.4rem !important;
     height: 2.4rem !important;
     top: -.8rem !important;
     border: 3px solid $white;
     border-radius: 50%;
-    @include small-tablet{
+
+    @include small-tablet {
         width: 4.8rem !important;
         height: 4.8rem !important;
     }
-    &::after, &::before{
+
+    &::after,
+    &::before {
         display: none;
-     }
-}
-.noUi-touch-area{
-    background-color: $blue;
-    border-radius: 50%;
-   
-    &::after, &::before{
-       display: none;
     }
 }
+
+.noUi-touch-area {
+    background-color: $blue;
+    border-radius: 50%;
+
+    &::after,
+    &::before {
+        display: none;
+    }
+}
+
 /* nouislider */
 
 .col {
@@ -103,9 +111,16 @@
 .bg {
     padding: .5rem 1rem;
     box-sizing: border-box;
+    width: fit-content;
 
     @include small-tablet {
         padding: .5rem 1rem;
+    }
+
+    &-wh {
+        padding: 0;
+        width: auto;
+        background-color: $white;
     }
 
     &_wh {
@@ -115,6 +130,7 @@
     &_grn {
         background-color: $green;
     }
+
     &_gr {
         background-color: $gray;
     }
@@ -163,6 +179,9 @@
 
 
 }
+.count::after{
+    content: 'шт.';
+}
 
 .two-line {
     overflow: hidden;
@@ -177,25 +196,51 @@
 }
 
 .show-help {
-
+position: relative;
     & svg,
     img {
         width: 2rem;
         height: 2rem;
     }
+    &-text{
+        width: 25.8rem;
+        position: absolute;
+        background-color: $black;
+        color: $white;
+        padding: .8rem 1.2rem;
+        top: -2rem;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        display: none;
+        text-transform: none;
+
+    }
 }
 
-.flex-row{
+.flex-row {
     display: flex;
     gap: 1rem;
     align-items: center;
-    & img, & svg{
+
+    & img,
+    & svg {
         max-width: 2rem;
         max-height: 2rem;
         flex-shrink: 0;
-        @include small-tablet{
+
+        @include small-tablet {
             max-width: 4rem;
             max-height: 4rem;
         }
+    }
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include small-tablet {
+        gap: 2rem;
     }
 }

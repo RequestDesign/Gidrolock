@@ -106,7 +106,7 @@
                         </p>
 
                         <label class="loyalty-partners__c-form-row input-container input-text form-input">
-                            <input type="text" name="name" placeholder="input-text">
+                            <input type="text" name="name" placeholder="Фио" data-required="y">
                             <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
@@ -148,32 +148,44 @@
                         </div>
 
                         <label class=" input-container input-text form-input">
-                            <input type="text" name="email" placeholder="input-text">
+                            <input type="text" name="email" placeholder="Адрес электронной почты" data-required="y">
                             <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
 
                         <label class=" input-container input-text form-input">
-                            <input type="text" name="companyName" placeholder="input-text">
+                            <input type="text" name="companyName"  placeholder="Названии компании" data-required="y">
                             <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
 
                         <label class=" input-container input-text form-input">
-                            <input type="text" name="inn" placeholder="input-text">
+                            <input type="text" name="inn"  placeholder="ИНН" data-required="y">
                             <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
 
                         <label class="loyalty-partners__c-form-row input-container input-text form-input">
-                            <input type="text" name="comment" placeholder="input-text">
+                            <input type="text" name="comment" placeholder="Комментарий">
                             <span class="input-text-placeholder"></span>
                             <span class="input-text-error-msg "></span>
                         </label>
 
                         <div class="loyalty-partners__c-form-row loyalty-partners__c-form-margin">
                             <p class="tl4">карточка предприятия</p>
-                            <input type="file">
+                            <label class="form-input input-file ">
+                                <input type="file" data-required="true" name="companyCard">
+                                <span class="txt18 flex-row input-file-add">
+                                    <img src="./assets/images/icons/add-file.svg" alt="add">
+                                    Прикрепите файл с карточкой предприятия
+                                </span>
+                                <span class=" flex-row txt18 input-file-got">
+                                    <img src="./assets/images/icons/x-blue.svg" alt="x">
+                                   <span class="input-file-text"></span>
+                                </span>
+                                <span class="input-text-error-msg"></span>
+
+                            </label>
                         </div>
                         <div class="loyalty-partners__c-form-row flex-row loyalty-partners__c-form-margin">
 
@@ -182,7 +194,7 @@
                             </button>
 
                             <label class="checkbox form-input">
-                                <input type="checkbox">
+                                <input type="checkbox" data-required="y">
                                 <span class="checkbox-check">
                                     <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -211,6 +223,7 @@
         </main>
         <include src="./components/_footer.html"></include>
         <include src="./components/_mobile-nav.html"></include>
+        <include src="./components/_modals.html"></include>
 
 
 

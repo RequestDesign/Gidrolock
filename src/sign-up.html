@@ -93,38 +93,30 @@
                                     заглавную букву и не должен содержать спецсимволы. Длина пароля не менее 8 символов.
                                 </p>
 
+
+
                                 <label class=" input-container input-text form-input">
-                                    <input type="text" name="password" data-required="true" placeholder="Пароль">
+                                    <input type="password" name="password" maxlength="20" data-required="true" placeholder="Пароль">
                                     <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
+                                    <button class="input-text-password">X</button>
                                 </label>
 
                                 <label class=" input-container input-text form-input">
-                                    <input type="text" name="passwordRepeat" data-required="true"
+                                    <input type="password" name="passwordRepeat" data-required="true"
                                         placeholder="Повторите пароль">
                                     <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
-                                <p class="tl4 sign-up__c-row">Карточка предприятия<span class="col-bl">*</span></p>
-                                <label class="form-input input-file">
-                                    <input type="file">
-                                    <span class="txt18 flex-row">
-                                        <img src="./assets/images/icons/add-file.svg" alt="add">
-                                        Прикрепите файл с карточкой предприятия
-                                    </span>
-                                    <span class="input-file-text flex-row txt18">
-                                        <img src="./assets/images/icons/x-blue.svg" alt="x">
-                                        value
-                                    </span>
 
-                                </label>
+                               
                                 <div class="flex-row sign-up__c-row">
                                     <button class="btn-primary btn-primary_green">
                                         Зарегистрироваться
                                     </button>
 
                                     <label class="checkbox form-input">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="policy" data-required="true">
                                         <span class="checkbox-check">
                                             <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +136,7 @@
                             <form class="sign-up__c-business form" autocomplete="off">
                                 <p class="tl3 sign-up__c-row"><strong>Личные данные</strong></p>
                                 <label class="sign-up__c-row input-container input-text form-input">
-                                    <input type="text" name="name" data-required="true" placeholder="input-text">
+                                    <input type="text" name="name" data-required="true" placeholder="фио">
                                     <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
@@ -203,9 +195,20 @@
                                     <span class="input-text-error-msg "></span>
                                 </label>
 
-                                <p class="tl3 sign-up__c-row"><strong>Карточка предприятия</strong></p>
-                                <p class="txt18 sign-up__c-row">надо сделать эту хуйню//// Прикрепите файл с карточкой
-                                    предприятия</p>
+                                <p class="tl4 sign-up__c-row">Карточка предприятия<span class="col-bl">*</span></p>
+                                <label class="form-input input-file ">
+                                    <input type="file" data-required="true" name="companyCard">
+                                    <span class="txt18 flex-row input-file-add">
+                                        <img src="./assets/images/icons/add-file.svg" alt="add">
+                                        Прикрепите файл с карточкой предприятия
+                                    </span>
+                                    <span class=" flex-row txt18 input-file-got">
+                                        <img src="./assets/images/icons/x-blue.svg" alt="x">
+                                       <span class="input-file-text"></span>
+                                    </span>
+                                    <span class="input-text-error-msg"></span>
+
+                                </label>
 
                                 <div class="flex-row sign-up__c-row">
                                     <button class="btn-primary btn-primary_green">
@@ -213,7 +216,7 @@
                                     </button>
 
                                     <label class="checkbox form-input">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="policy" data-required="required">
                                         <span class="checkbox-check">
                                             <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -255,7 +258,7 @@
         </main>
         <include src="./components/_footer.html"></include>
         <include src="./components/_modals.html"></include>
-
+   
     </div>
 
 

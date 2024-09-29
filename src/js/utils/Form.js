@@ -16,6 +16,8 @@ export default class Form {
         this.submitForm = submitFoo
         this._inputs = this._form.querySelectorAll('input, textarea')
         this._inputsData = this._createInputData(this._inputs)
+        this._passwordInput = Array.from(this._inputs).find(e => e.name == 'password')
+        this._passwordRepeatInput = Array.from(this._inputs).find(e => e.name == 'passwordRepeat')
         /**
          * _inputsData: {[key: input.name] :{
          *                  value: any,
@@ -33,34 +35,28 @@ export default class Form {
     }
     _inputHandler(inputTarget) {
 
-        if (inputTarget.type == 'checkbox' || inputTarget.type == 'radio') {
-            this._inputsData[inputTarget.name].value = inputTarget.checked;
-        } else if (inputTarget.type == 'file') {
-            console.log(inputTarget.value.split('\\').slice(-1));
-            this._inputsData[inputTarget.name].value = inputTarget.value
+
+
+        this._inputsData[inputTarget.name].value = inputTarget.value
+        this._validation(inputTarget);
+
+        if (!inputTarget.placeholder) return
+
+        if (inputTarget.value) {
+            inputTarget.closest('.' + this._inputContainerSelector)
+                .querySelector('.' + this._inputPlaceholderSelector).style.display = 'none'
         } else {
-
-            this._inputsData[inputTarget.name].value = inputTarget.value
-            this._validation(inputTarget);
-
-            if (!inputTarget.placeholder) return
-
-            if (inputTarget.value) {
-                inputTarget.closest('.' + this._inputContainerSelector)
-                    .querySelector('.' + this._inputPlaceholderSelector).style.display = 'none'
-            } else {
-                inputTarget.closest('.' + this._inputContainerSelector)
-                    .querySelector('.' + this._inputPlaceholderSelector).style.display = 'block'
-            }
-
-
-
+            inputTarget.closest('.' + this._inputContainerSelector)
+                .querySelector('.' + this._inputPlaceholderSelector).style.display = 'block'
         }
+
+
 
     }
 
     _validation(input) {
         //валидация инпутов
+
         switch (input.name) {
             case 'name':
                 this._checkInputValid(input, /^[A-Za-zА-Яа-яЁё ]+$/, 'Допустим ввод только букв')
@@ -73,14 +69,9 @@ export default class Form {
             case 'phone':
                 this._checkInputValid(input, /^\+(7|375) \(\d{3}\) \d{3}-\d{2}-\d{2}$/, 'Формат номера телефона +7 (888) 888-88-88')
                 break;
-            case 'passwordRepeat':
-                /**
-                 * надо сделать првоерку пароля
-                 * 
-                 */
-
+            case 'password':
+                this._checkInputValid(input, /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/, 'Не корректный пароль')
                 break;
-
 
 
             default:
@@ -88,31 +79,6 @@ export default class Form {
                 break;
         }
 
-    }
-
-    _onSubmit(evt) {
-        evt.preventDefault();
-        let whatsUp = true
-        for (const inp of this._inputs) {
-            this._inputHandler(inp)
-            console.log(inp);
-            if (!this._inputsData[inp.name].isValid) {
-                whatsUp = false
-            }
-        }
-
-        if (!whatsUp) return
-        //сабмит
-        this.submitForm(this._inputsData)
-        //дальше мои полномочия- все
-
-
-        /*  const inputs = this._form.querySelectorAll('.' + this._inputContainerSelector + ' input');
-         inputs.forEach(input => {
-             input.value = '';
-         });
- 
-         this._inputsData = this._createInputData(this._inputs) */
     }
 
     _checkInputValid(target, regex = null, regexMsg = 'че то не так написал, исправляй') {
@@ -129,6 +95,20 @@ export default class Form {
             inputContainer.classList.add(this._inputErrorSelector);
             errorMsg.textContent = 'Это поле обязательно.'
             this._inputsData[target.name].isValid = false
+
+
+        } else if (target.name == 'passwordRepeat') {
+
+            this._validation(this._passwordInput)
+            if (target.value !== this._inputsData.password.value) {
+                inputContainer.classList.add(this._inputErrorSelector);
+                errorMsg.textContent = 'Пароли не совпадают'
+                this._inputsData[target.name].isValid = false
+            } else {
+                this._inputsData[target.name].isValid = true
+                inputContainer.classList.remove(this._inputErrorSelector)
+                errorMsg.textContent = ' '
+            }
 
 
         } else if (target.getAttribute('type') == 'checkbox' || target.getAttribute('type') == 'radio') {
@@ -161,13 +141,39 @@ export default class Form {
     }
 
 
+    _onSubmit(evt) {
+        evt.preventDefault();
+        let whatsUp = true
+        for (const inp of this._inputs) {
+            this._inputHandler(inp)
+            if (!this._inputsData[inp.name].isValid) {
+                whatsUp = false
+            }
+        }
+
+        if (!whatsUp) return
+        //сабмит
+        this.submitForm(this._inputsData)
+        //дальше мои полномочия- все
+
+
+        /*  const inputs = this._form.querySelectorAll('.' + this._inputContainerSelector + ' input');
+         inputs.forEach(input => {
+             input.value = '';
+         });
+ 
+         this._inputsData = this._createInputData(this._inputs) */
+    }
+
+
+
     _createInputData(inputs) {
 
         let echo = {}
 
         for (const input of inputs) {
-            input.setAttribute('autocomplete', 'off')
 
+            input.setAttribute('autocomplete', 'off')
             if (input.placeholder) {
 
                 const plcaholder = input.closest('.' + this._inputContainerSelector)
@@ -177,7 +183,25 @@ export default class Form {
                 if (input.dataset.required) {
                     plcaholder.setAttribute('data-end', ' *')
                 }
-                /*  data-end="*" */
+
+            }
+
+
+            if (input.name == 'password') {
+                const passbtn = input.closest('.' + this._inputContainerSelector)
+                    .querySelector('.input-text-password')
+
+                if (passbtn) {
+                    passbtn.addEventListener('click', (e) => {
+                        e.preventDefault()
+                        this._passowrHide()
+                    })
+                }
+            }
+
+            if (input.type == 'file') {
+
+                input.addEventListener('change', (e) => { this._fileHandler(e) })
             }
 
 
@@ -195,11 +219,36 @@ export default class Form {
                 echo[input.name] = { value, isValid, isRequired }
             }
         }
-
+ 
 
         return echo
 
     }
+
+    _fileHandler(evt) {
+        const inputContainer = evt.target.closest('.' + this._inputContainerSelector);
+        if (evt.target.value) {
+            inputContainer.classList.add('_active')
+            inputContainer.querySelector('.input-file-got')
+                .querySelector('.input-file-text')
+                .textContent = evt.target.value.split('\\').slice(-1)
+
+
+        } else {
+            inputContainer.classList.remove('_active')
+        }
+    }
+
+    _passowrHide() {
+        if (this._passwordInput.type == 'text') {
+            this._passwordInput.setAttribute('type', 'password')
+            this._passwordRepeatInput.setAttribute('type', 'password')
+        } else {
+            this._passwordInput.setAttribute('type', 'text')
+            this._passwordRepeatInput.setAttribute('type', 'text')
+        }
+    }
+
 
     initForm() {
         this._form.noValidate = true

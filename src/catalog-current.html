@@ -49,15 +49,13 @@
                                             <ul>
                                                 <li class="txt18 ">
                                                     <label class="checkbox-hiden">
-                                                        <input type="checkbox" name="complects1"
-                                                            >
+                                                        <input type="checkbox" name="complects1">
                                                         <span> Готовые комплекты</span>
                                                     </label>
                                                 </li>
                                                 <li class="txt18 ">
                                                     <label class="checkbox-hiden">
-                                                        <input type="checkbox" name="complects2"
-                                                          >
+                                                        <input type="checkbox" name="complects2">
                                                         <span> Блоки управления</span>
                                                     </label>
                                                 </li>
@@ -70,8 +68,10 @@
                                     <p class="tl3 catalog-current__filter-scroll-list-ttl">Фильтры</p>
                                     <div class="catalog-current__filter-scroll-list-price">
                                         <p class="tl4">Цена</p>
-                                        <input id="priceInputMin" class="txt18" type="text" name="priceMin" value="0" min="0"  >
-                                        <input id="priceInputMax" class="txt18" type="text" name="priceMax" value="999" max="999" >
+                                        <input id="priceInputMin" class="txt18" type="text" name="priceMin" value="0"
+                                            min="0">
+                                        <input id="priceInputMax" class="txt18" type="text" name="priceMax" value="999"
+                                            max="999">
 
                                         <div class="catalog-current__filter-scroll-list-price-slider"></div>
                                     </div>
@@ -111,7 +111,7 @@
                                                     </label>
 
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -152,26 +152,34 @@
                         </div>
 
                     </form>
-                    <div class="catalog-current__banner">
-                        <div class="catalog-current__banner-wrp">
-                            <div class="catalog-current__banner-main">
-                                <p class="tl2 col-wh">Лидер продаж</p>
-                                <p class="txt20 col-wh">Умный манипулятор для шарового крана SCW1 (Wi-Fi) (81102020)</p>
 
-                                <a href="#" class="btn-nav btn-nav_bg">
-                                    Купить
-                                    <img src="./assets/images/icons/arrow-black.svg" alt="arr">
-                                </a>
+                    <div class="banner-with-img  catalog-current__banner">
+                        <div class=" banner-with-img__c">
+                            <div class="banner-with-img__c-wrp  banner-with-img__c_rev">
+                                <div class="banner-with-img__c-img">
+                                    <picture>
+                                        <source media="(max-width: 769px)"
+                                            srcset="./assets/images/banner-img-mobile.webp">
+                                        <img src="./assets/images/banner-img.webp" alt="choice">
+                                    </picture>
+                                </div>
+                                <div class="banner-with-img__c-info">
+                                    <div class="banner-with-img__c-info-left">
+                                        <p class="tl2 col-wh">Лидер продаж</p>
+                                        <p class="txt20 col-wh">Умный манипулятор для шарового крана SCW1 (Wi-Fi)
+                                            (81102020)</p>
 
-                            </div>
-                            <div class="catalog-current__banner-img">
-                                <picture>
-                                    <source media="(max-width: 768px )" srcset="./assets/images/banner-img-mobile.webp">
-                                    <img src="./assets/images/banner-img.webp" alt="img">
-                                </picture>
+                                        <a href="#" class="btn-nav btn-nav_bg">
+                                            Купить
+                                            <img src="./assets/images/icons/arrow-black.svg" alt="arr">
+                                        </a>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="catalog-current__items">
                         <div class="catalog-current__items-top">
                             <div class="catalog-current__items-top-select txt16">
@@ -267,6 +275,7 @@
         </main>
         <include src="./components/_footer.html"></include>
         <include src="./components/_mobile-nav.html"></include>
+        <include src="./components/_modals.html"></include>
 
 
 

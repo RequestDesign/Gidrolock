@@ -7,12 +7,12 @@ import initSelect from "../utils/select";
 import initCatalogFilterOpener from '../components/catalog'
 import initCardPage from "../components/cardView";
 import initFeedBack from "../components/feedback";
-
 import initSignUp from "../components/signUp";
-import { Toggler } from "../utils/toggler";
+import initSelection from "../components/selection";
+
 import { Switcher } from "../utils/Switcher";
 
-
+/*  */
 
 
 
@@ -26,13 +26,13 @@ $(function () {
     initCatalogFilterOpener()
     initCardPage()
     initFeedBack()
-
     initSignUp()
     modalsHandler()
-    new Toggler('.toggler-input-feedback', '.toggler-target-feedback', '_opened')
     initNewsSwiper()
     initSwichers()
-
+    initSelection()
+    modalMobileCode()
+    initShowHelp()
 
 });
 
@@ -40,15 +40,11 @@ function dropDowns() {
     const ddBtn = $('.drop-down-target')
     if (!ddBtn) return
 
-    const ddParent = '.drop-down-container',
-        ddOpened = '_opened'
-
-
     ddBtn.on('click', (e) => {
         e.preventDefault()
-        e.currentTarget.classList.toggle(ddOpened)
-        e.currentTarget.closest(ddParent)
-            .classList.toggle(ddOpened)
+        e.currentTarget.classList.toggle('_opened')
+        e.currentTarget.closest('.drop-down-container')
+            .classList.toggle('_opened')
     })
 
 }
@@ -182,7 +178,8 @@ function initSwipers() {
                 pauseOnMouseEnter: true,
             },
             pagination: {
-                el: '.header-pagination'
+                el: '.header-pagination',
+                clickable: true
             },
 
 
@@ -401,10 +398,63 @@ function modalsHandler() {
     })
 }
 
+function modalMobileCode() {
+    const container = $('.input-4x-code')
+    if (!container) return
+
+    const inputs = container.find('input'),
+        errMsg = container.find('.input-text-error-msg'),
+        valueInput = container.find('input[type="hidden"]')
+    valueInput.val('****');
+
+    inputs.on('keydown', (function (e) {
+        $(this).val('');
+        valueInput.val(inputs.index(this))
+    }))
+
+    inputs.on('keyup', (function (e) {
+
+        var val = $(this).val();
+
+
+        // Ввод только цифр
+        if (val == val.replace(/[0-9]/, '')) {
+            $(this).val('');
+            return false;
+        }
+
+        // Передача фокуса следующему innput
+        inputs.eq(inputs.index(this) + 1).focus();
+
+        /**
+         * 
+         * значение не записывается
+         * 
+         * 
+         */
+        const fullval = 3
+
+        if (fullval < 4) {
+            container.addClass('_error')
+            errMsg.text('error msg')
+        } else {
+            container.removeClass('_error')
+            errMsg.text('')
+        }
+    }))
+}
+
 function initSwichers() {
-    const basketDelivery = document.querySelector('.basket-order')
+    const basketDelivery = document.querySelector('.switcher-delivery')
+    console.log(basketDelivery);
     if (basketDelivery) {
         new Switcher(basketDelivery, 0)
+    }
+    console.log('----------------------------------');
+    const userdata = document.querySelector('.switcher-userdata')
+   
+    if (userdata) {
+        new Switcher(userdata, 0)
     }
 
     const modalCdek = document.querySelector('.modal-cdek')
@@ -412,15 +462,36 @@ function initSwichers() {
         new Switcher(modalCdek, 0)
     }
     const supportList = document.querySelector('.support-list')
-    if(supportList){
+    if (supportList) {
         new Switcher(supportList, 0)
     }
     const userPage = document.querySelector('.user-page')
-    if(userPage){
+    if (userPage) {
         new Switcher(userPage, 0)
     }
 
+    const modalSign = document.querySelector('.modal-sign-reset-switcher')
+    if (modalSign) {
+        new Switcher(modalSign, 0)
+    }
 
+   
+
+}
+
+function initShowHelp() {
+    const targets = document.querySelectorAll('.show-help')
+
+    targets.forEach((t) => {
+        if (!$(t).find('.show-help-text')) return
+
+        t.addEventListener('mouseover', (e) => {
+            $(e.currentTarget).find('.show-help-text').fadeIn()
+        })
+        t.addEventListener('mouseleave', (e) => {
+            $(e.currentTarget).find('.show-help-text').fadeOut()
+        })
+    })
 }
 
 
