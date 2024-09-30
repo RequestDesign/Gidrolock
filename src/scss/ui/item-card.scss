@@ -25,20 +25,22 @@
         }
 
         &-favorite {
-
-            margin-left: auto;
-
-            & svg {
-                width: 3.2rem;
-                height: 3.2rem;
-                @include small-tablet{
-                    width: 5rem;
-                    height: 5rem;
-                }
+            width: 3.2rem;
+            height: 3.2rem;
+            @include small-tablet{
+                width: 5rem;
+                height: 5rem;
             }
+            margin-left: auto;
+            background-image:  url(../../assets/images/icons/like.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
 
-            &_active svg {
-                fill: $blue;
+        
+
+            &_active {
+                background-image:  url(../../assets/images/icons/like-checked.svg);
             }
 
         }
