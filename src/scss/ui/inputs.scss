@@ -40,11 +40,13 @@
             &~.radio-border {
                 border-color: $blue;
             }
-            &+.radio-square_show-help svg{
-                & rect{
+
+            &+.radio-square_show-help svg {
+                & rect {
                     stroke: $white;
                 }
-                & path{
+
+                & path {
                     fill: $white;
                 }
             }
@@ -124,11 +126,13 @@
             &~.radio-border {
                 border-color: $blue;
             }
-            &+.radio-square_show-help svg{
-                & rect{
+
+            &+.radio-square_show-help svg {
+                & rect {
                     stroke: $white;
                 }
-                & path{
+
+                & path {
                     fill: $white;
                 }
             }
@@ -350,7 +354,7 @@
 
     &-placeholder {
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         display: block;
         width: 100%;
         height: 100%;
@@ -360,6 +364,10 @@
         font-weight: 400;
         line-height: 120%;
         color: $gray-dark;
+
+        &_wh {
+            color: $white;
+        }
 
         @include small-tablet {
             font-size: 3rem;
@@ -394,8 +402,16 @@
         line-height: 120%;
         resize: none;
         position: relative;
-        z-index: 2;
+        z-index: 3;
         height: fit-content;
+
+        &.input-text_bg {
+            height: 5.36rem;
+
+            @include small-tablet {
+                height: 8rem;
+            }
+        }
 
 
         @include small-tablet {
@@ -460,6 +476,23 @@
 
     }
 
+    &-bg {
+        position: absolute;
+        z-index: 1;
+        border: .2rem solid transparent;
+        border-radius: .3rem;
+        box-sizing: border-box;
+
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: $white;
+        height: 5.36rem;
+
+        @include small-tablet {
+            height: 8rem;
+        }
+    }
 
 
 
@@ -469,6 +502,7 @@
     display: flex;
     border: .2px solid $gray-dark;
     border-radius: .3rem;
+    position: relative;
 
     & input:focus {
         &+.input-text-placeholder {
@@ -484,7 +518,7 @@
 
     &__select {
         background-color: $gray;
-
+        z-index: 3;
         display: flex;
         transition: all .5s;
         position: relative;
@@ -604,7 +638,8 @@
     & textarea {
         width: 100%;
         padding: 1.6rem 2.4rem;
-
+position: relative;
+z-index: 3;
         font-family: Rebrand Txt;
         font-size: 1.8rem;
         font-weight: 400;
