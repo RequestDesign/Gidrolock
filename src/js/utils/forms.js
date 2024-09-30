@@ -23,8 +23,9 @@ export default function initForms() {
 function formSubmit(inputData) {
     console.log(inputData);
 }
-function changeInputMask() {
-    $('.input-phone__select-list-btn').on('click', (e) => {
+function changeInputMask(form) {
+  
+    $(form).find('.input-phone__select-list-btn').on('click', (e) => {
    
         const { mask } = e.target.dataset,
             parent = $(e.target.closest('.input-phone')),

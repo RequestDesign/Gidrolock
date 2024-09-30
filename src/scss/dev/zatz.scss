@@ -13,25 +13,24 @@
 @import '../components/_mobile-nav';
 
 /* catalog */
-@import '../components/_catalog-head';
-@import '../components/_catalog-defense';
+@import '../components/catalog';
 @import '../components/_category-fs';
 @import '../components/_footer-before';
-@import '../components/_catalog-current';
 /* catalog */
 
+/* catalog-current */
+@import '../components/catalog-current';
+/* catalog-current */
+
+
 /* card */
-@import '../components/_card-page-top';
-@import '../components/_card-page-description';
+@import '../components/card-page';
 @import '../components/_video';
 @import '../components/_feedback';
 /* card */
 
 /* basket */
 @import '../components/basket';
-@import '../components/_basket-order';
-@import '../components/_basket-list';
-@import '../components/basket-placeholder';
 /* basket */
 
 /* order succ */

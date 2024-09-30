@@ -20,7 +20,7 @@ $(function () {
     dropDowns()
     initForms()
     initSwipers()
-    choiceSystemSwiper()
+
     initSelect()
     initMobileNav()
     initCatalogFilterOpener()
@@ -28,7 +28,7 @@ $(function () {
     initFeedBack()
     initSignUp()
     modalsHandler()
-    initNewsSwiper()
+
     initSwichers()
     initSelection()
     modalMobileCode()
@@ -288,36 +288,62 @@ function initSwipers() {
 
     }
 
-
-
-}
-function choiceSystemSwiper() {
     const choiceSystem = document.querySelector('.choice-system__c-left-slider')
-    if (!choiceSystem) return
-    const swiper = new Swiper(choiceSystem, {
-        modules: [Pagination],
-        loop: false,
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: rem(3),
-        allowTouchMove: false,
-        preventInteractionOnTransition: true,
-        touchMoveStopPropagation: true,
-        pagination: {
-            el: '.choice-system__c-left-top-pagination',
-            type: 'fraction'
-        }
+    if (choiceSystem) {
+        const swiper = new Swiper(choiceSystem, {
+            modules: [Pagination],
+            loop: false,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: rem(3),
+            allowTouchMove: false,
+            preventInteractionOnTransition: true,
+            touchMoveStopPropagation: true,
+            pagination: {
+                el: '.choice-system__c-left-top-pagination',
+                type: 'fraction'
+            }
 
-    })
-
-    choiceSystem.querySelectorAll('.choice-system__c-left-slider-form-e-next')
-        .forEach((el) => {
-            el.addEventListener('click', () => {
-                swiper.slideNext()
-            })
         })
 
+        choiceSystem.querySelectorAll('.choice-system__c-left-slider-form-e-next')
+            .forEach((el) => {
+                el.addEventListener('click', () => {
+                    swiper.slideNext()
+                })
+            })
+    }
+
+    const newsDeatail = document.querySelectorAll('.news-detail-slider')
+    if (newsDeatail) {
+        newsDeatail.forEach((e) => {
+
+            new Swiper(e.querySelector('.swiper'), {
+                modules: [Navigation, Pagination],
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: rem(3),
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+
+                    }
+                },
+                navigation: {
+                    prevEl: e.querySelector('.btn-swiper_left'),
+                    nextEl: e.querySelector('.btn-swiper_right'),
+                },
+                pagination: {
+                    el: e.querySelector('.slider-pagination')
+                }
+            })
+
+        })
+    }
+
 }
+
 function initMobileNav() {
     const target = document.querySelector('.mobile-nav')
     if (!target) return
@@ -335,34 +361,7 @@ function initMobileNav() {
     })
 
 }
-function initNewsSwiper() {
-    const sliders = document.querySelectorAll('.news-detail-slider')
-    if (!sliders) return
-    sliders.forEach((e) => {
 
-        new Swiper(e.querySelector('.swiper'), {
-            modules: [Navigation, Pagination],
-            loop: false,
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: rem(3),
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-
-                }
-            },
-            navigation: {
-                prevEl: e.querySelector('.btn-swiper_left'),
-                nextEl: e.querySelector('.btn-swiper_right'),
-            },
-            pagination: {
-                el: e.querySelector('.slider-pagination')
-            }
-        })
-
-    })
-}
 function modalsHandler() {
 
 
@@ -446,13 +445,11 @@ function modalMobileCode() {
 
 function initSwichers() {
     const basketDelivery = document.querySelector('.switcher-delivery')
-    console.log(basketDelivery);
     if (basketDelivery) {
         new Switcher(basketDelivery, 0)
     }
-    console.log('----------------------------------');
     const userdata = document.querySelector('.switcher-userdata')
-   
+
     if (userdata) {
         new Switcher(userdata, 0)
     }
@@ -475,7 +472,7 @@ function initSwichers() {
         new Switcher(modalSign, 0)
     }
 
-   
+
 
 }
 
