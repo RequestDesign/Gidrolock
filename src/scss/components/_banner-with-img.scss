@@ -11,7 +11,7 @@
 
         &-wrp {
             flex-grow: 1;
-            background-image: url(../../assets/images/banner-bg.webp);
+            background-image: url(./assets/images/banner-bg.webp);
             background-size: 50% 100%;
             background-position: 46% 0;
             background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 
 
             @include small-tablet {
-                background-image: url(../../assets/images/banner-bg-mobile.webp);
+                background-image: url(./assets/images/banner-bg-mobile.webp);
                 background-size: 100% 100%;
                 background-position: 0 0;
 
@@ -46,10 +46,10 @@
                 padding: 6rem 0 6rem 6rem;
             }
 
-            background-image: url(../../assets/images/banner-bg-rev.png);
+            background-image: url(./assets/images/banner-bg-rev.png);
 
             @include small-tablet {
-                background-image: url(../../assets/images/banner-bg-rev-mobile.png);
+                background-image: url(./assets/images/banner-bg-rev-mobile.png);
 
             }
 

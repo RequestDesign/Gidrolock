@@ -8,6 +8,7 @@
     "build-dev": "set NODE_ENV=development&&webpack",
     "build-prod": "set NODE_ENV=production&&webpack",
     "build": "webpack",
+    "deploy":  "npm run build-dev&&gh-pages -d dist",
     "clear": "rd /s /q dist"
   },
   "author": "",
@@ -46,6 +47,7 @@
   },
   "dependencies": {
     "circletype": "^2.3.0",
+    "gh-pages": "^6.2.0",
     "inputmask": "^5.0.9",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.13.2",
