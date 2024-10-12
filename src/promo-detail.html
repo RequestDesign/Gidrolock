@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promo detail</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html"></include>
+        <main>
+            <include src="./components/_breadCrumps.html"></include>
+            <section class="promo promo-detail">
+                <div class="container promo-detail__c">
+                    <h1 class="tl1">Акция</h1>
+                    <div class="promo-detail__c-banner">
+                        <div class="promo-detail__c-banner-body">
+                            <h2 class="tl2">
+                                Битва Gidrolock -
+                                Выиграй поездку
+                                в Италию!
+                            </h2>
+                            <p class="txt18">
+                                Победитель конкурса получит возможность посетить завод Valvosanitaria Bugatti в Италии
+                            </p>
+
+                            <a href="#" class="btn-nav btn-nav_bg">
+                                О компании
+                                <img src="./assets/images/icons/arrow-black.svg" alt="arr">
+                            </a>
+
+
+                        </div>
+                        <div class="promo-detail__c-banner-img">
+                            <img src="./assets/images/promo.png" alt="promo img">
+                        </div>
+                        <div class="promo-detail__c-banner-flag">
+                            <img src="./assets/images/flag.png" alt="russian flag">
+                        </div>
+
+                    </div>
+                    <div class="promo-detail__c-body container-small">
+                        <div class="promo-detail__c-body-cell">
+                            <h4 class="tl3">Правила конкурса</h4>
+                            <p class="txt22">Правила участия в конкурсе просты и доступны каждому.
+                            </p>
+                            <ol class="txt22">
+                                <li>Отправьте нам на специальную почту priz@gidrolock.ru ссылку на публикацию с указанием ваших контактных данных: ФИО и номер телефона. Мы зарегистрируем ссылку, присвоим уникальный номер и зафиксируем количество публикаций.
+                                </li>
+                                <li>Победители будут определяться по количеству установленных систем и их публикаций. Одна установка — одна публикация.
+                                </li>
+                             
+                            </ol>
+                        </div>
+                        <div class="promo-detail__c-body-cell">
+                            <h4 class="tl3">Призовой фонд</h4>
+                            <span class="txt22"> <span class="txt22 _bold">1 место:</span> Путешествие в Италию на завод Bugatti</span>
+                          
+                        </div>
+                        
+                    </div>
+                    <div class="promo-detail__c-items">
+                        <div class="promo-detail__c-items-top">
+                            <h3 class="tl1">Товары, участвующие в акции</h3>
+                            <div class="select drop-down-container ">
+                                <button class="select__target drop-down-target ">
+                                    <input class="select__target-input txt16 txt16_medium" type="text" readonly=""
+                                        name="choice one" value="value 1">
+                                    <img src="./assets/images/icons/arrow-black.svg" alt="V">
+                                </button>
+                                <div class="select__items">
+                                    <div class="select__items-list">
+                                        <button class="select__items-list-e txt16 txt16_medium" disabled="">value
+                                            1</button>
+                                        <button class="select__items-list-e txt16 txt16_medium">qwe</button>
+                                        <button class="select__items-list-e txt16 txt16_medium">value 3</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <ul class="promo-detail__c-items-list">
+                            <include src="./components/_item-card.html"></include>
+
+                        </ul>
+                        <div class="promo-detail__c-items-footer">
+                            <a href="#" class="btn-nav btn-nav_ul">
+                                Показать еще
+                            </a>
+                            <div class="api-pagination">
+
+                                <button class="api-pagination-btn api-pagination-btn_prev">
+                                    <img src="./assets/images/icons/arrow-black.svg" alt="arr">
+                                </button>
+                                <div class="api-pagination-pages">
+                                    <button class="api-pagination-pages-btn txt18" disabled="">1</button>
+                                    <button class="api-pagination-pages-btn txt18">2</button>
+                                </div>
+                                <button class="api-pagination-btn api-pagination-btn_next">
+                                    <img src="./assets/images/icons/arrow-black.svg" alt="arr">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <include src="./components/_footer.html"></include>
+        <include src="./components/_mobile-nav.html"></include>
+        <include src="./components/_modals.html"></include>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promo </title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html"></include>
+        <main>
+            <include src="./components/_breadCrumps.html"></include>
+            <section class="promo ">
+                <div class="container promo__c">
+                    <div class="promo__c-top">
+                        <h2 class="tl1">Акции</h2>
+                        <div class="select drop-down-container">
+                            <button class="select__target drop-down-target ">
+                                <input class="select__target-input txt16 txt16_medium" type="text" readonly=""
+                                    name="choice one" value="value 1">
+                                <img src="./assets/images/icons/arrow-black.svg" alt="V">
+                            </button>
+                            <div class="select__items">
+                                <div class="select__items-list">
+                                    <button class="select__items-list-e txt16 txt16_medium" disabled="">value
+                                        1</button>
+                                    <button class="select__items-list-e txt16 txt16_medium">qwe</button>
+                                    <button class="select__items-list-e txt16 txt16_medium">value 3</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <ul class="promo__c-list">
+                        <li class="promo__c-list-e">
+                            <div class="promo__c-list-e-img">
+                                <img src="./assets/images/categories.webp" alt="img">
+                            </div>
+                            <div class="txt16 col-gr flex-row">
+                                <span>начало</span>
+                                <span>-</span>
+                                <span>конец</span>
+                            </div>
+                            <h3 class="txt20 promo__c-list-e-ttl">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eos totam nulla suscipit
+                                velit enim laborum atque iusto beatae voluptas.
+                            </h3>
+                            <p class="txt18 col-gr promo__c-list-e-body">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, libero, quia eaque
+                                exercitationem tenetur aspernatur sequi pariatur obcaecati, voluptatum provident
+                                reprehenderit eligendi error nisi. Dolor hic asperiores ut facere odio sapiente nesciunt
+                                ullam impedit voluptatibus. Voluptatum, fugit tempora aspernatur reiciendis sequi dolor
+                                nobis voluptas reprehenderit obcaecati commodi molestias ipsum quis!
+                            </p>
+
+
+                            <a href="#" class="btn-nav btn-nav_ul">
+                                подробнее об акции
+                            </a>
+
+
+                        </li>
+                    </ul>
+                    <div class="promo__c-footer">
+                        <a href="#" class="btn-nav btn-nav_ul">
+                            Показать еще
+                        </a>
+                        <div class="api-pagination">
+
+                            <button class="api-pagination-btn api-pagination-btn_prev">
+                                <img src="./assets/images/icons/arrow-black.svg" alt="arr">
+                            </button>
+                            <div class="api-pagination-pages">
+                                <button class="api-pagination-pages-btn txt18" disabled="">1</button>
+                                <button class="api-pagination-pages-btn txt18">2</button>
+                            </div>
+                            <button class="api-pagination-btn api-pagination-btn_next">
+                                <img src="./assets/images/icons/arrow-black.svg" alt="arr">
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <include src="./components/_footer.html"></include>
+        <include src="./components/_mobile-nav.html"></include>
+        <include src="./components/_modals.html"></include>
+
+
+    </div>
+
+</body>
+
+</html>

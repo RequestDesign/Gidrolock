@@ -7,7 +7,7 @@
     url('./assets/fonts/Rebrand Dis Regular.woff2') format('woff2'),
     url('./assets/fonts/Rebrand Dis Regular.ttf') format('truetype');
   font-style: normal;
-  font-style: 400;
+  font-weight: 400;
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     url('./assets/fonts/Rebrand Dis Medium.woff2') format('woff2'),
     url('./assets/fonts/Rebrand Dis Medium.ttf') format('truetype');
   font-style: normal;
-  font-style: 500;
+  font-weight: 500;
 }
 
 @font-face {
@@ -31,5 +31,5 @@
     url('./assets/fonts/Rebrand Dis SemiBold.woff2') format('woff2'),
     url('./assets/fonts/Rebrand Dis SemiBold.ttf') format('truetype');
   font-style: normal;
-  font-style: 700;
+  font-weight: 700;
 }
