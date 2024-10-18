@@ -8,7 +8,7 @@
     "build-dev": "set NODE_ENV=development&&webpack",
     "build-prod": "set NODE_ENV=production&&webpack",
     "build": "webpack",
-    "deploy":  "npm run build-dev&&gh-pages -d dist",
+    "deploy":  "npm run build-prod&&gh-pages -d dist",
     "clear": "rd /s /q dist"
   },
   "author": "",
