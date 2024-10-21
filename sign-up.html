@@ -761,6 +761,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal modal-sign-phone-code ">
     <div class="modal-wrp  modal-closer">
         <div class="modal__c modal-sign">
@@ -769,7 +770,7 @@
 
             <div class="modal-sign__slider">
                 <div class="modal-sign__slider-list-e">
-                    <form class="modal-sign__slider-list-e-body form">
+                    <div class="modal-sign__slider-list-e-body ">
 
 
                         <p class="tl1">
@@ -780,14 +781,14 @@
                             изменить номер
                         </button>
 
-                        <div class="input-4x-code">
-                            <input type="number">
-                            <input type="number">
-                            <input type="number">
-                            <input type="number">
-                            <input type="hidden" name="pincode">
-                            <span class="input-text-error-msg"></span>
-                        </div>
+                        <form class="input-4x-code _error" action="">
+                            <input type="number" name="code" data-index="0">
+                            <input type="number" name="code" data-index="1">
+                            <input type="number" name="code" data-index="2">
+                            <input type="number" name="code" data-index="3">
+                            <input type="hidden" name="pincode" value="****">
+                            <span class="input-text-error-msg">Код введен не верно</span>
+                        </form>
 
 
                         <button class="btn-primary btn-primary_green" type="submit">
@@ -798,7 +799,7 @@
                             с кодом?</button>
 
 
-                    </form>
+                        </div>
                 </div>
 
 
