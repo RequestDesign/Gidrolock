@@ -401,45 +401,49 @@ function modalMobileCode() {
     const container = $('.input-4x-code')
     if (!container) return
 
-    const inputs = container.find('input'),
+    const inputs = container.find('input[name="code"]'),
         errMsg = container.find('.input-text-error-msg'),
-        valueInput = container.find('input[type="hidden"]')
-    valueInput.val('****');
+        valueInput = container.find('input[name="pincode"]')
 
-    inputs.on('keydown', (function (e) {
-        $(this).val('');
-        valueInput.val(inputs.index(this))
-    }))
+    container.on('submit', (e) => {
+        e.preventDefault()
+      
+    })
+
+    inputs.on('keydown', (e) => {
+        const val = e.key
+        if (val == val.replace(/[0-9]/, '')) {
+            $(e.currentTarget).val('');
+            return false;
+        }
+
+        $(e.currentTarget).val('');
+        let res = Array.from(valueInput.val())
+        res[e.target.dataset.index] = val
+        res = res.join('')
+        valueInput.val(res)
+
+
+
+    })
 
     inputs.on('keyup', (function (e) {
-
-        var val = $(this).val();
-
-
+        let val = $(this).val();
         // Ввод только цифр
         if (val == val.replace(/[0-9]/, '')) {
             $(this).val('');
             return false;
         }
-
         // Передача фокуса следующему innput
-        inputs.eq(inputs.index(this) + 1).focus();
-
-        /**
-         * 
-         * значение не записывается
-         * 
-         * 
-         */
-        const fullval = 3
-
-        if (fullval < 4) {
-            container.addClass('_error')
-            errMsg.text('error msg')
-        } else {
-            container.removeClass('_error')
-            errMsg.text('')
+        if (e.currentTarget.dataset.index < 3) {
+            inputs.eq(inputs.index(this) + 1).focus();
         }
+       
+        if(valueInput.val() == valueInput.val().replace(/\*/g, '')){
+            container.trigger('submit')
+        }
+
+
     }))
 }
 

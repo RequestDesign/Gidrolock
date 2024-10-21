@@ -826,12 +826,18 @@ z-index: 3;
     }
 
     & .input-text-error-msg {
+        opacity: 0;
+        user-select: none;
         grid-column: 1 / span 4;
     }
 
     &._error {
         & input {
             border-color: $red;
+        }
+        .input-text-error-msg {
+            opacity: 1;
+            
         }
 
 
