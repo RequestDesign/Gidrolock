@@ -37,14 +37,15 @@ $(function () {
 });
 
 function dropDowns() {
-    const ddBtn = $('.drop-down-target')
-    if (!ddBtn) return
 
-    ddBtn.on('click', (e) => {
-        e.preventDefault()
-        e.currentTarget.classList.toggle('_opened')
-        e.currentTarget.closest('.drop-down-container')
-            .classList.toggle('_opened')
+    $(document).on('click', (e) => {
+        if(e.target.classList.contains('drop-down-target')) {
+            e.target.classList.toggle('_opened')
+            e.target.closest('.drop-down-container')
+                .classList.toggle('_opened')
+        }
+        
+      
     })
 
 }

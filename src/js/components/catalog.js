@@ -1,9 +1,9 @@
 import $ from "jquery";
-import noUiSlide from 'nouislider'
+//import noUiSlide from 'nouislider'
 export default function initCatalogFilterOpener() {
 
     if (!document.querySelector('.catalog-current')) return
-    priceSlider()
+   // priceSlider()
 
 
     const opener = document.querySelector('.catalog-current__items-top-opener'),
