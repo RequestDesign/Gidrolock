@@ -18,6 +18,7 @@ export default class Form {
         this._inputsData = this._createInputData(this._inputs)
         this._passwordInput = Array.from(this._inputs).find(e => e.name == 'password')
         this._passwordRepeatInput = Array.from(this._inputs).find(e => e.name == 'passwordRepeat')
+        this._submitBtn = this._form.querySelector('button[type="submit"]')
         /**
          * _inputsData: {[key: input.name] :{
          *                  value: any,
@@ -140,9 +141,7 @@ export default class Form {
 
     }
 
-
     _onSubmit(evt) {
-        evt.preventDefault();
         let whatsUp = true
         for (const inp of this._inputs) {
             this._inputHandler(inp)
@@ -153,16 +152,7 @@ export default class Form {
 
         if (!whatsUp) return
         //сабмит
-        this.submitForm(this._inputsData)
-        //дальше мои полномочия- все
-
-
-        /*  const inputs = this._form.querySelectorAll('.' + this._inputContainerSelector + ' input');
-         inputs.forEach(input => {
-             input.value = '';
-         });
- 
-         this._inputsData = this._createInputData(this._inputs) */
+        this._form.submit()
     }
 
 
@@ -219,7 +209,7 @@ export default class Form {
                 echo[input.name] = { value, isValid, isRequired }
             }
         }
- 
+
 
         return echo
 
@@ -252,12 +242,18 @@ export default class Form {
 
     initForm() {
         this._form.noValidate = true
-        this._form.addEventListener('submit', (e) => this._onSubmit(e))
+
+
         this._inputs.forEach(el => {
             el.addEventListener('input', (e) => this._inputHandler(e.target))
             el.addEventListener('blur', (e) => this._inputHandler(e.target))
             el.addEventListener('change', (e) => this._inputHandler(e.target))
         })
+        
+        if (this._submitBtn) {
+            this._submitBtn.setAttribute('type', 'button')
+            this._submitBtn.addEventListener('click', (e) => { this._onSubmit(e) })
+        }
 
     }
 

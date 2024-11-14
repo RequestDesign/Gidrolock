@@ -47,7 +47,6 @@
   },
   "dependencies": {
     "circletype": "^2.3.0",
-    "gh-pages": "^6.2.0",
     "inputmask": "^5.0.9",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.13.2",
