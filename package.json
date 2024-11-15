@@ -10,7 +10,7 @@
     "build": "webpack",
     "deploy": "npm run build-prod&&gh-pages -d dist",
     "clear": "rd /s /q dist",
-    "push-to-branch": "npm run build-prod && git add . && git commit -m \"Automated  commit\" && git push origin main && git checkout deploy && git add . && git commit -m \"Automated push\" && git push origin deploy && git checkout main"
+    "push-to-main": "npm run build-prod && git add . && git commit -m \"Automated  commit\" && git push origin main"
   },
   "author": "",
   "license": "ISC",
