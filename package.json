@@ -8,7 +8,7 @@
     "build-dev": "set NODE_ENV=development&&webpack",
     "build-prod": "set NODE_ENV=production&&webpack",
     "build": "webpack",
-    "deploy":  "npm run build-prod&&gh-pages -d dist",
+    "deploy": "npm run build-prod&&gh-pages -d dist",
     "clear": "rd /s /q dist"
   },
   "author": "",
@@ -41,12 +41,13 @@
     "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
-    "webpack": "^5.89.0",
+    "webpack": "5.94.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "circletype": "^2.3.0",
+    "filemanager-webpack-plugin": "^8.0.0",
     "inputmask": "^5.0.9",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.13.2",
