@@ -1,4 +1,9 @@
 node_modules
 dist
-deploy
 .idea
+src
+.prettierrc
+package-lock.json
+package.json
+webpack.config.js
+README.md
