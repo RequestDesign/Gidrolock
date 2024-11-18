@@ -151,7 +151,7 @@ export default class Form {
 
         if (!whatsUp) return
         //сабмит
-        this._form.submit()
+        this._form.dispatchEvent(new Event('submit'));
     }
 
 
