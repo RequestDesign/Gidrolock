@@ -59,7 +59,8 @@
         &-banner {
             margin-top: 3rem;
             width: 100%;
-            &>.catalog-choice__c>.catalog-choice__c-img{
+
+            &>.catalog-choice__c>.catalog-choice__c-img {
                 width: 67%;
             }
         }
@@ -130,23 +131,35 @@
 
             &-item {
                 height: fit-content;
-                padding: 4rem;
-                box-sizing: border-box;
+
                 background-color: $white;
+                &._opened .user-page__main-history-item-list {
+                    border-top: 1px solid $gray;
+                }
+
+                &-target {
+                    padding: 4rem;
+                    box-sizing: border-box;
+                }
 
                 &-list {
                     display: flex;
                     flex-direction: column;
                     gap: 2rem;
+                  
 
                     &-wrp {
                         margin-top: 5rem;
+                        &>.txt18:first-of-type{
+                            padding-left: 4rem;
+                        }
                     }
 
                     &-adress {
                         display: flex;
                         align-items: center;
                         gap: 1rem;
+                      
 
                         & img {
                             width: 1.8rem;
@@ -158,6 +171,9 @@
                         margin-top: 2rem;
                         display: flex;
                         gap: 2rem;
+                        box-sizing: border-box;
+                        padding: 4rem;
+                        padding-top: 0;
 
                         &-data {
                             margin-left: auto;
