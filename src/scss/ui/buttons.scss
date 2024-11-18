@@ -96,7 +96,8 @@
         }
 
     }
-    &_white{
+
+    &_white {
         border: .2rem solid $blue;
         background: none;
         color: $blue;
@@ -137,7 +138,8 @@
 
     & svg,
     & img {
-        max-width: 2.4rem;
+        flex-shrink: 0;
+        max-width: 1.5rem;
         max-height: 2.4rem;
 
         @include small-tablet {}
@@ -314,10 +316,10 @@
         }
 
         &__txt {
-           
+
             align-self: center;
-           margin-right: auto;
-           font-weight: 600;
+            margin-right: auto;
+            font-weight: 600;
         }
 
         &__link {
@@ -327,7 +329,7 @@
             justify-content: center;
             padding: 0 2.4rem;
             box-sizing: border-box;
-           
+
         }
 
 

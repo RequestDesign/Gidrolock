@@ -40,6 +40,7 @@ function dropDowns() {
 
     $(document).on('click', (e) => {
         if(e.target.classList.contains('drop-down-target')) {
+            e.preventDefault()
             e.target.classList.toggle('_opened')
             e.target.closest('.drop-down-container')
                 .classList.toggle('_opened')
