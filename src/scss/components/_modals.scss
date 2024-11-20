@@ -103,11 +103,12 @@
 
     &-cdek {
         &__c {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: min-content 60rem;
+           
             gap: 4rem;
             min-width: 100rem;
-            height: 84rem;
+           
             max-width: 100%;
             background-color: $bg;
 
@@ -128,6 +129,7 @@
                 & label>input::placeholder {
                     color: $gray-dark;
                 }
+                
                 
             }
 
