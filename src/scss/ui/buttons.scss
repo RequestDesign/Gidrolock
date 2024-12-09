@@ -7,13 +7,11 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-
     font-family: 'Rebrand Txt';
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.34rem;
     transition: box-shadow .5s;
-
     background-color: $white;
     color: $black;
 
@@ -22,7 +20,7 @@
         gap: 2rem;
         font-size: 3rem;
         line-height: 4rem;
-        padding: 3rem 4.4rem;
+        padding: 3rem 3.4rem;
     }
 
     & svg,

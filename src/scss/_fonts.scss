@@ -1,35 +1,22 @@
 @font-face {
   font-family: 'Rebrand Txt';
-  src: url('./assets/fonts/Rebrand Dis Regular.eot');
-  src: local('Rebrand Txt'), local('Rebrand-Txt'),
-    url('./assets/fonts/Rebrand Dis Regular.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/Rebrand Dis Regular.woff') format('woff'),
-    url('./assets/fonts/Rebrand Dis Regular.woff2') format('woff2'),
-    url('./assets/fonts/Rebrand Dis Regular.ttf') format('truetype');
+  src: url('../assets/fonts/Rebrand Dis Regular.otf');
+
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Rebrand Txt';
-  src: url('./assets/fonts/Rebrand Dis Medium.eot');
-  src: local('Rebrand Txt'), local('Rebrand-Txt'),
-    url('./assets/fonts/Rebrand Dis Medium.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/Rebrand Dis Medium.woff') format('woff'),
-    url('./assets/fonts/Rebrand Dis Medium.woff2') format('woff2'),
-    url('./assets/fonts/Rebrand Dis Medium.ttf') format('truetype');
-  font-style: normal;
+  src: url('../assets/fonts/Rebrand Dis Medium.otf');
+
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Rebrand Txt';
-  src: url('./assets/fonts/Rebrand Dis SemiBold.eot');
-  src: local('Rebrand Txt'), local('Rebrand-Txt'),
-    url('./assets/fonts/Rebrand Dis SemiBold.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/Rebrand Dis SemiBold.woff') format('woff'),
-    url('./assets/fonts/Rebrand Dis SemiBold.woff2') format('woff2'),
-    url('./assets/fonts/Rebrand Dis SemiBold.ttf') format('truetype');
+  src: url('../assets/fonts/Rebrand Dis SemiBold.otf');
+
   font-style: normal;
   font-weight: 700;
 }

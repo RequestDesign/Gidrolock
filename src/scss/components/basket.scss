@@ -5,7 +5,7 @@
     grid-template-areas:
         'basket aside'
         'order aside';
-    gap:0  5%;
+    gap: 0 5%;
     justify-content: space-between;
     margin-top: 6rem;
 
@@ -63,12 +63,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 3rem;
+
+                & .basket-list__banner-text {
+                    text-align: center;
+                }
+
+            }
         }
 
         &-login {
             display: flex;
             justify-content: space-between;
             gap: 4rem;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 3ren;
+            }
 
             &-indication {
                 display: flex;
@@ -84,6 +99,10 @@
                     left: 0;
                     z-index: 2;
                     background-color: $gray;
+
+                    @include mobile {
+                        top: 25%;
+                    }
                 }
 
 
@@ -113,6 +132,17 @@
                         position: relative;
                         z-index: 3;
 
+                        @include mobile {
+                            width: 4.8rem;
+                            height: 4.8rem;
+                        }
+
+                    }
+
+                    & .txt18 {
+                        @include mobile {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -120,18 +150,24 @@
 
     }
 
-   
+
 
     &__code {
         display: grid;
         max-width: 57rem;
         grid-template-columns: max-content auto;
         gap: 1rem;
+        @include mobile{
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
         & .tl4 {
             grid-column: 1 / span 2;
         }
-        & label{
+
+        & label {
             width: 100%;
         }
     }
@@ -145,6 +181,7 @@
     gap: 2.4rem;
     margin-top: 6rem;
     grid-area: order;
+
     &-c {
         background-color: $white;
         border-radius: .3rem;
@@ -160,28 +197,58 @@
         grid-template-columns: repeat(2, calc(50% - 4rem));
         grid-auto-rows: min-content;
         gap: 3.2rem 4rem;
-        & .switcher-slide{
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & .switcher-slide {
             grid-column: 1 / span 2;
         }
 
         &-form {
-            
+
             display: grid;
             grid-template-columns: repeat(2, calc(50% - 4rem));
             grid-auto-rows: min-content;
             gap: 1rem 4rem;
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+
+            }
         }
 
         &-e {
             width: 100%;
 
             &_row {
-                grid-column: 1 / span 2;
+                @include desktop {
+                    grid-column: 1 / span 2;
 
+                }
+
+
+            }
+
+
+            &.flex-row.basket-order__userdata-e_row {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    align-items: flex-start;
+                }
             }
 
             &-radio+&-radio {
                 margin-left: 5rem;
+
+                @include mobile {
+                    margin-left: 0;
+                }
             }
 
             &-link {
@@ -195,8 +262,7 @@
 
                 & img,
                 & svg {
-                    max-width: 1.8rem;
-                    max-height: 1.8rem;
+                    @include icon-18;
                 }
             }
 
@@ -224,6 +290,10 @@
 
         & .select {
             width: fit-content;
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         &-type {
@@ -232,6 +302,20 @@
             justify-content: flex-start;
             width: 100%;
             gap: 2rem;
+
+            @include mobile {
+                flex-direction: column;
+
+                & .radio.switcher-btn {
+                    width: 100%;
+                    justify-content: center;
+
+                    & .radio-square {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
 
 
 
@@ -247,6 +331,7 @@
             &-option {
                 width: 100%;
 
+
                 &-cdek {
 
                     height: 13rem;
@@ -258,6 +343,10 @@
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
+
+                    @include mobile {
+                        height: 26rem;
+                    }
 
                     &-item {
                         background-color: $bg;
@@ -290,6 +379,10 @@
                     grid-auto-rows: auto;
                     gap: 1rem 3rem;
                     width: 100%;
+                    @include mobile{
+                        display: flex;
+                        flex-direction: column;
+                    }
 
                     &-comment {
                         grid-column: 1 / span 2;
@@ -308,11 +401,11 @@
                         align-items: center;
                         gap: 1rem;
 
-                        & img,
-                        & svg {
-                            max-width: 1.8rem;
-                            max-height: 1.8rem;
+                        & svg,
+                        & img {
+                            @include icon-18;
                         }
+
                     }
 
                     &-comment {
@@ -330,6 +423,11 @@
         grid-auto-rows: auto auto;
         width: 100%;
         gap: 3rem;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
 
         & .tl3 {
             grid-column: 1 / span 3;
@@ -393,16 +491,24 @@
 
 }
 
-.basket-placeholder{
-    &__c{
+.basket-placeholder {
+    &__c {
         margin: 4rem 0;
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
         max-width: 58rem;
-        @include small-tablet{
+
+        @include small-tablet {
             margin: 8rem 0;
             gap: 5rem;
         }
+    }
+}
+
+.basket-item-quantity-plus,
+.basket-item-quantity-minus {
+    @include mobile {
+        font-size: 6rem;
     }
 }

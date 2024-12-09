@@ -22,7 +22,7 @@
         justify-content: center;
         align-items: center;
         background-color: rgba(22, 46, 58, 0.3);
-        backdrop-filter: 4rem;
+        backdrop-filter: blur(4rem);
     }
 
     &__c {
@@ -36,17 +36,46 @@
         box-sizing: border-box;
         position: relative;
         gap: 3.2rem;
-
         width: 75rem;
 
         @include small-tablet {
-            width: 100%;
+            width: calc(100% - 3rem);
+            margin: 0 1.5rem;
+            padding: 10rem 1.5rem;
+            max-height: 90vh;
+            overflow: auto;
+        }
+
+        &-closer {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-image: url(../assets/images/icons/x-black.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @include mobile {
+                width: 3.8rem;
+                height: 3.8rem;
+            }
+
         }
 
         & ol {
             display: flex;
             flex-direction: column;
             gap: 2rem;
+
+            @include mobile {
+                margin: 0;
+            }
+
+            & li {
+                list-style-position: inside;
+            }
         }
 
         &-btn {
@@ -62,6 +91,14 @@
 
             &:hover {
                 opacity: .7;
+            }
+        }
+    }
+    &-sign-reset{
+        @include mobile{
+            & .flex-row{
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     }
@@ -99,38 +136,47 @@
             }
 
         }
+        
     }
 
     &-cdek {
         &__c {
             display: grid;
             grid-template-rows: min-content 60rem;
-           
             gap: 4rem;
             min-width: 100rem;
-           
             max-width: 100%;
             background-color: $bg;
-
             padding: 8rem;
             box-sizing: border-box;
 
             @include small-tablet {
-                padding: 3rem;
-                height: 100vh;
+                min-width: 100%;
             }
 
             &-top {
                 display: grid;
                 grid-template-columns: auto auto 2fr;
                 gap: 3.2rem;
-                
+
 
                 & label>input::placeholder {
                     color: $gray-dark;
                 }
-                
-                
+
+                @include mobile {
+                    grid-template-columns: 1fr 1fr;
+
+                    & .input-container {
+                        grid-column: 1 / span 2;
+                    }
+
+                    & .switcher-btn[data-switchto="1"] {
+                        margin-left: auto;
+                    }
+                }
+
+
             }
 
             &-items {
@@ -139,6 +185,7 @@
                 overflow: auto;
                 scrollbar-width: thin;
                 scrollbar-color: rgba(22, 46, 58, 0.5) rgba(22, 46, 58, 0.2);
+
                 &-list {
                     width: 100%;
                     display: flex;
@@ -161,14 +208,20 @@
                         & .flex-row {
                             margin-bottom: 1.2rem;
                             justify-content: space-between;
+
+                            @include mobile {
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
                         }
                     }
                 }
 
             }
-            &-map{
-               
-              
+
+            &-map {
+
+
                 height: 59rem;
                 background-color: green;
             }

@@ -1,6 +1,9 @@
 .complects{
 
     &__c{
+        @include mobile{
+            padding: 0;
+        }
         &-top{
             margin-bottom: 4rem;
             display: flex;
@@ -8,6 +11,7 @@
             @include small-tablet{
                 flex-direction: column;
                 gap: 2rem;
+                padding:  0 1.5rem;
             }
 
         }

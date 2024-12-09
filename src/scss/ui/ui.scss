@@ -179,7 +179,8 @@
 
 
 }
-.count::after{
+
+.count::after {
     content: 'шт.';
 }
 
@@ -196,13 +197,15 @@
 }
 
 .show-help {
-position: relative;
+    position: relative;
+
     & svg,
     img {
         width: 2rem;
         height: 2rem;
     }
-    &-text{
+
+    &-text {
         width: 25.8rem;
         position: absolute;
         background-color: $black;
@@ -244,3 +247,4 @@ position: relative;
         gap: 2rem;
     }
 }
+

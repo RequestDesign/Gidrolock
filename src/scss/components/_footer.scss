@@ -5,6 +5,11 @@
     padding-bottom: 4rem;
     margin-top: 11rem;
 
+    @include mobile {
+        background-color: $bg;
+        border-top: none;
+    }
+
 
     &__c {
         display: grid;
@@ -13,11 +18,15 @@
 
         @include small-tablet {
             grid-template-columns: 1fr;
+            gap: 4rem;
 
         }
 
         &-info {
-            @include small-tablet {}
+            @include small-tablet {
+                background-color: $white;
+                padding: 3rem 2rem;
+            }
 
             &-img {
                 width: 23rem;
@@ -51,6 +60,12 @@
                     grid-template-columns: auto 10rem;
                 }
 
+                & .checkbox {
+                    @include mobile {
+                        grid-column: 1 /span 2;
+                    }
+                }
+
                 &-submit {
 
 
@@ -60,7 +75,8 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    @include small-tablet{
+
+                    @include small-tablet {
                         height: 8rem;
                     }
 
@@ -77,8 +93,8 @@
 
                 & label input {
                     height: 5.6rem;
-                   
-                  
+
+
                 }
 
 
@@ -88,7 +104,8 @@
 
         &-links {
             &-e {
-              display: block !important;
+                display: block !important;
+
                 @include small-tablet {
                     display: grid !important;
                 }
@@ -107,7 +124,7 @@
                     &-list {
                         & a:hover {
                             color: $blue;
-                        }        
+                        }
                     }
                 }
             }
@@ -120,6 +137,7 @@
 
             @include small-tablet {
                 grid-row: 2;
+                margin: 4rem 0;
             }
 
             &-e {

@@ -59,6 +59,12 @@
         padding: 1.6rem;
         justify-content: space-between;
         flex-direction: column;
+        gap: 2.4rem;
+
+        @include mobile {
+            height: 36rem;
+            gap: 5rem;
+        }
 
         & .radio-default {
             margin-right: auto;
@@ -69,7 +75,13 @@
             max-height: 60%;
             display: flex;
             gap: 1rem;
-            & img{
+
+            @include mobile {
+                height: 7.6rem;
+                max-height: 7.6rem;
+            }
+
+            & img {
                 max-width: 9rem;
                 flex-shrink: 0;
             }
@@ -77,6 +89,12 @@
 
         & .radio-txt {
             opacity: .7;
+            margin-bottom: auto;
+
+            @include mobile {
+                height: 4.8rem;
+
+            }
         }
 
         & .radio-border {
@@ -161,6 +179,10 @@
         flex-wrap: nowrap;
         align-items: center;
 
+        @include mobile {
+            padding: 3rem;
+        }
+
         &:hover {
 
             opacity: .9;
@@ -210,11 +232,13 @@
         border-radius: 50%;
         background-color: transparent;
         position: relative;
+        flex-shrink: 0;
 
 
         @include small-tablet {
             width: 4.8rem;
             height: 4.8rem;
+            border-width: 2px;
         }
 
         &::after {
@@ -229,6 +253,10 @@
             background-color: $blue;
             opacity: 0;
             transition: opacity .5s;
+
+            @include mobile {
+                border-width: 2px;
+            }
 
         }
 
@@ -302,6 +330,7 @@
         flex-shrink: 0;
         border: .2rem solid $blue;
         flex-shrink: 0;
+        align-self: baseline;
 
         @include small-tablet {
             width: 4rem;
@@ -375,7 +404,7 @@
 
         @include small-tablet {
             font-size: 3rem;
-            padding: 1.4rem 5rem;
+            padding: 2.4rem 5rem;
             min-height: 8rem;
         }
 
@@ -435,6 +464,7 @@
         &[type='password'] {
             &~.input-text-password {
                 background-image: url(../assets/images/icons/password-hiden.svg);
+                
             }
 
         }
@@ -463,7 +493,7 @@
         position: absolute;
         right: 1rem;
         top: 0;
-        z-index: 2;
+        z-index: 3;
         grid-column: 2;
         grid-row: 1;
         width: 3rem;
@@ -476,7 +506,12 @@
         background-position: center;
         background-size: 2.4rem;
         background-repeat: no-repeat;
-
+        @include mobile{
+            width: 4rem;
+            height: 4rem;
+            transform: translateY(50%);
+            background-size: cover;
+        }
 
     }
 
@@ -518,11 +553,14 @@
     & .input-text-placeholder {
         width: 85%;
         right: 0;
+        @include mobile{
+            width: 80%;
+        }
     }
 
     &__select {
         background-color: $gray;
-        z-index: 3;
+        z-index: 10;
         display: flex;
         transition: all .5s;
         position: relative;
@@ -550,6 +588,10 @@
             gap: 1rem;
             box-sizing: border-box;
             min-width: 8rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             @include small-tablet {
                 padding: 0 2.8rem;
@@ -575,7 +617,7 @@
 
                 @include small-tablet {
                     max-width: 2.4rem;
-                    max-height: 2.4rem;
+                  
                 }
             }
         }
@@ -642,8 +684,8 @@
     & textarea {
         width: 100%;
         padding: 1.6rem 2.4rem;
-position: relative;
-z-index: 3;
+        position: relative;
+        z-index: 3;
         font-family: Rebrand Txt;
         font-size: 1.8rem;
         font-weight: 400;
@@ -839,9 +881,10 @@ z-index: 3;
         & input {
             border-color: $red;
         }
+
         .input-text-error-msg {
             opacity: 1;
-            
+
         }
 
 

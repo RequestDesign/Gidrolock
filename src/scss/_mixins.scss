@@ -4,10 +4,36 @@
   @content;
 }
 
+@mixin desktop {
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 48em) {
+    @content;
+  }
+}
+
 @mixin small-tablet {
   @media (max-width: 48em) {
     @content;
   }
+}
+
+@mixin icon-18 {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  flex-shrink: 0;
+  @include mobile {
+
+    width: 3.6rem;
+    height: 3.6rem;
+   
+  }
+
 }
 
 @mixin sizes($width, $height) {
@@ -28,5 +54,5 @@
   -webkit-box-orient: vertical;
   line-clamp: $lines;
   box-orient: vertical;
- 
+
 }

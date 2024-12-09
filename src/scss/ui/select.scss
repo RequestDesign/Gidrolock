@@ -35,6 +35,9 @@
         border: .2rem solid $gray-dark;
         padding: 1.4rem 2rem;
         background-color: $white;
+        @include mobile{
+            padding: 2.5rem 3rem;
+        }
 
         & img {
             transition: transform .5s;
@@ -42,8 +45,8 @@
             max-height: 2.4rem;
 
             @include small-tablet {
-                max-width: 4.8rem;
-                max-height: 4.8rem;
+                max-width: 2rem;
+                max-height: 2rem;
             }
         }
 
