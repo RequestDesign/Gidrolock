@@ -66,8 +66,14 @@
         padding: 1.4rem 2.3rem;
 
         @include small-tablet {
-            padding: 1rem;
+            padding: 4rem 5rem;
         }
+
+        & svg,
+        & img {
+            @include icon-24;
+        }
+
 
     }
 
@@ -126,7 +132,7 @@
 
 
     @include small-tablet {
-        gap: 2rem;
+        gap: 1rem;
         font-size: 3rem;
         line-height: 3.4rem;
     }
@@ -136,12 +142,7 @@
 
     & svg,
     & img {
-        flex-shrink: 0;
-        max-width: 1.5rem;
-        max-height: 2.4rem;
-
-        @include small-tablet {}
-
+        @include icon-18;
     }
 
     &_ul {

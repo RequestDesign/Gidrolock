@@ -44,10 +44,10 @@ export default class Form {
 
         if (inputTarget.value) {
             inputTarget.closest('.' + this._inputContainerSelector)
-              .querySelector('.' + this._inputPlaceholderSelector).style.display = 'none'
+                .querySelector('.' + this._inputPlaceholderSelector).style.display = 'none'
         } else {
             inputTarget.closest('.' + this._inputContainerSelector)
-              .querySelector('.' + this._inputPlaceholderSelector).style.display = 'block'
+                .querySelector('.' + this._inputPlaceholderSelector).style.display = 'block'
         }
 
 
@@ -166,7 +166,7 @@ export default class Form {
             if (input.placeholder) {
 
                 const plcaholder = input.closest('.' + this._inputContainerSelector)
-                  .querySelector('.' + this._inputPlaceholderSelector)
+                    .querySelector('.' + this._inputPlaceholderSelector)
 
                 plcaholder.textContent = input.placeholder
                 if (input.dataset.required) {
@@ -178,7 +178,7 @@ export default class Form {
 
             if (input.name === 'password') {
                 const passbtn = input.closest('.' + this._inputContainerSelector)
-                  .querySelector('.input-text-password')
+                    .querySelector('.input-text-password')
 
                 if (passbtn) {
                     passbtn.addEventListener('click', (e) => {
@@ -196,7 +196,7 @@ export default class Form {
 
             if (!echo[input.name]) {
                 const isValid = !input.dataset.required,
-                  isRequired = !!input.dataset.required
+                    isRequired = !!input.dataset.required
 
                 let value = input.dataset.defaultv || input.checked || input.value || ''
 
@@ -218,8 +218,8 @@ export default class Form {
         if (evt.target.value) {
             inputContainer.classList.add('_active')
             inputContainer.querySelector('.input-file-got')
-              .querySelector('.input-file-text')
-              .textContent = evt.target.value.split('\\').slice(-1)
+                .querySelector('.input-file-text')
+                .textContent = evt.target.value.split('\\').slice(-1)
 
 
         } else {
@@ -228,12 +228,17 @@ export default class Form {
     }
 
     _passowrHide() {
+       
         if (this._passwordInput.type === 'text') {
             this._passwordInput.setAttribute('type', 'password')
-            this._passwordRepeatInput.setAttribute('type', 'password')
+            if (this._passwordRepeatInput) {
+                this._passwordRepeatInput.setAttribute('type', 'password')
+            }
         } else {
             this._passwordInput.setAttribute('type', 'text')
-            this._passwordRepeatInput.setAttribute('type', 'text')
+            if (this._passwordRepeatInput) {
+                this._passwordRepeatInput.setAttribute('type', 'text')
+            }
         }
     }
 

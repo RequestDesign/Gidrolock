@@ -395,7 +395,7 @@
         box-sizing: border-box;
         font-size: 1.8rem;
         font-weight: 400;
-        line-height: 120%;
+        line-height: 100%;
         color: $gray-dark;
 
         &_wh {
@@ -555,6 +555,7 @@
         right: 0;
         @include mobile{
             width: 80%;
+            padding-left: 1rem;
         }
     }
 
@@ -684,6 +685,7 @@
     & textarea {
         width: 100%;
         padding: 1.6rem 2.4rem;
+       
         position: relative;
         z-index: 3;
         font-family: Rebrand Txt;
@@ -694,6 +696,7 @@
 
         @include small-tablet {
             font-size: 3rem;
+            padding-left:1rem ;
         }
 
     }

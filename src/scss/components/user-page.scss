@@ -1,4 +1,8 @@
 .user-page {
+    @include mobile {
+        margin-top: 4rem;
+    }
+
     &__deleteme {
         display: flex;
         flex-direction: column;
@@ -10,6 +14,12 @@
         display: grid;
         grid-template-columns: 33rem auto;
         gap: 3.2rem;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+        }
 
         & .switcher-slide {
             grid-column: 2;
@@ -56,6 +66,10 @@
         display: flex;
         width: 100%;
 
+        @include mobile {
+            flex-direction: column;
+        }
+
         &-banner {
             margin-top: 3rem;
             width: 100%;
@@ -76,6 +90,11 @@
             padding: 4rem;
             height: fit-content;
 
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+            }
+
             &-row {
                 grid-column: 1 / span 2;
             }
@@ -86,11 +105,6 @@
 
             &-change {
                 margin-left: auto;
-
-                & img {
-                    max-width: 1.8rem;
-                    max-height: 1.8rem;
-                }
             }
 
         }
@@ -107,6 +121,7 @@
                 display: flex;
                 gap: 2rem;
 
+
             }
 
             &-heading {
@@ -117,6 +132,10 @@
                 background-color: $gray;
                 grid-template-columns: repeat(5, auto) 4rem;
                 justify-content: space-between;
+
+                @include mobile {
+                    display: none;
+                }
 
 
                 & li {
@@ -133,6 +152,7 @@
                 height: fit-content;
 
                 background-color: $white;
+
                 &._opened .user-page__main-history-item-list {
                     border-top: 1px solid $gray;
                 }
@@ -140,17 +160,39 @@
                 &-target {
                     padding: 4rem;
                     box-sizing: border-box;
+
+                    @include mobile {
+                        display: grid;
+                        grid-template-columns: auto auto min-content;
+                        gap: 3rem 4rem;
+
+
+                        & img {
+                            grid-column: 3;
+                            grid-row: 1 / span 2;
+                        }
+
+                        & span:nth-child(3) {
+                            grid-column: 1 / span 2;
+                            grid-row: 3;
+                        }
+                    }
+
+                    & img {
+                        @include icon-18;
+                    }
                 }
 
                 &-list {
                     display: flex;
                     flex-direction: column;
                     gap: 2rem;
-                  
+
 
                     &-wrp {
                         margin-top: 5rem;
-                        &>.txt18:first-of-type{
+
+                        &>.txt18:first-of-type {
                             padding-left: 4rem;
                         }
                     }
@@ -159,11 +201,11 @@
                         display: flex;
                         align-items: center;
                         gap: 1rem;
-                      
 
+
+                        & svg,
                         & img {
-                            width: 1.8rem;
-                            height: 1.8rem;
+                            @include icon-18;
                         }
                     }
 
@@ -175,8 +217,22 @@
                         padding: 4rem;
                         padding-top: 0;
 
+                        @include mobile {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 2rem;
+                            justify-items: center;
+
+                        }
+
                         &-data {
                             margin-left: auto;
+                           @include mobile{
+                            margin-left: 4rem;
+                            margin-right: auto;
+                            grid-column: 1/ span 2;
+                           }
+                           
                         }
 
                     }
@@ -191,6 +247,9 @@
             grid-template-columns: repeat(4, 1fr);
             grid-auto-rows: 1fr;
             gap: 3.2rem;
+            @include mobile{
+                grid-template-columns: 100%;
+            }
         }
     }
 
@@ -203,6 +262,14 @@
         flex-direction: column;
         gap: 2rem;
         height: fit-content;
+
+        @include mobile {
+            & .btn-primary {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+        }
 
         &-list {
             display: flex;
@@ -251,6 +318,10 @@
                 width: 100%;
                 height: .2rem;
                 background-color: $gray;
+
+                @include mobile {
+                    top: 2rem;
+                }
             }
         }
 
@@ -258,6 +329,12 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 3.2rem;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 3rem;
+
+            }
 
             &-e {
                 display: flex;
@@ -267,9 +344,12 @@
                 line-height: 110%;
                 font-weight: 700;
 
+                @include mobile {
+                    font-size: 3rem
+                }
+
                 & img {
-                    width: 2.4rem;
-                    height: 2.4rem;
+                    @include icon-24;
                 }
             }
         }

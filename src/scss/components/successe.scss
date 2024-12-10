@@ -8,18 +8,36 @@
         justify-content: center;
         gap: 3rem;
         min-height: 70rem;
-        background-image:url(.,/assets/images/order-successe-bg.png) ;
+        background-image: url(../assets/images/order-successe-bg.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
 
-        &-btns{
+        &-btns {
             display: flex;
             gap: 2rem;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+            }
         }
-        & .txt18{
+
+        & .txt18 {
             max-width: 50rem;
             text-align: center;
+
+            @include mobile {
+                max-width: 90%;
+            }
+        }
+
+        & .tl2 {
+            @include mobile {
+                text-align: center
+            }
+
+            ;
         }
     }
 

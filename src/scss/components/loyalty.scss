@@ -31,6 +31,10 @@
             display: flex;
             justify-content: space-between;
 
+            @include mobile {
+                padding: 6rem 2rem;
+            }
+
             &-line {
                 position: absolute;
                 top: 48%;
@@ -39,6 +43,10 @@
                 width: 70%;
                 height: .5rem;
                 background-color: $gray;
+
+                @include mobile {
+                    top: 50%;
+                }
             }
 
             &-item {
@@ -62,10 +70,20 @@
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+
+    @include mobile {
+        background: none;
+    }
+
     &__c {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
 
         &-form {
             display: grid;
@@ -73,13 +91,32 @@
             grid-auto-rows: min-content;
             gap: 1rem 3rem;
 
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+            }
+
             &-row {
                 grid-column: 1 / span 2;
+            }
+            & button{
+                @include mobile{
+                    width: 100%;
+                    justify-content: center;
+                }
             }
 
 
             &-margin {
                 margin: 1.5rem 0;
+                @include mobile{
+                    margin: 4rem 0;
+                    flex-direction: column;
+                    gap: 2rem;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    display: flex;
+                }
             }
         }
 
@@ -88,6 +125,9 @@
             overflow: hidden;
             background: radial-gradient(50% 50% at 50% 50%, rgba(0, 92, 143, 0.3) 0%, rgba(0, 92, 143, 0) 100%);
 
+            @include mobile {
+                display: none;
+            }
 
             & img {
                 width: 100%;

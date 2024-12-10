@@ -26,6 +26,12 @@
                     flex-direction: column-reverse;
                 }
             }
+            & .btn-primary{
+                @include mobile{
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
 
         }
     }

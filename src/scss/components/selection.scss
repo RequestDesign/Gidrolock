@@ -34,6 +34,10 @@
             gap: 1rem 3.2rem;
             overflow: hidden;
             height: 100%;
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+            }
 
             &-item {
                 display: flex;
@@ -72,6 +76,11 @@
                     display: grid;
                     grid-template-columns: auto auto auto;
                     justify-content: flex-start;
+                    @include mobile{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
 
                     & .txt18 {
                         grid-column: 1 / span 3;

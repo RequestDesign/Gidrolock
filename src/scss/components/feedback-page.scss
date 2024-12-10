@@ -24,9 +24,11 @@
             }
         }
     }
-    &._opened{
-        & .feedback-page-mobile-raiting__c {
+
+    &._opened {
+        & .feedback-page-mobile-raiting {
             transform: translateY(0);
+
         }
     }
 
@@ -39,13 +41,14 @@
             z-index: 20;
             bottom: 0;
             left: 0;
-
+            transform: translateY(100%);
+            transition: transform .5s;
         }
 
 
         &__c {
-            transition: transform .5s;
-            transform: translateY(100%);
+
+            transform: translateY(0);
             position: relative;
             width: 100vw;
             padding: 3rem 2rem;
@@ -70,6 +73,8 @@
 
         }
     }
+
+
 
     &-top {
         grid-column: 1;
@@ -146,6 +151,9 @@
     }
 
     &-main {
+        @include mobile{
+            margin-top: 8rem;
+        }
 
         &__c {
             display: grid;
@@ -234,14 +242,32 @@
                     margin: 2.8rem 0;
                     width: 100%;
                     justify-content: center;
+
                 }
 
                 & .flex-row {
                     justify-content: space-between;
-
+                    & button {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background-image: url(../assets/images/icons/question.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        margin: 0;
+                    }
                     @include small-tablet {
                         justify-content: flex-start;
                         gap: 2rem;
+                      &:last-of-type{
+                        margin-bottom: 4.8rem;
+                      }
+                        & button {
+                            width: 4.8rem;
+                            height: 4.8rem;
+                           
+                        }
+                       
 
                     }
 
@@ -379,13 +405,15 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.2rem 3.6rem;
-            @include small-tablet{
+
+            @include small-tablet {
                 grid-template-columns: 100%;
             }
 
             &-row {
                 grid-column: 1 / span 2;
-                @include small-tablet{
+
+                @include small-tablet {
                     grid-column: 1;
                 }
 
@@ -396,13 +424,14 @@
 
             & .flex-row {
                 justify-content: space-between;
-                
+
             }
 
             & .tl3 {
                 margin-bottom: 2rem;
                 margin-top: 4rem;
-                @include small-tablet{
+
+                @include small-tablet {
                     margin-top: 8rem;
                     margin-bottom: 4rem;
                 }
@@ -412,16 +441,19 @@
                 justify-content: flex-start !important;
                 gap: 4rem !important;
                 margin-top: 4rem;
-                @include small-tablet{
+
+                @include small-tablet {
                     margin-top: 8rem;
                     flex-direction: column-reverse;
-                    & button{
+
+                    & button {
                         width: 100%;
                         justify-content: center;
                     }
                 }
             }
-            &-comment{
+
+            &-comment {
                 height: 20rem;
 
             }

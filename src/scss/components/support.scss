@@ -4,10 +4,15 @@
 .support-heading {
     &__c {
         display: grid;
-        height: 50rem;
+        min-height: 50rem;
         grid-template-columns: 1fr 1fr;
         grid-row: 100%;
         background: linear-gradient(90deg, #016192 0%, #014B7B 100%);
+
+        @include mobile {
+            padding: 4rem;
+            grid-template-columns: 100%;
+        }
 
         &-left {
             position: relative;
@@ -23,6 +28,10 @@
                 right: -10%;
                 top: 0;
                 height: 100%;
+
+                @include mobile {
+                    display: none;
+                }
             }
 
             &-text {
@@ -34,13 +43,26 @@
                 flex-direction: column;
                 gap: 4rem;
 
+                @include mobile {
+                    margin: 0;
+                }
 
+            }
+
+            & .btn-nav {
+                width: 100%;
+                justify-content: center;
+                padding: 2rem 0;
             }
         }
 
         &-right {
             display: flex;
             position: relative;
+
+            @include mobile {
+                display: none;
+            }
 
             & img {
                 position: absolute;
@@ -61,6 +83,12 @@
         display: grid;
         grid-template-columns: 33rem auto;
         gap: 3.2rem;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
 
         &-nav {
             display: flex;
@@ -123,6 +151,11 @@
                         gap: 3.2rem;
                         overflow: hidden;
 
+                        @include mobile {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
                         &-loadmore,
                         &-hidemore {
                             justify-self: center;
@@ -156,21 +189,41 @@
         background-position: right;
         background-size: contain;
         background-repeat: no-repeat;
+
+        @include mobile {
+            background: none;
+        }
     }
 
     &__c {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 8rem 0 10rem;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            padding:4rem ;
+        }
 
         &-form {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem 3rem;
-           
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+            }
 
             &-row {
                 grid-column: 1 / span 2;
+                @include mobile{
+                    display: flex;
+                    flex-direction: column;
+                    & button{
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
             }
 
             &-top {
@@ -180,7 +233,7 @@
                 margin-bottom: 2rem;
                 color: $white;
             }
-           
+
 
         }
     }
@@ -191,14 +244,16 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3.2rem;
-        @include small-tablet{
+
+        @include small-tablet {
             grid-template-columns: 100%;
             gap: 6rem;
         }
 
         & .tl3 {
             grid-column: 1 / span 3;
-            @include small-tablet{
+
+            @include small-tablet {
                 grid-column: 1;
             }
         }
@@ -210,12 +265,12 @@
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
-            & .tl4+.txt20{
+
+            & .tl4+.txt20 {
                 margin-bottom: 3rem;
             }
-            @include small-tablet{
-               
-            }
+
+            @include small-tablet {}
         }
     }
 }

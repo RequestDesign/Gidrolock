@@ -24,14 +24,37 @@
 
 @mixin icon-18 {
   width: 1.8rem;
-  height: 1.8rem;
+  max-height: 1.8rem;
+  height: auto;
   display: flex;
   flex-shrink: 0;
+
   @include mobile {
 
     width: 3.6rem;
-    height: 3.6rem;
-   
+    max-height: 3.6rem;
+  height: auto;
+
+
+  }
+
+}
+
+@mixin icon-24 {
+  width: 2.4rem;
+  max-height: 2.4rem;
+  display: flex;
+  flex-shrink: 0;
+  height: auto;
+
+
+  @include mobile {
+
+    width: 4.8rem;
+    max-height: 4.8rem;
+  height: auto;
+
+
   }
 
 }

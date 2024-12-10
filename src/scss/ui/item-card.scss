@@ -245,6 +245,15 @@
         display: flex;
         gap: 1rem;
         align-items: center;
+        @include mobile{
+            grid-column: 1 / span 4;
+            grid-row: 3;
+            width: 100%;
+            padding: 3rem;
+            border: 1px solid $blue;
+            justify-content: center;
+            
+        }
     }
     &-delete{
         @include mobile{

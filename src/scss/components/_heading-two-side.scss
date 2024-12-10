@@ -6,6 +6,12 @@
         grid-template-rows: 50rem;
         background: linear-gradient(90deg, #016192 0%, #014B7B 100%);
 
+        @include mobile {
+            display: flex;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
         &-left {
             height: 100%;
             flex-grow: 1;
@@ -30,6 +36,9 @@
                 width: auto;
                 left: 0%;
 
+                @include mobile {
+                    display: none;
+                }
             }
 
             & .txt22 {
@@ -42,7 +51,11 @@
             padding: 4rem;
             box-sizing: border-box;
             display: flex;
-           
+
+            @include mobile {
+                display: none;
+            }
+
 
             * {
                 position: relative;
@@ -60,16 +73,17 @@
 
             &-img {
                 transform: translateY(-6rem);
-               height: 130%;
+                height: 130%;
                 object-fit: contain;
 
             }
-            &-items{
+
+            &-items {
                 display: flex;
                 flex-direction: column;
                 gap: 3.2rem;
-              
-                & li{
+
+                & li {
                     width: 36.2rem;
                     background-color: $white;
                     padding: 2.4rem;
