@@ -4,33 +4,199 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>basket</title>
+    <title>basket.html</title>
 
 <script defer src="js/swiper.js"></script><script defer src="js/jquery.js"></script><script defer src="js/inputmask.js"></script><script defer src="js/main.js"></script><link href="css/main.css" rel="stylesheet"></head>
 
 <body>
     <div class="wrapper">
-        <header class=" header header-small">
-    <div class="container header-small__c">
+        <header class=" header ">
+    <div class="header-wrp">
 
-        <a href="#" class="btn-nav">
-            <img src="./assets/images/icons/arrow-blue.svg" alt="nav">
-            назад
-        </a>
+        <div class="container header__top">
+            <a href="#" class="header__top-link txt16">
+                <img src="./assets/images/icons/location.svg" alt="location">
+                Адрес</a>
+            <a href="#" class="header__top-logo mobile">
+                <img src="./assets/images/icons/logo-small.svg" alt="gidrolock">
+            </a>
 
-        <div class="header__main-c-logo ">
-            <img src="./assets/images/icons/logo.svg" alt="gidrolock">
-            <p class="txt14">Официальный интернет-магазин завода-изготовителя</p>
+            <nav class="header__top-nav desktop">
+                <a class="header__top-link txt16" href="#">О нас</a>
+                <a class="header__top-link txt16" href="#">Проектировщикам</a>
+                <a class="header__top-link txt16" href="#">Дилерам</a>
+                <a class="header__top-link txt16" href="#">Доставка и оплата</a>
+                <a class="header__top-link txt16" href="#">Отзывы</a>
+                <a class="header__top-link txt16" href="#">Контакты</a>
+            </nav>
+            <nav class=" header__top-nav mobile">
+                <a class="header__top-link" href="#">
+                    <img src="./assets/images/icons/wa-blue.svg" alt="wa">
+                </a>
+                <a class="header__top-link" href="tel:+77777777777">
+                    <img src="./assets/images/icons/phone-blue.svg" alt="phone-blue">
+                </a>
+            </nav>
+
+
+
+
         </div>
-        <div class="header-small__c-links">
-            <a href="#" class="header__bottom-c-link txt18 txt18_bold">
-                <img src="./assets/images/icons/phone-blue.svg" alt="phone">
-                8 (495) 120-23-29</a>
-            <a href="#" class="header__bottom-c-link txt18 txt18_bold">
-                <img src="./assets/images/icons/wa-blue.svg" alt="wa">
-                Whats App</a>
+        <div class="header__main ">
+            <div class="container header__main-c">
+                <div class="header__main-c-logo desktop">
+                    <img src="./assets/images/icons/logo.svg" alt="gidrolock">
+                    <p class="txt14">Официальный интернет-магазин завода-изготовителя</p>
+                </div>
+
+                <a href="#" class="btn-primary btn-primary_blue desktop">
+                    О заводе
+                </a>
+                <button class="header__main-c-btn ">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <form class="header__main-c-search">
+                    <input type="text" placeholder="Поиск товаров" class="txt18">
+                    <button type="submit">
+                        <img src="./assets/images/icons/search.svg" alt="search">
+                    </button>
+                </form>
+
+                <button class="header__main-c-link txt16 desktop modal-opener" data-modal="sign-phone">
+                    <img src="./assets/images/icons/user.svg" alt="user">
+                    Войти
+                </button>
+
+                <a href="#" class="header__main-c-link txt16 desktop">
+                    <img src="./assets/images/icons/like.svg" alt="favorite">
+                    Избранное
+                </a>
+
+                <a href="#" class="header__main-c-link txt16 desktop">
+                    <img src="./assets/images/icons/basket-black.svg" alt="basket">
+                    Корзина
+                    <span class="header__main-c-link-basket-count  txt14">
+                        99</span>
+                </a>
+            </div>
+        </div>
+        <div class="header__bottom desktop">
+            <div class="container header__bottom-c">
+
+                <button class="btn-primary btn-primary_green btn-primary_small">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4.85" y="3.85" width="8.96667" height="8.96667" rx="1.15" stroke="white" stroke-width="1.7">
+                        </rect>
+                        <rect x="4.85" y="18.5165" width="8.96667" height="8.96667" rx="1.15" stroke="white" stroke-width="1.7">
+                        </rect>
+                        <rect x="19.1833" y="3.85" width="8.96667" height="8.96667" rx="1.15" stroke="white" stroke-width="1.7">
+                        </rect>
+                        <rect x="19.1833" y="18.5165" width="8.96667" height="8.96667" rx="1.15" stroke="white" stroke-width="1.7"></rect>
+                    </svg>
+                    <span>
+                        Каталог
+                    </span>
+
+                </button>
+
+                <div class="header__bottom-c-list">
+                    <a href="#" class="header__bottom-c-link txt18 txt18_bold">
+                        Защита от протечки
+                    </a>
+                    <a href="#" class=" col-gr txt16">
+                        Готовые комплекты
+                    </a>
+                    <a href="#" class=" col-gr txt16">
+                        Комплектующие
+                    </a>
+                    <a href="#" class=" col-gr txt16">
+                        Подбор системы
+                    </a>
+                </div>
+
+                <a href="#" class="header__bottom-c-link txt18 txt18_bold">
+                    теплый дом
+                </a>
+                <a href="#" class="header__bottom-c-link txt18 txt18_bold">
+                    умный дом
+                </a>
+                <a href="#" class="header__bottom-c-link txt18 txt18_bold">
+                    акции
+                </a>
+
+                <a class="header__bottom-c-link txt18 txt18_bold" href="tel:+7897877878">
+                    <img src="./assets/images/icons/phone-blue.svg" alt="phone">
+                    8 (495) 120-23-29
+                </a>
+                <a class="header__bottom-c-link txt18 txt18_bold" href="#">
+                    <img src="./assets/images/icons/wa-blue.svg" alt="phone">
+                    WhatsApp
+                </a>
+
+            </div>
         </div>
 
+        <div class="header__mobile header__mobile-wrp">
+            <div class="header__mobile-c">
+                <div class="header__mobile-c-list">
+                    <img class="header__mobile-c-list-logo" src="./assets/images/icons/logo-small.svg" alt="gidrolock">
+                    <a href="#" class="header__mobile-c-list-link-top tl4">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10.1672L19.5 9.05611L13.5 4.61167L12.55 3.91167C12.3867 3.79219 12.1955 3.72852 12 3.72852C11.8045 3.72852 11.6133 3.79219 11.45 3.91167L10.5 4.61167L4.5 9.05611L3 10.1672" stroke="#898485" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M19.5 9.05664V17.9455C19.5 18.8296 19.1839 19.6774 18.6213 20.3026C18.0587 20.9277 17.2956 21.2789 16.5 21.2789H14V15.7233C14 15.4286 13.8946 15.146 13.7071 14.9376C13.5196 14.7293 13.2652 14.6122 13 14.6122H11C10.7348 14.6122 10.4804 14.7293 10.2929 14.9376C10.1054 15.146 10 15.4286 10 15.7233V21.2789H7.5C6.70435 21.2789 5.94129 20.9277 5.37868 20.3026C4.81607 19.6774 4.5 18.8296 4.5 17.9455V9.05664" stroke="#898485" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        Главная
+                    </a>
+                    <a href="#" class="header__mobile-c-list-link-top tl4">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.6375" y="3.1375" width="7.67598" height="7.66316" rx="0.8625" stroke="#898485" stroke-width="1.275"></rect>
+                            <rect x="2.6375" y="14.2" width="7.67598" height="7.66316" rx="0.8625" stroke="#898485" stroke-width="1.275"></rect>
+                            <rect x="13.6863" y="3.1375" width="7.67598" height="7.66316" rx="0.8625" stroke="#898485" stroke-width="1.275"></rect>
+                            <rect x="13.6863" y="14.2" width="7.67598" height="7.66316" rx="0.8625" stroke="#898485" stroke-width="1.275"></rect>
+                        </svg>
+
+                        Каталог
+                    </a>
+                    <a href="#" class="header__mobile-c-list-link-top tl4">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.45423 13.5095L4.4551 13.5103L11.5136 20.4455C11.6516 20.581 11.8259 20.65 12 20.65C12.1741 20.65 12.3484 20.581 12.4864 20.4455L19.5449 13.5103L19.5458 13.5095C20.5645 12.5114 21.15 11.1007 21.15 9.61508V9.37665C21.15 6.88466 19.444 4.81354 17.1891 4.41735L4.45423 13.5095ZM4.45423 13.5095C3.43552 12.5114 2.85 11.1007 2.85 9.61508V9.37665C2.85 6.88466 4.55605 4.81354 6.81091 4.41735L4.45423 13.5095ZM12 6.94773L11.3838 6.29924L10.9151 5.80592C9.83189 4.66597 8.3035 4.15561 6.81112 4.41731L12 6.94773ZM12 6.94773L12.6162 6.29924M12 6.94773L12.6162 6.29924M12.6162 6.29924L13.0849 5.80592C14.1681 4.66597 15.6965 4.15562 17.1889 4.41731L12.6162 6.29924Z" stroke="#898485" stroke-width="1.7"></path>
+                        </svg>
+
+
+                        Избранное
+                    </a>
+                    <a href="#" class="header__mobile-c-list-link-top tl4">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.25 8.89192V8.08358C8.25 6.20858 9.75833 4.36692 11.6333 4.19192C13.8667 3.97525 15.75 5.73358 15.75 7.92525V9.07525" stroke="#898485" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M9.49937 20.8327H14.4994C17.8494 20.8327 18.4494 19.491 18.6244 17.8577L19.2494 12.8577C19.4744 10.8243 18.891 9.16602 15.3327 9.16602H8.66603C5.1077 9.16602 4.52437 10.8243 4.74937 12.8577L5.37437 17.8577C5.54937 19.491 6.14937 20.8327 9.49937 20.8327Z" stroke="#898485" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        Корзина
+                    </a>
+                    <a href="#" class="header__mobile-c-list-link-top tl4 modal-opener" data-modal="sign-phone">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.1738 11.9738C12.0727 11.9609 11.9427 11.9609 11.8272 11.9738C9.28549 11.8966 7.26367 10.0453 7.26367 7.76969C7.26367 5.44265 9.37214 3.55273 12.0005 3.55273C14.6144 3.55273 16.7374 5.44265 16.7374 7.76969C16.7229 10.0453 14.7155 11.8966 12.1738 11.9738Z" stroke="#898485" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M20.9475 21.4466C20.3995 19.9921 19.9027 19.2027 18.8352 18.0902C15.0762 14.1726 8.79517 14.1163 5.09307 18.0902C4.05206 19.2076 3.54282 19.7932 3.05273 21.4466" stroke="#898485" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+
+                        Войти
+                    </a>
+                    <hr>
+                    <a href="#" class="txt18">О заводе</a>
+                    <a href="#" class="txt18">Проектировщикам</a>
+                    <a href="#" class="txt18">Дилерам</a>
+                    <a href="#" class="txt18">Партнеры</a>
+                    <a href="#" class="txt18">Доставка и оплата</a>
+                    <a href="#" class="txt18">Отзывы</a>
+                    <a href="#" class="txt18">Контакты</a>
+                </div>
+
+            </div>
+        </div>
+
+        
     </div>
 </header>
         <main>
@@ -184,19 +350,19 @@
                             </div>
                             <div class="item-card-row-counts">
                                 <div class="btn-counter">
-                                    <button>-</button>
+                                    <button class="basket-item-quantity-minus">-</button>
                                     <span>1111</span>
-                                    <button>+</button>
+                                    <button class="basket-item-quantity-plus">+</button>
                                 </div>
                                 <span class="txt16">
-                                    <span class="price ">999 999</span>/шт
+                                    <span class="price ">9 999</span>/шт
                                 </span>
 
                             </div>
 
                             <div class="item-card-row-prices">
-                                <span class="price tl4">777 777 7</span>
-                                <span class="price price_discount txt20"> 4 444 444</span>
+                                <span class="price tl4">777 777</span>
+                                <span class="price price_discount txt20">44 444</span>
                                 <span class="item-card-row-prices-discount bg bg_ye fit txt14">-10%</span>
                             </div>
                             <button class="item-card-row-delete">
@@ -394,7 +560,7 @@
                                     <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
-                               
+
 
                             </form>
                         </div>
@@ -579,18 +745,18 @@
                                     data-modal="cdek">
                                     <span class="tl3 col-wh">Выбрать пункт выдачи</span>
                                 </button>
-                                <div class="basket-order__delivery-type-option-cdek-item"></div>
-                                <div class="basket-order__delivery-type-option-cdek-item-data">
-                                    <p class="tl4">Пункт выдачи СДЭК №21</p>
-                                    <p class="txt18">107113, Москва, улица Сокольнический Вал, 2</p>
-                                    <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
+                                <div class="basket-order__delivery-type-option-cdek-item">
+                                    <div class="basket-order__delivery-type-option-cdek-item-data">
+                                        <p class="tl4">Пункт выдачи СДЭК №21</p>
+                                        <p class="txt18">107113, Москва, улица Сокольнический Вал, 2</p>
+                                        <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
+                                    </div>
+
+                                    <button
+                                        class="basket-order__delivery-type-option-cdek-item-btn btn-primary btn-primary_blue">
+                                        Изменить
+                                    </button>
                                 </div>
-
-                                <button
-                                    class="basket-order__delivery-type-option-cdek-item-btn btn-primary btn-primary_blue">
-                                    Изменить
-                                </button>
-
 
                             </div>
 
@@ -673,7 +839,7 @@
                             </span>
                             <span class="radio-img">
                                 <img src="./assets/images/MasterCard.webp" alt="master">
-                               
+
                             </span>
                             <span class="tl4 radio-txt">
                                 Картой на сайте
@@ -838,6 +1004,425 @@
             </section>
         </main>
 
+        <div class="modal modal-mail-help">
+    <div class="modal-wrp  modal-closer">
+        <div class="modal__c">
+            <button class="modal__c-btn modal-closer">
+            </button>
+            <p class="tl1">
+                Не приходит
+                письмо на почту
+            </p>
+            <p class="txt18">
+                Если вы столкнулись с проблемой неполучения письма для завершения регистрации, есть несколько шагов,
+                которые
+                можно предпринять:
+            </p>
+            <ol>
+                <li class="txt18">
+                    Проверьте правильность электронной почты. Убедитесь, что вы указали верную почту в настройках вашего
+                    профиля.
+                </li>
+                <li class="txt18">
+                    Проверьте подключение к интернету. Отсутствие интернета может привести к задержкам в доставке писем.
+                </li>
+                <li class="txt18">Проверьте папку «Спам». Иногда письма могут попадать в папку со спамом. Пожалуйста,
+                    проверьте эту
+                    папку
+                    на вашем устройстве.
+                </li>
+                <li class="txt18">
+                    Попробуйте еще раз. В случае отсутствия письма, попробуйте <span class="col-bl"> запросить его
+                        повторно.</span>
+                </li>
+                <li class="txt18">
+                    В случае, если все вышеперечисленные пункты не помогают, свяжитесь с нами для решения проблемы
+                    +74951205002 <a href="mailto:qwe@qwe.com" class="col-bl">info@gidrolock.ru.</a>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal modal-sign-phone ">
+    <div class="modal-wrp  modal-closer">
+        <div class="modal__c modal-sign">
+            <button class="modal__c-btn modal-closer">
+            </button>
+
+            <div class="modal-sign__slider">
+                <div class="modal-sign__slider-list-e">
+                    <form class="modal-sign__slider-list-e-body form">
+                        <p class="tl1">
+                            Вход в аккаунт
+                        </p>
+                        <div class="flex-row">
+                            <p class="txt20 col-gr">Нет аккаунта?</p>
+                            <a href="#" class="btn-nav btn-nav_ul modal-closer modal-closer">
+                                Регистрация
+                            </a>
+                        </div>
+
+                        <p class="txt18">Введите свой контактный номер телефона. Вам поступит SMS с кодом-паролем.
+                        </p>
+
+                        <div class="input-text form-input">
+                            <div class="input-phone">
+                                <div class="input-phone__select drop-down-container">
+                                    <button class="input-phone__select-current drop-down-target">
+                                        <img class="input-phone__select-flag input-phone__select-current-flag" src="./assets/images/icons/flag-rus.svg" alt="flag">
+                                        <img class="input-phone__select-current-arrow" src="./assets/images/icons/arrow-black.svg" alt="arrow">
+                                    </button>
+                                    <div class="input-phone__select-list">
+                                        <div class="input-phone__select-list-wrp">
+                                            <button class="input-phone__select-list-btn" data-mask="ru">
+                                                <img class="input-phone__select-flag " src="./assets/images/icons/flag-rus.svg" alt="flag">
+                                                +7
+                                            </button>
+                                            <button class="input-phone__select-list-btn" data-mask="br">
+                                                <img class="input-phone__select-flag " src="./assets/images/icons/flag-br.svg" alt="flag">
+                                                +375
+                                            </button>
+                                            <button class="input-phone__select-list-btn" data-mask="kz">
+                                                <img class="input-phone__select-flag " src="./assets/images/icons/flag-kz.svg" alt="flag">
+                                                +7
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="text" autocomplete="off" data-required="true" name="phone" placeholder="номер телефона">
+                                <span class="input-text-placeholder"></span>
+                            </div>
+                            <span class="input-text-error-msg "></span>
+                        </div>
+
+                        <label class="checkbox form-input">
+                            <input type="checkbox" data-required="true">
+                            <span class="checkbox-check">
+                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.41445 5.47216L8.88627 0.187083C9.0154 0.0623609 9.16884 0 9.34661 0C9.52438 0 9.67761 0.0623609 9.80631 0.187083C9.93544 0.311804 10 0.460015 10 0.631715C10 0.803415 9.93544 0.951418 9.80631 1.07572L3.8664 6.81292C3.73727 6.93764 3.58662 7 3.41445 7C3.24228 7 3.09163 6.93764 2.9625 6.81292L0.186243 4.1314C0.0571146 4.00668 -0.00486715 3.85847 0.000297988 3.68677C0.00546312 3.51507 0.0728249 3.36707 0.202384 3.24276C0.331512 3.11804 0.48496 3.05568 0.662727 3.05568C0.840493 3.05568 0.993726 3.11804 1.12242 3.24276L3.41445 5.47216Z" fill="white"></path>
+                                </svg>
+                            </span>
+                            <span class="checkbox-text txt14">Отправляя данные в эту форму «Я согласен с условиями
+                                обработки и хранения персональных данных»</span>
+                        </label>
+
+                        <button class="btn-primary btn-primary_green modal-closer modal-opener" data-modal="sign-phone-code" type="submit">
+                            Получить код
+                        </button>
+
+                        <span class="btn-nav btn-nav_ul txt20 col-gr modal-closer modal-opener" data-modal="sign-email">Войти по e-mail</span>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-sign-phone-code ">
+    <div class="modal-wrp  modal-closer">
+        <div class="modal__c modal-sign">
+            <button class="modal__c-btn modal-closer">
+            </button>
+
+            <div class="modal-sign__slider">
+                <div class="modal-sign__slider-list-e">
+                    <div class="modal-sign__slider-list-e-body ">
+                        <p class="tl1">
+                            Введите код
+                        </p>
+                        <p class="txt18">Укажите код из СМС на номер +7(999) 999 99-99</p>
+                        <button class="btn-nav btn-nav_ul modal-closer model-opener" data-modal="sign-phone">
+                            изменить номер
+                        </button>
+                        <form class="input-4x-code _error" action="">
+                            <input type="number" name="code" data-index="0">
+                            <input type="number" name="code" data-index="1">
+                            <input type="number" name="code" data-index="2">
+                            <input type="number" name="code" data-index="3">
+                            <input type="hidden" name="pincode" value="****">
+                            <span class="input-text-error-msg">Код введен не верно</span>
+                        </form>
+                        <button class="btn-primary btn-primary_green" type="submit">
+                            Запросить код повторно через <span>0:55</span>
+                        </button>
+                        <button data-modal="mail-help" class="modal-opener btn-nav btn-nav_ul txt20 col-gr">Не
+                            приходит SMS
+                            с кодом?</button>
+
+                        </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal modal-sign-email ">
+    <div class="modal-wrp  modal-closer">
+        <div class="modal__c modal-sign">
+            <button class="modal__c-btn modal-closer">
+            </button>
+            <form class="modal-sign__slider-list-e-body form">
+                <p class="tl1">
+                    Вход в аккаунт
+                </p>
+                <div class="flex-row">
+                    <p class="txt20 col-gr">Нет аккаунта?</p>
+                    <a href="#" class="btn-nav btn-nav_ul modal-closer">
+                        Регистрация
+                    </a>
+                </div>
+
+
+                <label class="input-container input-text form-input">
+                    <input type="text" name="email" placeholder="Электронная почта">
+                    <span class="input-text-placeholder"></span>
+                    <span class="input-text-error-msg "></span>
+                </label>
+
+
+                <label class=" input-container input-text form-input">
+                    <input type="password" name="password" maxlength="20" data-required="true" placeholder="Пароль">
+                    <span class="input-text-placeholder"></span>
+                    <span class="input-text-error-msg "></span>
+                    <button class="input-text-password">X</button>
+                </label>
+
+                <a href="#" class="btn-nav btn-nav_ul modal-closer modal-opener" data-modal="sign-reset">
+                    Забыли пароль?
+                </a>
+
+
+
+
+
+                <button class="btn-primary btn-primary_green" type="submit">
+                    Войти
+                </button>
+
+                <span class="btn-nav btn-nav_ul txt20 col-gr modal-closer modal-opener" data-modal="sign-phone">Войти по
+                    номеру</span>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal modal-sign-reset ">
+    <div class="modal-wrp  modal-closer">
+        <div class="modal__c modal-sign">
+            <button class="modal__c-btn modal-closer">
+            </button>
+
+            <div class="modal-sign__slider-list-e-body  modal-sign-reset-switcher">
+                <p class="tl1">
+                    Восстановление пароля
+                </p>
+                <div class="flex-row">
+                    <label class="radio txt18 ">
+                        <input class="sign-form-switcher switcher-btn" type="radio" name="sign" checked="">
+                        <span class="radio-default">
+                        </span>
+                        Физическое лицо
+                    </label>
+                    <label class="radio txt18 ">
+                        <input class="sign-form-switcher switcher-btn" type="radio" name="sign">
+                        <span class="radio-default">
+                        </span>
+                        Юридическое лицо
+                    </label>
+                </div>
+                <div class="switcher-slide">
+                    <form class=" flex-column form">
+
+
+
+                        <p class="txt18">
+                            Введите свой адрес электронной почты. Вам поступит сообщение с кодом-паролем.
+                        </p>
+
+
+                        <label class="input-container input-text form-input">
+                            <input type="text" name="email" placeholder="Электронная почта" data-required="true">
+                            <span class="input-text-placeholder"></span>
+                            <span class="input-text-error-msg "></span>
+                        </label>
+
+                        <label class="checkbox form-input">
+                            <input type="checkbox" name="policy" data-required="true">
+                            <span class="checkbox-check">
+                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.41445 5.47216L8.88627 0.187083C9.0154 0.0623609 9.16884 0 9.34661 0C9.52438 0 9.67761 0.0623609 9.80631 0.187083C9.93544 0.311804 10 0.460015 10 0.631715C10 0.803415 9.93544 0.951418 9.80631 1.07572L3.8664 6.81292C3.73727 6.93764 3.58662 7 3.41445 7C3.24228 7 3.09163 6.93764 2.9625 6.81292L0.186243 4.1314C0.0571146 4.00668 -0.00486715 3.85847 0.000297988 3.68677C0.00546312 3.51507 0.0728249 3.36707 0.202384 3.24276C0.331512 3.11804 0.48496 3.05568 0.662727 3.05568C0.840493 3.05568 0.993726 3.11804 1.12242 3.24276L3.41445 5.47216Z" fill="white"></path>
+                                </svg>
+                            </span>
+                            <span class="checkbox-text txt14">Отправляя данные в эту форму, вы соглашаетесь с условиями
+                                обработки и хранения персональных данных</span>
+                        </label>
+
+
+                        <button class="btn-primary btn-primary_green" type="submit">
+                            Восстановить пароль
+                        </button>
+
+                    </form>
+                </div>
+                <div class="switcher-slide">
+                    <form class=" flex-column form">
+                        <p class="txt18">
+                            Для восстановления пароля свяжитесь с менеджером
+                        </p>
+
+                        <label class="input-container input-text form-input">
+                            <input type="text" name="name" data-required="true" placeholder="Имя">
+                            <span class="input-text-placeholder"></span>
+                            <span class="input-text-error-msg "></span>
+                        </label>
+
+                        <label class="input-container input-text form-input">
+                            <input type="text" name="email" data-required="true" placeholder="Электронная почта">
+                            <span class="input-text-placeholder"></span>
+                            <span class="input-text-error-msg "></span>
+                        </label>
+
+                        <label class="checkbox form-input">
+                            <input type="checkbox" name="policy" data-required="true">
+                            <span class="checkbox-check">
+                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.41445 5.47216L8.88627 0.187083C9.0154 0.0623609 9.16884 0 9.34661 0C9.52438 0 9.67761 0.0623609 9.80631 0.187083C9.93544 0.311804 10 0.460015 10 0.631715C10 0.803415 9.93544 0.951418 9.80631 1.07572L3.8664 6.81292C3.73727 6.93764 3.58662 7 3.41445 7C3.24228 7 3.09163 6.93764 2.9625 6.81292L0.186243 4.1314C0.0571146 4.00668 -0.00486715 3.85847 0.000297988 3.68677C0.00546312 3.51507 0.0728249 3.36707 0.202384 3.24276C0.331512 3.11804 0.48496 3.05568 0.662727 3.05568C0.840493 3.05568 0.993726 3.11804 1.12242 3.24276L3.41445 5.47216Z" fill="white"></path>
+                                </svg>
+                            </span>
+                            <span class="checkbox-text txt14">Отправляя данные в эту форму, вы соглашаетесь с условиями
+                                обработки и хранения персональных данных</span>
+                        </label>
+
+
+                        <button class="btn-primary btn-primary_green" type="submit">
+                            Оставить заявку
+                        </button>
+
+
+                    </form>
+                </div>
+                <button class="btn-nav btn-nav_ul txt20 col-gr modal-closer modal-opener" data-modal="sign-phone">
+                    Войти по номеру телефона
+                </button>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-sign-password ">
+    <div class="modal-wrp  modal-closer">
+        <div class="modal__c modal-sign">
+            <button class="modal__c-btn modal-closer">
+            </button>
+            <form class="modal-sign__slider-list-e-body form">
+                <p class="tl1">
+                    Введите новый пароль
+                </p>
+                <p class="txt18">
+                    Пароль должен содержать минимум 1 символ, 1 цифру и 1 заглавную букву и не должен содержать
+                    спецсимволы. Длина пароля не менее 8 символов.
+                </p>
+
+
+                <label class="input-container input-text form-input">
+                    <input type="text" name="name" placeholder="input-text">
+                    <span class="input-text-placeholder"></span>
+                    <span class="input-text-error-msg "></span>
+                </label>
+
+                <label class="input-container input-text form-input">
+                    <input type="text" name="name" placeholder="input-text">
+                    <span class="input-text-placeholder"></span>
+                    <span class="input-text-error-msg "></span>
+                </label>
+
+                <button class="btn-primary btn-primary_green" type="submit">
+                    Восстановить пароль
+                </button>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal modal-cdek ">
+    <div class="modal-wrp  modal-closer">
+        <div class="modal__c  modal-cdek__c">
+            <button class="modal__c-closer modal-closer"></button>
+            <div class="modal-cdek__c-top">
+
+                <label class="radio switcher-btn">
+                    <input type="radio" name="test">
+                    <span class="radio-square txt18">
+                        Списком
+                    </span>
+                </label>
+
+
+                <label class="radio switcher-btn">
+                    <input type="radio" name="test">
+                    <span class="radio-square txt18">
+                        На карте
+                    </span>
+                </label>
+
+
+                <label class="input-container input-text form-input">
+                    <input type="text" name="name" placeholder="Адрес" data-required="true">
+
+                </label>
+
+
+            </div>
+
+            <div class="switcher-slide">
+                <div class="modal-cdek__c-items ">
+                    <ul class="modal-cdek__c-items-list">
+                        <li class="modal-cdek__c-items-list-e _active">
+                            <div class="flex-row">
+                                <p class="tl4">СДЭК пункт выдачи №32</p>
+                                <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
+                            </div>
+                            <p class="txt18">107113, Москва, улица Сокольнический </p>
+                            <p class="txt18">вал 2</p>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="switcher-slide">
+                <div class="modal-cdek__c-map ">
+                    <p class="tl1">map here</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
         <footer class="footer">
     <div class="container footer__c">
         <div class="footer__c-info">
