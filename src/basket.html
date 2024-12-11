@@ -10,7 +10,7 @@
 
 <body>
     <div class="wrapper">
-        <include src="./components/_header-small.html"></include>
+        <include src="./components/_header.html"></include>
         <main>
             <section class="basket-placeholder">
                 <div class="container">
@@ -162,19 +162,19 @@
                             </div>
                             <div class="item-card-row-counts">
                                 <div class="btn-counter">
-                                    <button>-</button>
+                                    <button class="basket-item-quantity-minus">-</button>
                                     <span>1111</span>
-                                    <button>+</button>
+                                    <button class="basket-item-quantity-plus">+</button>
                                 </div>
                                 <span class="txt16">
-                                    <span class="price ">999 999</span>/шт
+                                    <span class="price ">9 999</span>/шт
                                 </span>
 
                             </div>
 
                             <div class="item-card-row-prices">
-                                <span class="price tl4">777 777 7</span>
-                                <span class="price price_discount txt20"> 4 444 444</span>
+                                <span class="price tl4">777 777</span>
+                                <span class="price price_discount txt20">44 444</span>
                                 <span class="item-card-row-prices-discount bg bg_ye fit txt14">-10%</span>
                             </div>
                             <button class="item-card-row-delete">
@@ -372,7 +372,7 @@
                                     <span class="input-text-placeholder"></span>
                                     <span class="input-text-error-msg "></span>
                                 </label>
-                               
+
 
                             </form>
                         </div>
@@ -557,18 +557,18 @@
                                     data-modal="cdek">
                                     <span class="tl3 col-wh">Выбрать пункт выдачи</span>
                                 </button>
-                                <div class="basket-order__delivery-type-option-cdek-item"></div>
-                                <div class="basket-order__delivery-type-option-cdek-item-data">
-                                    <p class="tl4">Пункт выдачи СДЭК №21</p>
-                                    <p class="txt18">107113, Москва, улица Сокольнический Вал, 2</p>
-                                    <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
+                                <div class="basket-order__delivery-type-option-cdek-item">
+                                    <div class="basket-order__delivery-type-option-cdek-item-data">
+                                        <p class="tl4">Пункт выдачи СДЭК №21</p>
+                                        <p class="txt18">107113, Москва, улица Сокольнический Вал, 2</p>
+                                        <p class="txt18 col-gr">пн-вс: 09:00-21:00</p>
+                                    </div>
+
+                                    <button
+                                        class="basket-order__delivery-type-option-cdek-item-btn btn-primary btn-primary_blue">
+                                        Изменить
+                                    </button>
                                 </div>
-
-                                <button
-                                    class="basket-order__delivery-type-option-cdek-item-btn btn-primary btn-primary_blue">
-                                    Изменить
-                                </button>
-
 
                             </div>
 
@@ -651,7 +651,7 @@
                             </span>
                             <span class="radio-img">
                                 <img src="./assets/images/MasterCard.png" alt="master">
-                               
+
                             </span>
                             <span class="tl4 radio-txt">
                                 Картой на сайте
@@ -710,6 +710,7 @@
             </section>
         </main>
 
+        <include src="./components/_modals.html"></include>
         <include src="./components/_footer.html"></include>
     </div>
 

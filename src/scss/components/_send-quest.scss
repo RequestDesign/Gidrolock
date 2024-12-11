@@ -20,6 +20,7 @@
             &-bottom{
                 grid-column: 1 / span 2;
                 display: flex;
+                align-items: center;
                 gap: 2rem;
                 @include small-tablet{
                     grid-column: 1;

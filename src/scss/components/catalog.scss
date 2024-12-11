@@ -8,15 +8,17 @@
         background: linear-gradient(90deg, #016192 0%, #014B7B 100%);
 
     }
-    &-pagination{
-        & .swiper-pagination-bullet{
+
+    &-pagination {
+        & .swiper-pagination-bullet {
             background-color: $white;
         }
     }
-    &-link{
+
+    &-link {
         display: flex;
         justify-content: center;
-        margin-top:4rem ;
+        margin-top: 4rem;
 
     }
 
@@ -30,6 +32,7 @@
 
         @include small-tablet {
             grid-template-columns: 100%;
+            padding: 0;
             padding-top: 8rem;
             padding-bottom: 8rem;
             gap: 2rem;
@@ -38,8 +41,11 @@
         &-left {
             display: flex;
             flex-direction: column;
-
             height: 100%;
+
+            @include mobile {
+                padding: 0 1.5rem;
+            }
 
             & .txt20 {
                 margin: 4rem 0 7.4rem;
@@ -71,7 +77,7 @@
 
         }
     }
-    
+
 
 }
 
@@ -80,8 +86,8 @@
     &__c {
         display: grid;
         grid-template-columns: 20% 75%;
-        grid-auto-rows: auto ;
-       
+        grid-auto-rows: auto;
+
         gap: 5%;
 
         @include small-tablet {
@@ -92,7 +98,8 @@
 
         & .tl2 {
             grid-column: 1 / span 2;
-            @include small-tablet{
+
+            @include small-tablet {
                 grid-column: 1;
             }
         }
@@ -102,36 +109,39 @@
             flex-direction: column;
             gap: 3.2rem;
         }
-        &-right{
+
+        &-right {
             width: 100%;
+
             &-list {
                 @media screen and (min-width: 49em) {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     grid-template-rows: repeat(2, auto);
                     gap: 3.2rem;
-    
+
                     & li {
                         height: 100% !important;
                         width: 100% !important;
                         margin: 0 !important;
-    
+
                         &._big {
                             grid-column: 1 / span 2;
-                          
+
                             height: 28.8rem !important;
                         }
-    
+
                     }
                 }
-    
-    
-    
-    
+
+
+
+
             }
-            
+
         }
-        &-link{
+
+        &-link {
             margin-top: 4rem;
             display: flex;
             justify-content: center;

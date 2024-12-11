@@ -65,12 +65,20 @@
                         grid-column: 1 /span 2;
                     }
                 }
+                & input{
+                    background-color: $gray;
+                    border: none !important;
+                }
+                & .input-text-placeholder {
+                    color: $gray-dark;
+                    z-index: 3;
+                }
 
                 &-submit {
 
 
                     height: 5.6rem;
-                    border: .2rem solid $gray-dark;
+                    background-color: $gray;
                     border-left: none;
                     display: flex;
                     align-items: center;
@@ -123,7 +131,7 @@
                 &-items {
                     &-list {
                         & a:hover {
-                            color: $blue;
+                            color: $blue !important;
                         }
                     }
                 }

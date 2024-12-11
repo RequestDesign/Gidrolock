@@ -39,14 +39,14 @@ $(function () {
 function dropDowns() {
 
     $(document).on('click', (e) => {
-        if(e.target.classList.contains('drop-down-target')) {
+        if (e.target.classList.contains('drop-down-target')) {
             e.preventDefault()
             e.target.classList.toggle('_opened')
             e.target.closest('.drop-down-container')
                 .classList.toggle('_opened')
         }
-        
-      
+
+
     })
 
 }
@@ -59,13 +59,15 @@ function initSwipers() {
             new Swiper(e, {
                 modules: [Navigation, Pagination],
                 loop: false,
-                slidesPerView: 1,
+                slidesPerView: 1.2,
+                centeredSlides: true,
                 slidesPerGroup: 1,
                 spaceBetween: rem(3),
                 breakpoints: {
                     768: {
                         slidesPerView: 5,
                         slidesPerGroup: 1,
+                        centeredSlides: false
 
                     }
                 },
@@ -215,19 +217,22 @@ function initSwipers() {
         new Swiper(catalogHead, {
             modules: [Pagination],
             loop: false,
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             slidesPerGroup: 1,
             spaceBetween: rem(3),
+            centeredSlides: true,
+            simulateTouch: false,
             breakpoints: {
                 768: {
+                    centeredSlides: false,
                     slidesPerView: 3,
                     slidesPerGroup: 1,
 
                 }
             },
-            pagination: {
+           /*  pagination: {
                 el: '.catalog-head-pagination'
-            }
+            } */
 
 
         })
@@ -409,7 +414,7 @@ function modalMobileCode() {
 
     container.on('submit', (e) => {
         e.preventDefault()
-      
+
     })
 
     inputs.on('keydown', (e) => {
@@ -440,8 +445,8 @@ function modalMobileCode() {
         if (e.currentTarget.dataset.index < 3) {
             inputs.eq(inputs.index(this) + 1).focus();
         }
-       
-        if(valueInput.val() == valueInput.val().replace(/\*/g, '')){
+
+        if (valueInput.val() == valueInput.val().replace(/\*/g, '')) {
             container.trigger('submit')
         }
 

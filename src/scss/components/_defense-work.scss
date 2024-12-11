@@ -108,6 +108,9 @@
                     display: flex;
                     align-items: flex-start;
                     gap: 1rem;
+                    & .tl4{
+                        margin-top: .5rem;
+                    }
 
                 }
             }

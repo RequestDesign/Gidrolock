@@ -1,7 +1,7 @@
 .breadcrumps {
    
     margin-top: 6rem;
-    &+section {
+    &~section:first-of-type {
         margin-top: 6rem !important;
     }
     @include small-tablet{

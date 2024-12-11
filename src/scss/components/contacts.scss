@@ -17,13 +17,14 @@
 
             &-e {
                 display: grid;
-                grid-template-columns: 28% 70%;
-                gap: 2%;
+                grid-template-columns: .3fr .7fr;
+
                 justify-content: flex-start;
                 background-color: $white;
                 border-radius: .3rem;
                 padding: 3.2rem;
                 box-sizing: border-box;
+                align-items: flex-start;
                 @include small-tablet{
                     grid-template-columns: 100%;
                     gap: 3rem;
@@ -46,6 +47,8 @@
                     display: flex;
                     flex-direction: column;
                     gap: .8rem;
+                    min-height: 100%;
+                    justify-content: center;
                     & .txt18{
                         margin-bottom: 1.8rem;
                     }

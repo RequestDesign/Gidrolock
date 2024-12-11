@@ -254,6 +254,9 @@
             justify-content: center;
             
         }
+        & svg, & img{
+            @include icon-18;
+        }
     }
     &-delete{
         @include mobile{

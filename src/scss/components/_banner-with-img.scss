@@ -67,19 +67,24 @@
 
             }
 
-            & img {
-                height: 100%;
-                width: 100%;
+            & picture {
+                display: flex;
+                flex-grow: 1;
+            }
+
+            & img,
+            & picture img {
+         
                 object-fit: cover;
 
-                
+
 
             }
         }
 
         &-info {
             grid-row: 1;
-            padding: 6rem 6rem 6rem 0;
+            padding: 1rem 6rem 1rem 0;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -87,7 +92,7 @@
             @include small-tablet {
                 flex-direction: column;
                 width: 100%;
-                padding: 6rem 1.2rem 0 !important;
+                padding: 6rem 1.2rem 6rem !important;
             }
 
             &-left {

@@ -37,10 +37,23 @@
             background-image: none;
             color: rgba(22, 46, 58, 0.5);
             width: 100%;
+            & ._fill {
+                fill: $gray-dark ;
+            }
+            & ._stroke{
+                stroke: $gray-dark;
+            }
 
             &._opened {
                 background-color: $blue;
                 color: $white;
+
+                & ._fill {
+                    fill: $white ;
+                }
+                & ._stroke{
+                    stroke: $white;
+                }
             }
         }
 
@@ -60,6 +73,14 @@
         }
 
 
+    }
+    & .switcher-slide{
+        & .user-page__main{
+            @include desktop{
+                grid-column: 1 / span 4;
+            }
+           
+        }
     }
 
     &__main {
@@ -227,12 +248,13 @@
 
                         &-data {
                             margin-left: auto;
-                           @include mobile{
-                            margin-left: 4rem;
-                            margin-right: auto;
-                            grid-column: 1/ span 2;
-                           }
-                           
+
+                            @include mobile {
+                                margin-left: 4rem;
+                                margin-right: auto;
+                                grid-column: 1/ span 2;
+                            }
+
                         }
 
                     }
@@ -247,7 +269,8 @@
             grid-template-columns: repeat(4, 1fr);
             grid-auto-rows: 1fr;
             gap: 3.2rem;
-            @include mobile{
+
+            @include mobile {
                 grid-template-columns: 100%;
             }
         }

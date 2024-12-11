@@ -3,6 +3,27 @@
     z-index: 50;
     width: 100%;
 
+    @include mobile {
+
+        & input.js-smartSearch-input {
+            background-color: $white;
+            font-family: "Rebrand Txt";
+            font-size: 3rem;
+            line-height: 120%;
+            font-weight: 400;
+
+
+        }
+
+        & button.js-smartSearch-submit {
+            background-color: $white;
+
+        }
+    }
+
+
+
+
     &-wrp {
         position: relative;
     }
@@ -322,7 +343,8 @@
                     display: flex;
                     align-items: center;
 
-                    & svg {
+                    & svg,
+                    & img {
                         width: 5rem;
                         height: 5rem;
                         margin-right: 2rem;
@@ -351,10 +373,11 @@
     &__c {
         display: flex;
         justify-content: space-between;
-       
+
         padding: 2.8rem 0;
         box-sizing: border-box;
-        &-links{
+
+        &-links {
             display: flex;
             gap: 1rem;
         }
