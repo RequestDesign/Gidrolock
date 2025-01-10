@@ -65,10 +65,12 @@
                         grid-column: 1 /span 2;
                     }
                 }
-                & input{
+
+                & input {
                     background-color: $gray;
                     border: none !important;
                 }
+
                 & .input-text-placeholder {
                     color: $gray-dark;
                     z-index: 3;
@@ -132,6 +134,12 @@
                     &-list {
                         & a:hover {
                             color: $blue !important;
+                        }
+
+                        &-link {
+                            @media screen and (min-width: 47rem) {
+                                padding-left: 0 !important;
+                            }
                         }
                     }
                 }

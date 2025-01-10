@@ -1,14 +1,40 @@
 .banner-fs {
     background-color: $blue;
     background: linear-gradient(90deg, #016192 0%, #014B7B 100%);
-    padding: 6.8rem 0;
+    position: relative;
 
-    @include small-tablet {
-        padding: 1.4rem ;
-       
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../assets/images/banner-fs.webp);
+        background-position: right;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+        @include small-tablet{
+        background-image: url(../assets/images/banner-fs-mob.webp);
+
+        }
+
     }
 
+
+
+
     &__c {
+        padding: 6.8rem 0;
+        position: relative;
+        z-index: 2;
+
+        @include small-tablet {
+            padding: 1.4rem;
+
+        }
+
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -40,7 +66,8 @@
                 align-items: center;
                 gap: 1rem;
 
-                & svg, & img {
+                & svg,
+                & img {
                     width: 3.2rem;
                     height: 3.2rem;
 

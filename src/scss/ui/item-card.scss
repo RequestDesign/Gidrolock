@@ -80,6 +80,12 @@
     &__info {
         display: flex;
         justify-content: space-between;
+        margin-top: auto;
+        flex-shrink: 0;
+        height: 4.5rem;
+        @include mobile{
+            height: 7.5rem;
+        }
 
         &-price {
             display: flex;
@@ -153,6 +159,10 @@
     & .btn-primary {
         width: 100%;
         justify-content: center;
+        height: 6.2rem;
+        @include mobile{
+            height: unset;
+        }
        
     }
 
