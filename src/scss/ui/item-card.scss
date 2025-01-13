@@ -97,11 +97,7 @@
                     font-size: 4rem;
                 }
 
-                &::after {
-                    content: '₽';
-                    font-size: .8em;
-                    line-height: .9em;
-                }
+               
 
                 &_discount {
                     color: $gray-dark;
