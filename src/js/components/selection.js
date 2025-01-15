@@ -6,10 +6,16 @@ export default function initSelection() {
     const btn = container.querySelector('.selection__c-btn'),
         domCounter = container.querySelector('.selection__c-top-count'),
         addItemBtns = container.querySelectorAll('.selection-add-item'),
-        lists = container.querySelectorAll('.item-list')
+        lists = container.querySelectorAll('.item-list'),
+        goBack = container.querySelector('.selection__c-footer-back')
 
 
-
+    goBack.addEventListener('click', () => {
+        stateCount = 3
+        container.setAttribute('data-step', stateCount)
+        domCounter.textContent = stateCount
+        btn.textContent = 'Продолжить'
+    })
     btn.addEventListener('click', () => {
         stateCount++
         container.setAttribute('data-step', stateCount)

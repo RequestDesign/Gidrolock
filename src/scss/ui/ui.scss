@@ -149,7 +149,7 @@
 }
 
 .price {
-    width: fit-content;
+  /*   width: fit-content;
     letter-spacing: .1rem;
 
     @include small-tablet {
@@ -160,7 +160,7 @@
         content: '₽';
         font-size: .8em;
         line-height: .9em;
-    }
+    } */
 
     &_discount {
         color: $gray-dark;

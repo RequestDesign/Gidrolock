@@ -1,5 +1,6 @@
 import $ from "jquery";
-//import noUiSlide from 'nouislider'
+import noUiSlide from 'nouislider'
+//
 export default function initCatalogFilterOpener() {
 
     if (!document.querySelector('.catalog-current')) return
@@ -28,6 +29,7 @@ export default function initCatalogFilterOpener() {
             html.removeClass('lock')
         }
     })
+    priceSlider()
 }
 
 
@@ -39,22 +41,21 @@ function priceSlider() {
 
     if (!target) return
 
-    min.attr('min', 0)
-    max.attr('max', 100)
+console.log(min.attr('min'));
 
     noUiSlide.create(target, {
         start: [20, 80],
         connect: true,
-        step: 10,
+        step: 100,
         range: {
-            'min': 0,
-            'max': 100
+            'min': Number(min.attr('min')),
+            'max': Number(max.attr('max'))
         }
     });
 
     target.noUiSlider.on('update', function (values, handle) {
-        min.attr('value',values[0])
-        max.attr('value',values[1])
+        min.attr('value',Math.round(values[0]))
+        max.attr('value',Math.round(values[1]))
 
     });
 

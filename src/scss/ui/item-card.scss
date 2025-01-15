@@ -65,7 +65,7 @@
 
         }
     }
-    & .tl4{
+    &__ttl{
         overflow: hidden;
         text-overflow: ellipsis;
         display: -moz-box;
@@ -75,6 +75,10 @@
         -webkit-box-orient: vertical;
         line-clamp: 2;
         box-orient: vertical;
+        height: 7rem;
+        @include small-tablet{
+            height: 10rem;
+        }
     }
 
     &__info {
