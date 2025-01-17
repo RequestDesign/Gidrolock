@@ -25,6 +25,7 @@
                 padding: 3.2rem;
                 box-sizing: border-box;
                 align-items: flex-start;
+                justify-content: space-between;
                 @include small-tablet{
                     grid-template-columns: 100%;
                     gap: 3rem;

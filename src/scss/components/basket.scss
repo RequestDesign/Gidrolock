@@ -446,6 +446,7 @@
 }
 
 .basket-main-aside {
+    margin-top: 14rem;
     grid-area: aside;
     position: sticky;
     top: 10rem;
@@ -456,6 +457,9 @@
     box-sizing: border-box;
     background-color: $white;
     gap: 1.2rem;
+    @include small-tablet{
+        margin-top: 0;
+    }
 
     &__row {
         display: flex;

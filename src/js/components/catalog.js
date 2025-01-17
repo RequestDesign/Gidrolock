@@ -36,21 +36,20 @@ export default function initCatalogFilterOpener() {
 function priceSlider() {
 
     const target = document.querySelector('.catalog-current__filter-scroll-list-price-slider'),
-        min = $('#priceInputMin'),
-        max = $('#priceInputMax')
+        min = $('#arrFilter_P1_MIN'),
+        max = $('#arrFilter_P1_MAX')
 
     if (!target) return
 
-console.log(min.attr('min'));
 
     noUiSlide.create(target, {
-        start: [20, 80],
+        start: [Number(min.attr('min')), Number(max.attr('max'))],
         connect: true,
         step: 100,
         range: {
             'min': Number(min.attr('min')),
             'max': Number(max.attr('max'))
-        }
+        },
     });
 
     target.noUiSlider.on('update', function (values, handle) {

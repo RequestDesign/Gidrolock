@@ -267,6 +267,9 @@
                 box-sizing: border-box;
                 border: .2rem solid $gray-dark;
                 border-radius: .3rem;
+                @media screen and (min-width: 48em) {
+                    margin-right: auto;
+                }
 
             }
 

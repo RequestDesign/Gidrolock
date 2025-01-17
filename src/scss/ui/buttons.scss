@@ -390,6 +390,9 @@
     border: .2rem solid $gray-dark;
     height: fit-content;
     width: fit-content;
+    & *{
+        text-align: center;
+    }
 
     @include small-tablet {
         grid-template-columns: 9rem auto 9rem;

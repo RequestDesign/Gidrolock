@@ -123,8 +123,14 @@
                     }
 
                     &-slider {
+                        transform: translateX(-1.2rem);
                         margin: 2rem 2rem 0;
                         grid-column: 1 / span 2;
+                        @include small-tablet{
+                            & .noUi-handle{
+                                top: -2.2rem !important;
+                            }
+                        }
                     }
                 }
                 & * {
