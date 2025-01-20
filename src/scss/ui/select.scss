@@ -1,5 +1,6 @@
 .select {
     position: relative;
+    z-index: 1;
     min-width: 29rem;
 
     &._opened {
@@ -33,16 +34,31 @@
         align-items: center;
         width: 100%;
         border: .2rem solid $gray-dark;
-        padding: 1.4rem 2rem;
-        background-color: $white;
-        @include mobile{
-            padding: 2.5rem 3rem;
+        position: relative;
+     
+
+        &-input {
+            width: 100%;
+            padding: 1.4rem 2rem;
+            background-color: $white;
+            z-index: -1;
+
+            @include mobile {
+                padding: 2.5rem 3rem;
+            }
         }
 
+
         & img {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            z-index: 0;
+            transform: translateY(-50%);
             transition: transform .5s;
             max-width: 1.4rem;
             max-height: 2.4rem;
+            z-index: -1;
 
             @include small-tablet {
                 max-width: 2rem;

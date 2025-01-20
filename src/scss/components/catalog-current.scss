@@ -23,8 +23,7 @@
         }
 
         & .mobile {
-            margin-left: auto;
-            margin-right: 2rem;
+            margin: auto 2rem auto auto;
         }
 
     }
@@ -123,16 +122,17 @@
                     }
 
                     &-slider {
-                        transform: translateX(-1.2rem);
                         margin: 2rem 2rem 0;
                         grid-column: 1 / span 2;
-                        @include small-tablet{
-                            & .noUi-handle{
+
+                        @include small-tablet {
+                            & .noUi-handle {
                                 top: -2.2rem !important;
                             }
                         }
                     }
                 }
+
                 & * {
                     word-break: break-word;
                 }
@@ -272,6 +272,19 @@
             &-opener {
                 display: flex;
                 align-items: center;
+            }
+
+            @include small-tablet {
+                & .mobile {
+                    margin: auto 2rem auto auto;
+                    display: flex;
+                }
+
+                &-select {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
             }
 
 

@@ -19,10 +19,13 @@ export default function initCatalogFilterOpener() {
         target.fadeIn()
         target.addClass('_opened')
     })
-    closer.addEventListener('click', () => {
+    closer.addEventListener('click', (ev) => {
+      
         html.removeClass('lock')
         target.fadeOut()
         target.removeClass('_opened')
+        ev.preventDefault()
+        ev.stopPropagation()
     })
     window.addEventListener('resize', () => {
         if (!target.hasClass('_opened') && html.hasClass('lock')) {

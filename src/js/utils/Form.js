@@ -40,7 +40,7 @@ export default class Form {
         this._inputsData[inputTarget.name].value = inputTarget.value
         this._validation(inputTarget);
 
-        if (!inputTarget.placeholder) return
+        if (!inputTarget.placeholder &&  inputTarget.closest('.' + this._inputContainerSelector)) return
 
         if (inputTarget.value) {
             inputTarget.closest('.' + this._inputContainerSelector)
@@ -163,7 +163,7 @@ export default class Form {
         for (const input of inputs) {
 
             input.setAttribute('autocomplete', 'off')
-            if (input.placeholder) {
+            if (input.placeholder && input.closest('.' + this._inputContainerSelector)) {
 
                 const plcaholder = input.closest('.' + this._inputContainerSelector)
                     .querySelector('.' + this._inputPlaceholderSelector)
