@@ -112,9 +112,13 @@
 
         &-right {
             width: 100%;
+            @include desktop{
+                height: 61rem;
+
+            }
 
             &-list {
-                @media screen and (min-width: 49em) {
+               /*  @media screen and (min-width: 49em) {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     grid-template-rows: repeat(2, auto);
@@ -132,7 +136,7 @@
                         }
 
                     }
-                }
+                } */
 
 
 

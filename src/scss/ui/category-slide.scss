@@ -3,12 +3,14 @@
     position: relative;
     overflow: hidden;
 
-    /*  height: 26.8rem; */
-    /* @media screen and (min-width: 47em) {
+ 
+
+    @media screen and (min-width: 47em) {
         width: 41rem !important;
         height: 28.8rem !important;
 
-    } */
+    }
+
 
     &.line {
         &-gr {
@@ -21,12 +23,13 @@
         &-ye {
             & a {
                 border-color: $yellow;
+
                 &:hover {
                     border-color: $blue;
                 }
             }
 
-           
+
         }
     }
 
@@ -56,7 +59,7 @@
         }
     }
 
-    /* &_big {
+     &._big {
         @media screen and (min-width: 47em) {
             width: 85rem !important;
             height: 28.8rem !important;
@@ -65,5 +68,5 @@
         }
         @include small-tablet {}
 
-    } */
+    } 
 }

@@ -128,7 +128,7 @@ function initSwipers() {
 
             breakpoints: {
                 768: {
-                    slidesPerView: 4,
+                    slidesPerView: 'auto',
                     slidesPerGroup: 2,
                     grid: {
                         rows: 2,
